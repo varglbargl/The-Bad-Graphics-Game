@@ -6,7 +6,7 @@ local clientPlayer = Game.GetLocalPlayer()
 
 local myHitPoints = "nothin"
 
-local myGold = "nothin"
+local myRP = "nothin"
 
 function onResourceChanged(player, name, newTotal)
   -- print(player.name.."'s "..name.." changed to "..newTotal.."!")
@@ -25,10 +25,10 @@ function onResourceChanged(player, name, newTotal)
     end
 
     myHitPoints = player.hitPoints
-  elseif name == "Gold" then
+  elseif name == "RP" then
 
-    if myGold ~= "nothin" then
-      local difference = newTotal - myGold
+    if myRP ~= "nothin" then
+      local difference = newTotal - myRP
       if difference > 0 then
 
         Task.Wait(0.1)
@@ -37,11 +37,11 @@ function onResourceChanged(player, name, newTotal)
           Utils.playSoundEffect(REWARD_POINT_SFX, nil, 0.2, 200)
         end
 
-        Utils.showFlyupText("+"..Utils.formatInt(difference * 5).." RP", clientPlayer:GetWorldPosition(), Utils.color.rp)
+        Utils.showFlyupText("+"..Utils.formatInt(difference).." RP", clientPlayer:GetWorldPosition(), Utils.color.rp)
       end
     end
 
-    myGold = newTotal
+    myRP = newTotal
   end
 end
 

@@ -1,17 +1,16 @@
 Assets {
-  Id: 6845418575452539766
-  Name: "Player Resource Server"
+  Id: 3770894354438221197
+  Name: "Destructible Prop Server"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:Utils"
-        AssetReference {
-          Id: 16574734029457462020
+        Name: "cs:Hitbox"
+        ObjectReference {
         }
       }
       Overrides {
-        Name: "cs:LevelUpVFX"
+        Name: "cs:DestroyVFX"
         AssetReference {
           Id: 841534158063459245
         }

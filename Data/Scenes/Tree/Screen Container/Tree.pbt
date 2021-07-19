@@ -198,7 +198,7 @@ Objects {
     }
     RotationOffset {
     }
-    FieldOfView: 70
+    FieldOfView: 75
     ViewWidth: 1200
     RotationMode {
       Value: "mc:erotationmode:lookangle"

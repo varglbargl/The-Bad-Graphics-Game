@@ -1,4 +1,4 @@
-local FLY_UP_FONT = script:GetCustomProperty("FlyUpFont")
+local FLY_UP_FONT = script:GetCustomProperty("FlyupFont")
 
 local Utils = {}
 
@@ -11,6 +11,8 @@ Utils.color = {
   attack   = Color.New(1, 0.95, 0.8),
   magic    = Color.New(1, 0.95, 0.1),
   gold     = Color.New(1, 0.7, 0.3),
+  quest    = Color.New(0.8, 0.8, 0.7),
+  questCompete = Color.New(0, 0.5, 0),
 
   common   = Color.New(0.9, 0.8, 0.7),
   rare     = Color.New(0.35, 1, 0.5),

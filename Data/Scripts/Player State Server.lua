@@ -1,7 +1,9 @@
 function playerDied(player, damage)
+  if not Object.IsValid(player) then return end
   player.isMovementEnabled = false
 
   Task.Wait(5)
+  if not Object.IsValid(player) then return end
 
   player:Spawn({spawnKey = "Graveyard"})
 end

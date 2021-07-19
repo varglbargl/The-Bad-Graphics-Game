@@ -15,7 +15,7 @@ function onInteracted(thisTrigger, other)
       Utils.playSoundEffect(ACCEPT_SFX, TRIGGER:GetWorldPosition(), 0.75, math.random(-2, 2) * 100)
     end
 
-    Utils.throttleToServer("AcceptQuest", clientPlayer)
+    Utils.throttleToServer("AcceptQuest")
 	end
 end
 

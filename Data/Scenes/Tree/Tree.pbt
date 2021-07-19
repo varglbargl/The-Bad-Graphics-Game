@@ -38,6 +38,7 @@ Objects {
   ChildIds: 7820281097886967192
   ChildIds: 17292874734962372016
   ChildIds: 10222172855987492633
+  ChildIds: 12445343338097033578
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -50,6 +51,74 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 12445343338097033578
+  Name: "Destructible Jar"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5845038571325297108
+      value {
+        Overrides {
+          Name: "DisableCastShadows"
+          Bool: false
+        }
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 1
+            G: 0.5
+            B: 0.5
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "ma:Shared_BaseMaterial:color"
+          Color {
+            R: 0.75
+            G: 0.180000052
+            B: 0.0375000089
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13968435029310018508
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Destructible Jar"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 950
+            Y: -650
+            Z: 1.52587891e-05
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7387608343629949228
+    }
   }
 }
 Objects {
@@ -72,6 +141,19 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
+      key: 5911184958205127811
+      value {
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 0.0999999791
+            Y: 0.200000092
+            Z: 0.931933403
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 15049718848827633436
       value {
         Overrides {
@@ -82,7 +164,7 @@ Objects {
           Name: "Position"
           Vector {
             X: 1400
-            Y: -305
+            Y: -302
             Z: 159
           }
         }
@@ -1449,6 +1531,7 @@ Objects {
   Name: "Skylight"
   Transform {
     Location {
+      Z: 86.0731201
     }
     Rotation {
     }
@@ -1475,9 +1558,7 @@ Objects {
     Overrides {
       Name: "bp:Lower Hemisphere Color"
       Color {
-        R: 1
-        G: 1
-        B: 1
+        R: 0.01
         A: 1
       }
     }
@@ -1505,8 +1586,8 @@ Objects {
     Overrides {
       Name: "bp:Tint Color"
       Color {
-        R: 0.82818681
-        G: 0.816
+        R: 0.7
+        G: 0.7
         B: 1
         A: 1
       }
@@ -1514,7 +1595,7 @@ Objects {
     Overrides {
       Name: "bp:Blend Target Image"
       Enum {
-        Value: "mc:eambientcubemapssmall:27"
+        Value: "mc:eambientcubemapssmall:17"
       }
     }
     Overrides {
@@ -1528,7 +1609,7 @@ Objects {
     Overrides {
       Name: "bp:Ambient Image"
       Enum {
-        Value: "mc:eambientcubemapssmall:27"
+        Value: "mc:eambientcubemapssmall:17"
       }
     }
   }

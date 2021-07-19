@@ -12,11 +12,11 @@ Assets {
       }
       Overrides {
         Name: "metallic"
-        Float: 0
+        Float: 0.2
       }
       Overrides {
         Name: "specular"
-        Float: 0.25
+        Float: 0.1
       }
       Overrides {
         Name: "roughness"
@@ -51,6 +51,27 @@ Assets {
       Overrides {
         Name: "fresnel_sharpness"
         Float: -1
+      }
+      Overrides {
+        Name: "gradient_worldspace"
+        Bool: true
+      }
+      Overrides {
+        Name: "gradient_shift"
+        Float: 0
+      }
+      Overrides {
+        Name: "gradient_falloff"
+        Float: 1
+      }
+      Overrides {
+        Name: "gradient_color"
+        Color {
+          R: 0.25
+          G: 0.1875
+          B: 0.1875
+          A: 1
+        }
       }
     }
     Assets {

@@ -1,13 +1,13 @@
 Assets {
-  Id: 1832804711851380767
-  Name: "Rat Death VFX"
+  Id: 9467663329305447255
+  Name: "Jar Explode VFX"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 13312380640363569658
+      RootId: 7378495573533773579
       Objects {
-        Id: 13312380640363569658
-        Name: "Rat Death VFX"
+        Id: 7378495573533773579
+        Name: "Jar Explode VFX"
         Transform {
           Scale {
             X: 1
@@ -16,12 +16,11 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 11174074706174079379
-        ChildIds: 7281298430966585189
-        ChildIds: 2997070645655560099
-        ChildIds: 2036443368232342638
-        ChildIds: 16506846671997723022
-        Lifespan: 3
+        ChildIds: 8781793836482891972
+        ChildIds: 10459662219918302337
+        ChildIds: 15751431628025683410
+        ChildIds: 9621302536910549213
+        Lifespan: 2
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -39,11 +38,11 @@ Assets {
         }
       }
       Objects {
-        Id: 11174074706174079379
-        Name: "Squeaky Toy 03 SFX"
+        Id: 8781793836482891972
+        Name: "Glass Shatter Break Impact Set 01 SFX"
         Transform {
           Location {
-            Z: 20
+            Z: 50
           }
           Rotation {
           }
@@ -53,7 +52,15 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13312380640363569658
+        ParentId: 7378495573533773579
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_glass_shatter_impact:48"
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -66,24 +73,29 @@ Assets {
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
-        AudioInstance {
-          AudioAsset {
-            Id: 4899923684842662943
+        Blueprint {
+          BlueprintAsset {
+            Id: 7739271263565614284
           }
-          AutoPlay: true
-          Pitch: 300
-          Volume: 1
-          Falloff: 2000
-          Radius: 1000
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Pitch: -600
+            Volume: 0.75
+            Falloff: 2000
+            Radius: 1000
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
         }
       }
       Objects {
-        Id: 7281298430966585189
+        Id: 10459662219918302337
         Name: "Retro Explosions Set 01 SFX"
         Transform {
           Location {
+            Z: 50
           }
           Rotation {
           }
@@ -93,12 +105,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13312380640363569658
+        ParentId: 7378495573533773579
         UnregisteredParameters {
           Overrides {
             Name: "bp:Type"
             Enum {
-              Value: "mc:esfx_retro_explosions:22"
+              Value: "mc:esfx_retro_explosions:12"
             }
           }
         }
@@ -131,59 +143,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2997070645655560099
-        Name: "Gunshot Retro Arcade & LoFi Set 01 SFX"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13312380640363569658
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Type"
-            Enum {
-              Value: "mc:esfx_gunshot_retro_arcade_lofi_01:14"
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 4525558059198461685
-          }
-          TeamSettings {
-          }
-          AudioBP {
-            AutoPlay: true
-            Pitch: -300
-            Volume: 1
-            Falloff: 2000
-            Radius: 1000
-            IsSpatializationEnabled: true
-            IsAttenuationEnabled: true
-          }
-        }
-      }
-      Objects {
-        Id: 2036443368232342638
+        Id: 15751431628025683410
         Name: "Explosion Kit Rock Burst VFX"
         Transform {
           Location {
@@ -197,31 +157,36 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13312380640363569658
+        ParentId: 7378495573533773579
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Density"
-            Float: 2
+            Name: "bp:Gravity"
+            Float: -40
           }
           Overrides {
             Name: "bp:Color"
             Color {
-              R: 0.132
-              G: 0.0351999961
+              R: 0.4
+              G: 0.106000021
+              B: 0.0400000103
               A: 1
             }
           }
           Overrides {
             Name: "bp:Particle Scale"
+            Float: 1
+          }
+          Overrides {
+            Name: "bp:Density"
             Float: 2
           }
           Overrides {
             Name: "bp:Life"
-            Float: 0.5
+            Float: 0.3
           }
           Overrides {
-            Name: "bp:Gravity"
-            Float: -30
+            Name: "bp:Burst Angle Max"
+            Float: 180
           }
         }
         Collidable_v2 {
@@ -251,7 +216,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16506846671997723022
+        Id: 9621302536910549213
         Name: "NewFolder"
         Transform {
           Location {
@@ -264,11 +229,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13312380640363569658
-        ChildIds: 1133884599998685478
-        ChildIds: 13367776816678171777
-        ChildIds: 14077372557742311563
-        ChildIds: 4049583455270263145
+        ParentId: 7378495573533773579
+        ChildIds: 7895044008239855894
+        ChildIds: 6686736611960745403
+        ChildIds: 11636010272091349480
+        ChildIds: 697573839209319026
+        ChildIds: 8618214618085868856
         Lifespan: 0.3
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -287,7 +253,46 @@ Assets {
         }
       }
       Objects {
-        Id: 1133884599998685478
+        Id: 7895044008239855894
+        Name: "Simple Scale Parent"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9621302536910549213
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Speed"
+            Float: -2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13246694329671874582
+          }
+        }
+      }
+      Objects {
+        Id: 6686736611960745403
         Name: "Simple Look At Local View"
         Transform {
           Location {
@@ -301,7 +306,7 @@ Assets {
             Z: 1.49999988
           }
         }
-        ParentId: 16506846671997723022
+        ParentId: 9621302536910549213
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -321,8 +326,8 @@ Assets {
         }
       }
       Objects {
-        Id: 13367776816678171777
-        Name: "Star - Beveled"
+        Id: 11636010272091349480
+        Name: "Star - Outline"
         Transform {
           Location {
             Z: 75
@@ -336,8 +341,8 @@ Assets {
             Z: 1.5
           }
         }
-        ParentId: 16506846671997723022
-        ChildIds: 13491857257846133652
+        ParentId: 9621302536910549213
+        ChildIds: 270934279775336809
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -350,6 +355,7 @@ Assets {
             Color {
               R: 1
               G: 1
+              B: 1
               A: 1
             }
           }
@@ -385,7 +391,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13491857257846133652
+        Id: 270934279775336809
         Name: "Simple Scale Parent"
         Transform {
           Location {
@@ -398,7 +404,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13367776816678171777
+        ParentId: 11636010272091349480
         UnregisteredParameters {
           Overrides {
             Name: "cs:Speed"
@@ -424,7 +430,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14077372557742311563
+        Id: 697573839209319026
         Name: "NewFolder"
         Transform {
           Location {
@@ -439,9 +445,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 16506846671997723022
-        ChildIds: 7992869266365394644
-        ChildIds: 11042923904313123875
+        ParentId: 9621302536910549213
+        ChildIds: 11838276452984468323
+        ChildIds: 347242137089925999
         Lifespan: 0.2
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -460,7 +466,7 @@ Assets {
         }
       }
       Objects {
-        Id: 7992869266365394644
+        Id: 11838276452984468323
         Name: "Simple Rotate Parent"
         Transform {
           Location {
@@ -473,7 +479,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 14077372557742311563
+        ParentId: 697573839209319026
         UnregisteredParameters {
           Overrides {
             Name: "cs:Speed"
@@ -505,7 +511,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11042923904313123875
+        Id: 347242137089925999
         Name: "Crescent 01 - Large"
         Transform {
           Location {
@@ -521,20 +527,12 @@ Assets {
             Z: 0.005
           }
         }
-        ParentId: 14077372557742311563
+        ParentId: 697573839209319026
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
               Id: 69844939897041847
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 1
-              A: 1
             }
           }
         }
@@ -568,14 +566,15 @@ Assets {
         }
       }
       Objects {
-        Id: 4049583455270263145
+        Id: 8618214618085868856
         Name: "NewFolder"
         Transform {
           Location {
+            Y: 7.62939453e-06
             Z: 75
           }
           Rotation {
-            Roll: -13.4423523
+            Roll: -13.4423018
           }
           Scale {
             X: 0.5
@@ -583,13 +582,13 @@ Assets {
             Z: 0.5
           }
         }
-        ParentId: 16506846671997723022
-        ChildIds: 14227323684121059331
-        ChildIds: 6711846254127899835
-        ChildIds: 9926254032018879254
-        ChildIds: 4343775487813261673
-        ChildIds: 13350548043682323694
-        ChildIds: 18068805005933182649
+        ParentId: 9621302536910549213
+        ChildIds: 4885622386368115467
+        ChildIds: 112465173467507403
+        ChildIds: 10576386931128120057
+        ChildIds: 14694476515341778649
+        ChildIds: 12347051804103547986
+        ChildIds: 206368730385917895
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -607,7 +606,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14227323684121059331
+        Id: 4885622386368115467
         Name: "Simple Scale Parent"
         Transform {
           Location {
@@ -620,7 +619,7 @@ Assets {
             Z: 0.999999881
           }
         }
-        ParentId: 4049583455270263145
+        ParentId: 8618214618085868856
         UnregisteredParameters {
           Overrides {
             Name: "cs:Speed"
@@ -646,7 +645,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6711846254127899835
+        Id: 112465173467507403
         Name: "Plane Trapezoid - One Sided"
         Transform {
           Location {
@@ -664,7 +663,7 @@ Assets {
             Z: 0.0671098828
           }
         }
-        ParentId: 4049583455270263145
+        ParentId: 8618214618085868856
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -677,6 +676,7 @@ Assets {
             Color {
               R: 1
               G: 1
+              B: 1
               A: 1
             }
           }
@@ -711,7 +711,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9926254032018879254
+        Id: 10576386931128120057
         Name: "Plane Trapezoid - One Sided"
         Transform {
           Location {
@@ -729,7 +729,7 @@ Assets {
             Z: 0.0671098828
           }
         }
-        ParentId: 4049583455270263145
+        ParentId: 8618214618085868856
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -742,6 +742,7 @@ Assets {
             Color {
               R: 1
               G: 1
+              B: 1
               A: 1
             }
           }
@@ -776,7 +777,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4343775487813261673
+        Id: 14694476515341778649
         Name: "Plane Trapezoid - One Sided"
         Transform {
           Location {
@@ -794,7 +795,7 @@ Assets {
             Z: 0.0671098828
           }
         }
-        ParentId: 4049583455270263145
+        ParentId: 8618214618085868856
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -807,6 +808,7 @@ Assets {
             Color {
               R: 1
               G: 1
+              B: 1
               A: 1
             }
           }
@@ -841,7 +843,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13350548043682323694
+        Id: 12347051804103547986
         Name: "Plane Trapezoid - One Sided"
         Transform {
           Location {
@@ -859,7 +861,7 @@ Assets {
             Z: 0.0671098828
           }
         }
-        ParentId: 4049583455270263145
+        ParentId: 8618214618085868856
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -872,6 +874,7 @@ Assets {
             Color {
               R: 1
               G: 1
+              B: 1
               A: 1
             }
           }
@@ -906,7 +909,7 @@ Assets {
         }
       }
       Objects {
-        Id: 18068805005933182649
+        Id: 206368730385917895
         Name: "Plane Trapezoid - One Sided"
         Transform {
           Location {
@@ -923,7 +926,7 @@ Assets {
             Z: 0.0671098828
           }
         }
-        ParentId: 4049583455270263145
+        ParentId: 8618214618085868856
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -936,6 +939,7 @@ Assets {
             Color {
               R: 1
               G: 1
+              B: 1
               A: 1
             }
           }
@@ -971,12 +975,12 @@ Assets {
       }
     }
     Assets {
-      Id: 4899923684842662943
-      Name: "Squeaky Toy 03 SFX"
-      PlatformAssetType: 7
+      Id: 7739271263565614284
+      Name: "Glass Shatter Break Impact Set 01 SFX"
+      PlatformAssetType: 10
       PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_squeaky_toy_03a_Cue_ref"
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_glass_shatter_impact_hits_set_ref"
       }
     }
     Assets {
@@ -986,15 +990,6 @@ Assets {
       PrimaryAsset {
         AssetType: "AudioBlueprintAssetRef"
         AssetId: "sfxabp_retro_explosions_ref"
-      }
-    }
-    Assets {
-      Id: 4525558059198461685
-      Name: "Gunshot Retro Arcade & LoFi Set 01 SFX"
-      PlatformAssetType: 10
-      PrimaryAsset {
-        AssetType: "AudioBlueprintAssetRef"
-        AssetId: "sfxabp_gunshot_Retro_arcade_lofi_ref"
       }
     }
     Assets {

@@ -55,9 +55,11 @@ end
 function onPlayerLeft(player)
 end
 
-function onPlayerGainedGold(player, amount)
-  player:GrantRewardPoints(amount * 5, "Gold")
-  player:AddResource("Gold", amount)
+function onRatKilled(player)
+  local amount = math.random(1, 3)
+
+  player:GrantRewardPoints(amount, "RatKill")
+  player:AddResource("RP", amount)
 end
 
 function resourceTicker(player)
@@ -80,5 +82,5 @@ Game.playerLeftEvent:Connect(onPlayerLeft)
 -- handler params: Player_player, integer_newTotal
 Events.Connect("PlayerHealed", onPlayerHealed)
 
--- handler params: Player_player, integer_amount
-Events.Connect("PlayerGainedGold", onPlayerGainedGold)
+-- handler params: Player_player
+Events.Connect("RatKilled", onRatKilled)

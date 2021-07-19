@@ -142,7 +142,7 @@ function die(killer, damage)
   isDead = true
   Utils.throttleToAllPlayers("eDie", killer, enemy.id, damage)
 
-  Events.Broadcast("PlayerGainedGold", isFighting, math.random(1, 3))
+  Events.Broadcast("RatKilled", isFighting)
 
   Task.Spawn(function()
     if not Object.IsValid(enemy) then return end

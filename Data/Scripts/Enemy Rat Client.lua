@@ -25,11 +25,10 @@ local lastKnownPosition = MESH:GetWorldPosition()
 local clientPlayer = Game.GetLocalPlayer()
 
 local idleMessages = {
-  "glowers at you dupiously.",
+  "glowers at you dubiously.",
   "has something shiny in its mouth.",
   "squeaks. *SQUEAK*",
   "squeaks twice. *SQUEAK SQUEAK*",
-  "says something racist so it's fine if you kill it now.",
   "eyes you suspiciously.",
   "looks like it's coming right for you!",
   "is minding its business.",
@@ -48,7 +47,9 @@ local idleMessages = {
   "looks evil. You should probably kill it.",
   "doesn't look like much of a challenge.",
   "looks like a reasonably safe opponent.",
-  "scowls at you, ready to attack! What would you like your tombstone to say?"
+  "scowls at you, ready to attack!",
+  "probably has all kinds of treasure inside it.",
+  "looks like it just ate some treasure."
 }
 
 local ratNames = {
@@ -65,19 +66,19 @@ local ratNames = {
   "Rat, Technological Marvel",
   "Rat, 3D Masterwork",
   "Expertly Sculpted Rat",
-  "Rat of Ample Verticies",
+  "Rat of Ample Vertices",
   "Intricately Detailed Rat",
   "Masterfully Recreated Rat",
   "Astonishingly Realistic Rat",
   "Rat of Painstaking Exactitude",
   "Rat of True Verisimilitude",
-  "A Glimpse into the Future of Computerized Rat Recreation",
-  "The Sequel to Rats with Five Electric Asses",
+  "The Future of Digital Rats",
   "Rat of Voracious Veracity",
   "Remarkably Lifelike Rat",
   "Computationally Exorbitant Rat",
   "Good Lookin' Rat",
-  "Perfectly Simulated Rat"
+  "Perfectly Simulated Rat",
+  "1.44 Megabytes of Rat"
 }
 
 local ratName = ratNames[math.random(1, #ratNames)]
@@ -89,18 +90,12 @@ function idleLoop()
 
   if isDead or not Object.IsValid(enemy) then return end
 
-  local nearbyPlayers = Game.FindPlayersInSphere(enemy:GetWorldPosition(), 1000)
+  if (enemy:GetWorldPosition() - clientPlayer:GetWorldPosition()).size < 1000 then
+    local message = ratName.." "..idleMessages[math.random(1, #idleMessages)]
+    Chat.LocalMessage(message)
 
-  for i, player in ipairs(nearbyPlayers) do
-    if player == clientPlayer then
-      local message = ratName.." "..idleMessages[math.random(1, #idleMessages)]
-      Chat.LocalMessage(message)
-
-      if IDLE_SFX then
-        Utils.playSoundEffect(IDLE_SFX, enemy:GetWorldPosition(), 0.2, math.random(-2, 2) * 100)
-      end
-
-      break
+    if IDLE_SFX then
+      Utils.playSoundEffect(IDLE_SFX, enemy:GetWorldPosition(), 0.2, math.random(-2, 2) * 100)
     end
   end
 
