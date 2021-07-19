@@ -1,12 +1,9 @@
+local CLOCK_PIVOT = script:GetCustomProperty("ClockPivot"):WaitForObject()
+local COMPASS = script:GetCustomProperty("Compass"):WaitForObject()
+
 local clientPlayer = Game.GetLocalPlayer()
 
-function OnBindingPressed(player, action)
-  if action == "ability_extra_1" then
-      UI.SetRewardsDialogVisible(true, RewardsDialogTab.REWARD_POINT_GAMES)
-
-  elseif action == "ability_extra_2" then
-      UI.SetRewardsDialogVisible(true, RewardsDialogTab.QUESTS)
-  end
+function Tick()
+  CLOCK_PIVOT.rotationAngle = CLOCK_PIVOT.rotationAngle + 0.1
+  COMPASS.rotationAngle = -clientPlayer:GetLookWorldRotation().z + 130
 end
-
-clientPlayer.bindingPressedEvent:Connect(OnBindingPressed)

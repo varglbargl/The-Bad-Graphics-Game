@@ -24,7 +24,6 @@ Objects {
   ChildIds: 13523464746032534107
   ChildIds: 13410151037257972765
   ChildIds: 3188689987035251775
-  ChildIds: 10005074784157121906
   ChildIds: 18174600898058180228
   ChildIds: 13333434867839266172
   ChildIds: 3350160550469469697
@@ -38,6 +37,7 @@ Objects {
   ChildIds: 940429799832424765
   ChildIds: 7820281097886967192
   ChildIds: 17292874734962372016
+  ChildIds: 10222172855987492633
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -50,6 +50,47 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 10222172855987492633
+  Name: "Quest - Wanted Poster"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 15049718848827633436
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Quest - Wanted Poster"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 1400
+            Y: -305
+            Z: 159
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 4555270158870941161
+    }
   }
 }
 Objects {
@@ -702,101 +743,6 @@ Objects {
         }
       }
     }
-    ParameterOverrideMap {
-      key: 5251258028689580085
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -0.183422729
-            Y: 7.07106495
-            Z: -32.4265862
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 15.3962088
-            Yaw: -0.847686768
-            Roll: -20.1581726
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 6878946638624220035
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -0.392407745
-            Y: 6.86611748
-            Z: -31.2816982
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 15.3962221
-            Yaw: -0.84765625
-            Roll: -20.1581116
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 11449705317125433992
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: 75
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 11541190853513288523
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1.0816406
-            Y: -10.5678234
-            Z: -31.6019039
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 23.7825394
-            Yaw: -32.7948914
-            Roll: 6.43644571
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 16493672704921518073
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 0.8487854
-            Y: -10.39956
-            Z: -30.455658
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 23.7825394
-            Yaw: -32.7948608
-            Roll: 6.43645763
-          }
-        }
-      }
-    }
     TemplateAsset {
       Id: 757257612037628633
     }
@@ -1253,141 +1199,6 @@ Objects {
   }
 }
 Objects {
-  Id: 10005074784157121906
-  Name: "Default Sky"
-  Transform {
-    Location {
-      Z: 700
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  ChildIds: 7155168770677928712
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Folder {
-    IsGroup: true
-  }
-}
-Objects {
-  Id: 7155168770677928712
-  Name: "Skylight"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 10005074784157121906
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Index"
-      Int: 3
-    }
-    Overrides {
-      Name: "bp:Occlusion Contrast"
-      Float: 0
-    }
-    Overrides {
-      Name: "bp:Intensity"
-      Float: 5
-    }
-    Overrides {
-      Name: "bp:Lower Hemisphere Color"
-      Color {
-        R: 1
-        G: 1
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Occlusion Tint"
-      Color {
-        R: 0.0274509825
-        G: 0.0274509825
-        B: 0.0392156877
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Occlusion Exponent"
-      Float: 0
-    }
-    Overrides {
-      Name: "bp:Cast Shadows"
-      Bool: false
-    }
-    Overrides {
-      Name: "bp:Cast Volumetric Shadows"
-      Bool: false
-    }
-    Overrides {
-      Name: "bp:Tint Color"
-      Color {
-        R: 0.82818681
-        G: 0.816
-        B: 1
-        A: 1
-      }
-    }
-    Overrides {
-      Name: "bp:Blend Target Image"
-      Enum {
-        Value: "mc:eambientcubemapssmall:27"
-      }
-    }
-    Overrides {
-      Name: "bp:Indirect Intensity"
-      Float: 0
-    }
-    Overrides {
-      Name: "bp:Blend Amount"
-      Float: 1
-    }
-    Overrides {
-      Name: "bp:Ambient Image"
-      Enum {
-        Value: "mc:eambientcubemapssmall:27"
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 11515840070784317904
-    }
-  }
-}
-Objects {
   Id: 3188689987035251775
   Name: "Level Segment - Dead End 1"
   Transform {
@@ -1618,6 +1429,7 @@ Objects {
   ParentId: 4781671109827199097
   ChildIds: 6044595599357094386
   ChildIds: 5903406210565133761
+  ChildIds: 7155168770677928712
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -1630,6 +1442,109 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   NetworkContext {
+  }
+}
+Objects {
+  Id: 7155168770677928712
+  Name: "Skylight"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 724324913679364851
+  UnregisteredParameters {
+    Overrides {
+      Name: "bp:Index"
+      Int: 3
+    }
+    Overrides {
+      Name: "bp:Occlusion Contrast"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Intensity"
+      Float: 5
+    }
+    Overrides {
+      Name: "bp:Lower Hemisphere Color"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Occlusion Tint"
+      Color {
+        R: 0.0274509825
+        G: 0.0274509825
+        B: 0.0392156877
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Occlusion Exponent"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Cast Shadows"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Cast Volumetric Shadows"
+      Bool: false
+    }
+    Overrides {
+      Name: "bp:Tint Color"
+      Color {
+        R: 0.82818681
+        G: 0.816
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "bp:Blend Target Image"
+      Enum {
+        Value: "mc:eambientcubemapssmall:27"
+      }
+    }
+    Overrides {
+      Name: "bp:Indirect Intensity"
+      Float: 0
+    }
+    Overrides {
+      Name: "bp:Blend Amount"
+      Float: 1
+    }
+    Overrides {
+      Name: "bp:Ambient Image"
+      Enum {
+        Value: "mc:eambientcubemapssmall:27"
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Blueprint {
+    BlueprintAsset {
+      Id: 11515840070784317904
+    }
   }
 }
 Objects {

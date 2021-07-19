@@ -35,6 +35,7 @@ end
 function onEquipped(thisEquipment, player)
   if STANCE then
     player.animationStance = STANCE
+    Events.Broadcast("UpdateIdleStance", player, STANCE)
   end
 end
 

@@ -5,7 +5,7 @@ Objects {
   Name: "That Beautiful Bean Footage"
   Transform {
     Location {
-      X: 15
+      X: 14
       Z: 2.5
     }
     Rotation {
@@ -67,7 +67,7 @@ Objects {
     Overrides {
       Name: "bp:Scene View Distortion Type"
       Enum {
-        Value: "mc:eportalscenedistortiontype:newenumerator2"
+        Value: "mc:eportalscenedistortiontype:newenumerator0"
       }
     }
     Overrides {
@@ -198,7 +198,7 @@ Objects {
     }
     RotationOffset {
     }
-    FieldOfView: 90
+    FieldOfView: 70
     ViewWidth: 1200
     RotationMode {
       Value: "mc:erotationmode:lookangle"

@@ -41,7 +41,7 @@ Assets {
         Name: "Hitbox"
         Transform {
           Location {
-            Z: 100
+            Z: 75
           }
           Rotation {
           }
@@ -201,6 +201,12 @@ Assets {
           Overrides {
             Name: "cs:ReadyAnimation"
             String: "unarmed_idle_ready"
+          }
+          Overrides {
+            Name: "cs:Nameplate"
+            ObjectReference {
+              SubObjectId: 2931936198307561319
+            }
           }
         }
         Collidable_v2 {
@@ -408,7 +414,7 @@ Assets {
         Name: "World Text"
         Transform {
           Location {
-            Z: 150
+            Z: 125
           }
           Rotation {
           }

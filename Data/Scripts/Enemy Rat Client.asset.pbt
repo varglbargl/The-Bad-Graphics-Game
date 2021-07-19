@@ -58,6 +58,11 @@ Assets {
           Id: 6746142747426534616
         }
       }
+      Overrides {
+        Name: "cs:Nameplate"
+        ObjectReference {
+        }
+      }
     }
     Assets {
       Id: 6746142747426534616

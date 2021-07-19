@@ -145,12 +145,15 @@ function die(killer, damage)
   Events.Broadcast("PlayerGainedGold", isFighting, math.random(1, 3))
 
   Task.Spawn(function()
+    if not Object.IsValid(enemy) then return end
+    enemy:MoveTo(enemy:GetWorldPosition() + Vector3.UP * 25, 1)
+
     Task.Wait(2)
     if not Object.IsValid(enemy) then return end
+    enemy:MoveTo(enemy:GetWorldPosition() + Vector3.UP * -500, 5)
 
-    if DESPAWN_VFX then
-      World.SpawnAsset(DESPAWN_VFX, {position = enemy:GetWorldPosition(), scale = spawnScale})
-    end
+    Task.Wait(5)
+    if not Object.IsValid(enemy) then return end
 
     enemy:Destroy()
     respawn()

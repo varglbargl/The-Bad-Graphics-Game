@@ -18,6 +18,8 @@ local DEATH_VFX = script:GetCustomProperty("DeathVFX")
 local ATTACK_VFX = script:GetCustomProperty("AttackVFX")
 local IDLE_SFX = script:GetCustomProperty("IdleSFX")
 
+local NAMEPLATE = script:GetCustomProperty("Nameplate"):WaitForObject()
+
 local isDead = false
 local lastKnownPosition = MESH:GetWorldPosition()
 local clientPlayer = Game.GetLocalPlayer()
@@ -41,8 +43,46 @@ local idleMessages = {
   "looks your way apprehensively.",
   "regards you indifferently.",
   "looks upon you warmly.",
-  "regards you as an ally."
+  "regards you as an ally.",
+  "is shaped like a friend.",
+  "looks evil. You should probably kill it.",
+  "doesn't look like much of a challenge.",
+  "looks like a reasonably safe opponent.",
+  "scowls at you, ready to attack! What would you like your tombstone to say?"
 }
+
+local ratNames = {
+  "Good Graphics Rat",
+  "Rat of Stunning Fidelity",
+  "High Definition Rat",
+  "Impressive Looking Rat",
+  "Rat of Impeccable Clarity",
+  "Amazing Graphics Rat",
+  "Very Good Graphics Rat",
+  "High-Poly Rat",
+  "Immaculately Rendered Rat",
+  "Awe-Inspiring Rat",
+  "Rat, Technological Marvel",
+  "Rat, 3D Masterwork",
+  "Expertly Sculpted Rat",
+  "Rat of Ample Verticies",
+  "Intricately Detailed Rat",
+  "Masterfully Recreated Rat",
+  "Astonishingly Realistic Rat",
+  "Rat of Painstaking Exactitude",
+  "Rat of True Verisimilitude",
+  "A Glimpse into the Future of Computerized Rat Recreation",
+  "The Sequel to Rats with Five Electric Asses",
+  "Rat of Voracious Veracity",
+  "Remarkably Lifelike Rat",
+  "Computationally Exorbitant Rat",
+  "Good Lookin' Rat",
+  "Perfectly Simulated Rat"
+}
+
+local ratName = ratNames[math.random(1, #ratNames)]
+
+NAMEPLATE.text = string.upper(ratName)
 
 function idleLoop()
   Task.Wait(math.random(50, 100) / 10)
@@ -53,7 +93,7 @@ function idleLoop()
 
   for i, player in ipairs(nearbyPlayers) do
     if player == clientPlayer then
-      local message = enemy.name.." "..idleMessages[math.random(1, #idleMessages)]
+      local message = ratName.." "..idleMessages[math.random(1, #idleMessages)]
       Chat.LocalMessage(message)
 
       if IDLE_SFX then

@@ -30,7 +30,9 @@ end
 function onPlayerJoined(player)
 	print("Assigning animations to " .. player.name)
 
-  player.serverUserData["IdleAnimation"] = "unarmed_ready"
+  if not player.serverUserData["IdleAnimation"] then
+    player.serverUserData["IdleAnimation"] = "unarmed_ready"
+  end
 
   -- handler params: Player_player, Damage_damage
   player.damagedEvent:Connect(hurtAnimation)
