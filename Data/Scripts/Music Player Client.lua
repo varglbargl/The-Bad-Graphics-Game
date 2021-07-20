@@ -81,6 +81,7 @@ end
 for _, track in ipairs(playlist) do
   track.fadeInTime = CROSSFADE
   track.fadeOutTime = CROSSFADE
+  track.volume = 0.6
   track.isSpatializationEnabled = false
   track.isAttenuationEnabled = false
   track.isOcclusionEnabled = false
@@ -94,5 +95,4 @@ BACK.clickedEvent:Connect(playPreviousTrack)
 PLAY_STOP.clickedEvent:Connect(playStopMusic)
 FORWARD.clickedEvent:Connect(playNextTrack)
 
-Task.Wait(1)
-playlist[1]:Play()
+playlist[1]:FadeIn(0.5)

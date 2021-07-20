@@ -224,6 +224,15 @@ Assets {
   }
 }
 Assets {
+  Id: 4486692728165318131
+  Name: "Fantasy Spell Ingredient 009"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ingredient_009"
+  }
+}
+Assets {
   Id: 3538782503367545712
   Name: "BG Flat 003"
   PlatformAssetType: 9

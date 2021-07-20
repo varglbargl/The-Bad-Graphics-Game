@@ -39,7 +39,7 @@ function onPlayerJoined(player)
 
   Utils.throttleMessage(player.name.." (Level "..(math.floor(yourXP / 25) + 1).." "..player.serverUserData["Rank"]..") has joined the game!")
 
-  player.maxHitPoints = 10
+  player.maxHitPoints = 25
   player.hitPoints = player.maxHitPoints
 
   player:SetResource("MaxHitPoints", player.maxHitPoints)
@@ -105,9 +105,10 @@ function checkLevelUp(player)
   end
 
   if levelsGained > 0 then
-    player.hitPoints = 10
-    player:SetResource("HitPoints", 10)
-    player.serverUserData["Rank"] = Utils.getRandomRank()
+    player.serverUserData["Level"] = math.floor(currentXP / 25) + 1
+    player.hitPoints = math.min(player.hitPoints + 10, player.maxHitPoints)
+    player:SetResource("HitPoints", player.hitPoints)
+    player.serverUserData["Rank"] = Utils.getRank(player.serverUserData["Level"])
 
     Utils.updatePrivateNetworkedData(player, "Rank")
   end

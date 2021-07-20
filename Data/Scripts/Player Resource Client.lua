@@ -26,14 +26,14 @@ local myXP = clientPlayer:GetResource("XP") or "nothin"
 PLAYER_NAME.text = clientPlayer.name
 
 function onResourceChanged(player, name, newTotal)
-  print(player.name.."'s "..name.." changed to "..newTotal.."!")
+  print(clientPlayer.name.."'s "..name.." changed to "..newTotal.."!")
   if name == "HitPoints" then
 
     if myHitPoints ~= "nothin" then
       local difference = newTotal - myHitPoints
 
       if difference > 0 then
-        if not player.isDead then
+        if not clientPlayer.isDead then
           Utils.showFlyupText("+"..Utils.formatInt(difference), clientPlayer:GetWorldPosition(), Utils.color.heal)
         end
       elseif difference < 0 then
@@ -41,9 +41,9 @@ function onResourceChanged(player, name, newTotal)
       end
     end
 
-    HEALTH_BAR.progress = player.hitPoints / player.maxHitPoints
-    HEALTH_NUMBER.text = player.hitPoints.."/"..player.maxHitPoints.." HP"
-    myHitPoints = player.hitPoints
+    HEALTH_BAR.progress = newTotal / 25
+    HEALTH_NUMBER.text = Utils.formatInt(newTotal).."/25 HP"
+    myHitPoints = newTotal
   elseif name == "RP" then
 
     if myRP ~= "nothin" then
@@ -76,8 +76,8 @@ function onResourceChanged(player, name, newTotal)
     myLevel = math.floor(myXP / 25) + 1
     LEVEL_NUMBER.text = Utils.formatInt(myLevel)
   elseif name == "Grip" then
-    GRIP_BAR.progress = newTotal / 10
-    GRIP_NUMBER.text = newTotal.."/10 Grip"
+    GRIP_BAR.progress = newTotal / 25
+    GRIP_NUMBER.text = newTotal.."/25 Grip"
   end
 end
 

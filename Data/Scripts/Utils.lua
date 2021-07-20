@@ -23,6 +23,7 @@ Utils.color = {
 -- GENERATORS
 
 local ranks = {
+  "Plucky Ratventurer",
   "Measly Cheesesqueak",
   "Junior Wheel Runner",
   "Apprentice Ankle Biter",
@@ -47,6 +48,7 @@ local ranks = {
   "Notorious Capybasher",
   "Arsenic Ratnip",
   "Vermine Labrattler",
+  "Muridae Murderer",
   "Scrupulous Shrew",
   "Grim Exterminatrix",
   "Rodentious Redwaller",
@@ -131,11 +133,50 @@ local stats = {
   "Piercings",
   "Fuel Efficiency",
   "Fishing Skill",
-  "Boondollars"
+  "Boondollars",
+  "Mindfulness",
+  "Hacking",
+  "Depression",
+  "Numbness",
+  "Restlessness",
+  "Awkwardness",
+  "Free Will",
+  "Nihilism",
+  "Kindness",
+  "Caring",
+  "Alcohol Tolerance",
+  "Verisimilitude",
+  "Cunning",
+  "Musk",
+  "Nightmares",
+  "Greed",
+  "Nimbleness",
+  "Stoutness",
+  "Courage",
+  "Batting Average",
+  "Luck",
+  "Nerves",
+  "Memories",
+  "Fate",
+  "Writing",
+  "Leatherworking",
+  "Managerial Experience",
+  "Sponsorships",
+  "Typing Speed",
+  "Dramatic Posing",
+  "Leadership",
+  "Plausible Deniability",
+  "Durability"
 }
 
 function Utils.getRank(level)
-  return ranks[level]
+  local tier = math.ceil(level / 50)
+
+  if tier == 1 then
+    return ranks[(level - 1) % 50 + 1]
+  else
+    return ranks[(level - 1) % 50 + 1].." Tier "..tier
+  end
 end
 
 function Utils.getRandomStats()

@@ -412,7 +412,7 @@ Assets {
         Name: "World Text"
         Transform {
           Location {
-            Z: 75
+            Z: 80
           }
           Rotation {
           }

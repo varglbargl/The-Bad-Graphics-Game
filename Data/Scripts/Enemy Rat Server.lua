@@ -72,23 +72,23 @@ function fight(player)
     local distanceToPlayer = (player:GetWorldPosition() - fromVector).size
 
     if distanceToPlayer < 500 and distanceToPlayer > 150 then
-      enemy:MoveTo(Utils.groundBelowPoint(player:GetWorldPosition() + (fromVector - player:GetWorldPosition()):GetNormalized() * 200), distanceToPlayer / 400)
-      Task.Wait(distanceToPlayer / 400)
+      enemy:MoveTo(Utils.groundBelowPoint(player:GetWorldPosition() + (fromVector - player:GetWorldPosition()):GetNormalized() * 200), distanceToPlayer / 800)
+      Task.Wait(distanceToPlayer / 800)
       attack(player)
-    elseif distanceToPlayer > 150 then
+    elseif distanceToPlayer >= 150 then
 
       local toVector = Utils.groundBelowPoint(fromVector + (player:GetWorldPosition() - fromVector):GetNormalized() * 400)
 
       if not toVector then
         -- print("Must have been nothing...")
       else
-        enemy:MoveTo(toVector, 1)
+        enemy:MoveTo(toVector, 0.5)
       end
     else
       attack(player)
     end
 
-    Task.Wait(1)
+    Task.Wait(0.75)
   end
 
   -- something has gone wrong idk what but just reset safely okay?
@@ -123,7 +123,7 @@ end
 function attack(target)
   if isDead or not Object.IsValid(target) or not Object.IsValid(enemy) then return end
 
-  local damage = Damage.New(math.random(1, 2))
+  local damage = Damage.New(math.random(1, 3))
 
   Utils.throttleToAllPlayers("eAtt", target, enemy.id)
 

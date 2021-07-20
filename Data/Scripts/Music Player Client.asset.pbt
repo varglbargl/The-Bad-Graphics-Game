@@ -1,6 +1,6 @@
 Assets {
   Id: 8754554839842260247
-  Name: "MusicManager"
+  Name: "Music Player Client"
   PlatformAssetType: 3
   TextAsset {
   }
