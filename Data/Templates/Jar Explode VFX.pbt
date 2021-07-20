@@ -82,7 +82,7 @@ Assets {
           AudioBP {
             AutoPlay: true
             Pitch: -600
-            Volume: 0.75
+            Volume: 0.5
             Falloff: 2000
             Radius: 1000
             IsSpatializationEnabled: true

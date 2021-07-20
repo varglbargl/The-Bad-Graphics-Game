@@ -46,7 +46,7 @@ Assets {
           Rotation {
           }
           Scale {
-            X: 1
+            X: 1.99999988
             Y: 1
             Z: 1
           }
@@ -346,10 +346,9 @@ Assets {
       }
       Objects {
         Id: 6483310414203425976
-        Name: "nameplate"
+        Name: "root"
         Transform {
           Location {
-            Z: 107.273987
           }
           Rotation {
           }
@@ -379,14 +378,13 @@ Assets {
         Name: "Nameplate"
         Transform {
           Location {
-            Z: -90.2018
           }
           Rotation {
           }
           Scale {
-            X: 0.666666687
-            Y: 0.666666687
-            Z: 0.666666687
+            X: 1
+            Y: 1
+            Z: 1
           }
         }
         ParentId: 6483310414203425976
@@ -414,14 +412,14 @@ Assets {
         Name: "World Text"
         Transform {
           Location {
-            Z: 125
+            Z: 75
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
           }
         }
         ParentId: 13786495613638375397

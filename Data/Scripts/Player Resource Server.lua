@@ -17,10 +17,27 @@ function playerSpawned(player)
 end
 
 function onPlayerJoined(player)
-  local yourLevel = player:SetResource("Level", 1)
-  player:SetResource("Gold", 0)
 
-  Utils.throttleMessage(player.name.." (Level "..yourLevel.." Ratventurer) has joined the game!")
+  local saveData = Storage.GetPlayerData(player)
+
+  local yourXP = 0
+
+  if saveData.xp and saveData.rank then
+    yourXP = player:SetResource("XP", saveData.xp)
+    player.serverUserData["Rank"] = saveData.rank
+  else
+    player:SetResource("XP", 0)
+    player.serverUserData["Rank"] = "Plucky Ratventurer"
+  end
+
+  player.serverUserData["Level"] = math.floor(yourXP / 25) + 1
+
+  player:SetResource("RP", 0)
+  player:SetResource("Grip", 0)
+
+  Utils.updatePrivateNetworkedData(player, "Rank")
+
+  Utils.throttleMessage(player.name.." (Level "..(math.floor(yourXP / 25) + 1).." "..player.serverUserData["Rank"]..") has joined the game!")
 
   player.maxHitPoints = 10
   player.hitPoints = player.maxHitPoints
@@ -44,7 +61,8 @@ function onPlayerJoined(player)
     -- handler params: Player_player, string_keyCode
     player.bindingPressedEvent:Connect(function(thisPlayer, keyCode)
       if keyCode == "ability_extra_38" then
-        print("Hello "..thisPlayer.name)
+        player:AddResource("XP", 25)
+        checkLevelUp(player)
       end
     end)
   end
@@ -53,13 +71,46 @@ function onPlayerJoined(player)
 end
 
 function onPlayerLeft(player)
+  local saveData = {
+    xp = player:GetResource("XP"),
+    rank = player.serverUserData["Rank"]
+  }
+
+  if Environment.IsPreview() then saveData = {} end
+
+  Storage.SetPlayerData(player, saveData)
 end
 
 function onRatKilled(player)
+  if not Object.IsValid(player) then return end
+
   local amount = math.random(1, 3)
 
+  player:AddResource("XP", 1)
   player:GrantRewardPoints(amount, "RatKill")
   player:AddResource("RP", amount)
+
+  checkLevelUp(player)
+end
+
+function checkLevelUp(player)
+  if not Object.IsValid(player) then return end
+
+  local currentXP = player:GetResource("XP")
+  local currentLevel = player.serverUserData["Level"]
+  local levelsGained = 0
+
+  while currentXP >= 25 * (currentLevel + levelsGained) do
+    levelsGained = levelsGained + 1
+  end
+
+  if levelsGained > 0 then
+    player.hitPoints = 10
+    player:SetResource("HitPoints", 10)
+    player.serverUserData["Rank"] = Utils.getRandomRank()
+
+    Utils.updatePrivateNetworkedData(player, "Rank")
+  end
 end
 
 function resourceTicker(player)
@@ -84,3 +135,6 @@ Events.Connect("PlayerHealed", onPlayerHealed)
 
 -- handler params: Player_player
 Events.Connect("RatKilled", onRatKilled)
+
+-- handler params: Player_player
+Events.Connect("CheckLevelUp", checkLevelUp)

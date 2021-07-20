@@ -17,7 +17,6 @@ HITBOX.serverUserData["Enemy"] = enemy
 
 local spawnPoint = Utils.groundBelowPoint(enemy:GetWorldPosition())
 local spawnRotation = enemy:GetWorldRotation()
-local spawnScale = HITBOX:GetWorldScale()
 
 if not spawnPoint then
   spawnPoint = enemy:GetWorldPosition()
@@ -173,7 +172,7 @@ function respawn()
 
   if areTherePlayersNearby() then
     if SPAWN_VFX then
-      World.SpawnAsset(SPAWN_VFX, {position = spawnPoint, scale = spawnScale})
+      World.SpawnAsset(SPAWN_VFX, {position = spawnPoint})
     end
 
     World.SpawnAsset(myTemplateId, {position = spawnPoint, rotation = spawnRotation})

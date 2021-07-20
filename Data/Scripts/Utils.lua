@@ -5,11 +5,11 @@ local Utils = {}
 -- MY COLORS
 
 Utils.color = {
+  xp       = Color.New(0.9, 0.1, 0.7),
   rp       = Color.New(0.4, 0.2, 0.95),
   hurt     = Color.New(1, 0.1, 0.05),
   heal     = Color.New(0.1, 1, 0.5),
-  attack   = Color.New(1, 0.95, 0.8),
-  magic    = Color.New(1, 0.95, 0.1),
+  attack   = Color.New(1, 0.95, 0.1),
   gold     = Color.New(1, 0.7, 0.3),
   quest    = Color.New(0.8, 0.8, 0.7),
   questCompete = Color.New(0, 0.5, 0),
@@ -19,6 +19,129 @@ Utils.color = {
   epic     = Color.New(0.7, 0.45, 1),
   unique   = Color.New(1, 0.38, 0.3)
 }
+
+-- GENERATORS
+
+local ranks = {
+  "Measly Cheesesqueak",
+  "Junior Wheel Runner",
+  "Apprentice Ankle Biter",
+  "Fluffy Pesterknight",
+  "Minor Meadowsneak",
+  "Inscrupulous Shrew",
+  "Pesky Pizza Thief",
+  "Lesser Meadowalker",
+  "Sneaky Den Delver",
+  "Lesser Wolverkinight",
+  "Rattata Wrestler",
+  "Gnashing Gnawbones",
+  "Scavenging Rodentivore",
+  "Lesser Whiskermage",
+  "Chuck E. Cheesemonger",
+  "Raticidal Poisoneer",
+  "Verminally Capricious",
+  "Cursed Hexterminator",
+  "Whispy Willowinder",
+  "Happy Habitrailer",
+  "Secretive Nimhspeaker",
+  "Notorious Capybasher",
+  "Arsenic Ratnip",
+  "Vermine Labrattler",
+  "Scrupulous Shrew",
+  "Grim Exterminatrix",
+  "Rodentious Redwaller",
+  "Sagely Soothsquaker",
+  "Bubonic Plaguesploder",
+  "Radical Ratsweeper",
+  "Raticate Culler",
+  "Greater Whiskermage",
+  "Burrowing Warrenlord",
+  "Mighty Wolverkinight",
+  "Avatar of Muskwrath",
+  "Major Meadowstrider",
+  "Ratatoskr's Demise",
+  "Plaguewarden Prime",
+  "Rattus Ex Infernis",
+  "Mayor of Gnashville",
+  "Ascendant Cheesesqueak",
+  "Exterminus Rex",
+  "Senior Wheel Runner",
+  "Grand Exterminatriarch",
+  "Legendary Pizza Thief",
+  "Fabled Fursuiter",
+  "Ratpocalypse Arisen",
+  "Harbinger of Ratnarok"
+}
+
+local stats = {
+  "Hair Length",
+  "Carrying Capacity",
+  "Determination",
+  "Skin Moisture",
+  "Shoe Size",
+  "Arm Length",
+  "Fingers",
+  "Eyes",
+  "Popularity",
+  "Body Temperature",
+  "Smoothness",
+  "Lung Capacity",
+  "Snakes",
+  "Think Power",
+  "Skull Hardness",
+  "Bite Pressure",
+  "Perception",
+  "Reading Comprehension",
+  "Brain Weight",
+  "Organ Capacity",
+  "Gel Viscocity",
+  "Grist Limit",
+  "Criticism Resistence",
+  "Gumption",
+  "Reflexes",
+  "Scrutibility",
+  "Confidence",
+  "Ironic Distance",
+  "Saliva Production",
+  "Dinosaur Facts",
+  "Pupil Radius",
+  "Maximum Hats",
+  "Cooking Skill",
+  "Pet Fondness",
+  "Charm",
+  "Surface Area",
+  "Dance Skill",
+  "Gritpoints",
+  "Witpoints",
+  "Spitpoints",
+  "Vigor",
+  "Erudicity",
+  "Rat Resistence",
+  "Turn Radius",
+  "Sleeve Length",
+  "Dream Vividness",
+  "Sheen",
+  "Piano Skill",
+  "Vertebrae",
+  "Polygons",
+  "Density",
+  "Buoyancy",
+  "Dart Skill",
+  "Tattoos",
+  "Piercings",
+  "Fuel Efficiency",
+  "Fishing Skill",
+  "Boondollars"
+}
+
+function Utils.getRank(level)
+  return ranks[level]
+end
+
+function Utils.getRandomStats()
+  Utils.shuffleArray(stats, 3)
+  return stats[1], stats[2], stats[3]
+end
 
 -- GAME MECHANICS
 
@@ -51,6 +174,17 @@ function Utils.showFlyupText(text, pos, color)
   end
 
   UI.ShowFlyUpText(text, pos + Vector3.New(math.random(-60, 60), math.random(-60, 60), math.random(50, 100)), {font = FLY_UP_FONT, isBig = true, duration = 2, color = color})
+end
+
+function Utils.shuffleArray(arr, n)
+  n = n or #arr
+
+  for i = 1, n do
+    local j = math.random(i, #arr)
+    arr[i], arr[j] = arr[j], arr[i]
+  end
+
+  return arr
 end
 
 -- NETWORKED DATA

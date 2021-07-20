@@ -14,10 +14,6 @@ Objects {
       Z: 1
     }
   }
-  ChildIds: 7367735074338159388
-  ChildIds: 16813558807825262224
-  ChildIds: 11392669927433405941
-  ChildIds: 12973355317056269751
   ChildIds: 724324913679364851
   ChildIds: 13429581632254988900
   ChildIds: 15794348866375307406
@@ -39,6 +35,10 @@ Objects {
   ChildIds: 17292874734962372016
   ChildIds: 10222172855987492633
   ChildIds: 12445343338097033578
+  ChildIds: 5444238021819702538
+  ChildIds: 15162013212123227178
+  ChildIds: 12678772704604320590
+  ChildIds: 4211106929790579287
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -51,6 +51,306 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 4211106929790579287
+  Name: "Destructible Jar"
+  Transform {
+    Location {
+      X: 815
+      Y: -490
+      Z: 1.52587891e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5845038571325297108
+      value {
+        Overrides {
+          Name: "DisableCastShadows"
+          Bool: false
+        }
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 1
+            G: 0.5
+            B: 0.5
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "ma:Shared_BaseMaterial:color"
+          Color {
+            R: 0.75
+            G: 0.180000052
+            B: 0.0375000089
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13968435029310018508
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Destructible Jar"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 750
+            Y: -595
+            Z: 1.52587891e-05
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7387608343629949228
+    }
+  }
+}
+Objects {
+  Id: 12678772704604320590
+  Name: "Destructible Jar"
+  Transform {
+    Location {
+      X: 845
+      Y: -615
+      Z: 1.52587891e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5845038571325297108
+      value {
+        Overrides {
+          Name: "DisableCastShadows"
+          Bool: false
+        }
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 1
+            G: 0.5
+            B: 0.5
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "ma:Shared_BaseMaterial:color"
+          Color {
+            R: 0.75
+            G: 0.180000052
+            B: 0.0375000089
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13968435029310018508
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Destructible Jar"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 815
+            Y: -490
+            Z: 1.52587891e-05
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7387608343629949228
+    }
+  }
+}
+Objects {
+  Id: 15162013212123227178
+  Name: "Destructible Jar"
+  Transform {
+    Location {
+      X: 925
+      Y: -555
+      Z: 1.52587891e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5845038571325297108
+      value {
+        Overrides {
+          Name: "DisableCastShadows"
+          Bool: false
+        }
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 1
+            G: 0.5
+            B: 0.5
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "ma:Shared_BaseMaterial:color"
+          Color {
+            R: 0.75
+            G: 0.180000052
+            B: 0.0375000089
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13968435029310018508
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Destructible Jar"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 845
+            Y: -615
+            Z: 1.52587891e-05
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7387608343629949228
+    }
+  }
+}
+Objects {
+  Id: 5444238021819702538
+  Name: "Destructible Jar"
+  Transform {
+    Location {
+      X: 950
+      Y: -650
+      Z: 1.52587891e-05
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5845038571325297108
+      value {
+        Overrides {
+          Name: "DisableCastShadows"
+          Bool: false
+        }
+        Overrides {
+          Name: "ma:Shared_Detail1:color"
+          Color {
+            R: 1
+            G: 0.5
+            B: 0.5
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "ma:Shared_BaseMaterial:color"
+          Color {
+            R: 0.75
+            G: 0.180000052
+            B: 0.0375000089
+            A: 1
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 13968435029310018508
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Destructible Jar"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 925
+            Y: -555
+            Z: 1.52587891e-05
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 7387608343629949228
+    }
   }
 }
 Objects {
@@ -141,19 +441,6 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 5911184958205127811
-      value {
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 0.0999999791
-            Y: 0.200000092
-            Z: 0.931933403
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
       key: 15049718848827633436
       value {
         Overrides {
@@ -166,6 +453,11 @@ Objects {
             X: 1400
             Y: -302
             Z: 159
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
@@ -671,101 +963,6 @@ Objects {
           Name: "Rotation"
           Rotator {
             Yaw: 180
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 5251258028689580085
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -0.183422729
-            Y: 7.07106495
-            Z: -32.4265862
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 15.3962088
-            Yaw: -0.847686768
-            Roll: -20.1581726
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 6878946638624220035
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -0.392407745
-            Y: 6.86611748
-            Z: -31.2816982
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 15.3962221
-            Yaw: -0.84765625
-            Roll: -20.1581116
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 11449705317125433992
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: 75
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 11541190853513288523
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1.0816406
-            Y: -10.5678234
-            Z: -31.6019039
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 23.7825394
-            Yaw: -32.7948914
-            Roll: 6.43644571
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 16493672704921518073
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 0.8487854
-            Y: -10.39956
-            Z: -30.455658
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 23.7825394
-            Yaw: -32.7948608
-            Roll: 6.43645763
           }
         }
       }
@@ -1558,7 +1755,7 @@ Objects {
     Overrides {
       Name: "bp:Lower Hemisphere Color"
       Color {
-        R: 0.01
+        G: 0.1
         A: 1
       }
     }
@@ -1691,202 +1888,5 @@ Objects {
   Folder {
     IsFilePartition: true
     FilePartitionName: "Sky Sphere"
-  }
-}
-Objects {
-  Id: 12973355317056269751
-  Name: "\"Halloween Hunt\" Music Construction Kit (Sections) 01"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 3356587786520115648
-    }
-    TeamSettings {
-    }
-    AudioBP {
-      AutoPlay: true
-      Repeat: true
-      Pitch: 300
-      Volume: 0.5
-      Falloff: 3600
-      Radius: 400
-    }
-  }
-}
-Objects {
-  Id: 11392669927433405941
-  Name: "\"Retro Power Rock\" Music Construction Kit (Sections) 01"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  UnregisteredParameters {
-    Overrides {
-      Name: "bp:Type"
-      Enum {
-        Value: "mc:emx_retro_power_rock_sections_kit:28"
-      }
-    }
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Blueprint {
-    BlueprintAsset {
-      Id: 6310529690738152368
-    }
-    TeamSettings {
-    }
-    AudioBP {
-      Repeat: true
-      Volume: 1
-      Falloff: 3600
-      Radius: 400
-    }
-  }
-}
-Objects {
-  Id: 16813558807825262224
-  Name: "Spawn Point"
-  Transform {
-    Location {
-      Z: 115
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  UnregisteredParameters {
-  }
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  PlayerSpawnPoint {
-    TeamInt: 1
-    PlayerScaleMultiplier: 1
-  }
-}
-Objects {
-  Id: 7367735074338159388
-  Name: "Game Settings"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Settings {
-    IsDefault: true
-    GameSettings {
-      ChatMode {
-        Value: "mc:echatmode:teamandall"
-      }
-      ChatSettings {
-        ChatMode {
-          Value: "mc:echatmode:allonly"
-        }
-        ChatPosition {
-          Y: -20
-        }
-        ChatSize {
-          X: 800
-          Y: 300
-        }
-        ChatHorizontalAlignment {
-          Value: "mc:ecorehorizontalalign:center"
-        }
-        ChatVerticalAlignment {
-          Value: "mc:ecoreverticalalign:bottom"
-        }
-      }
-      PhysicsSettings {
-        MinContactOffset: 2
-        MaxContactOffset: 8
-      }
-      RelevanceSettings {
-        key: "decal"
-        value {
-          LowDistance: 4500
-          MediumDistance: 7000
-          HighDistance: 9000
-        }
-      }
-      RelevanceSettings {
-        key: "vfx"
-        value {
-          LowDistance: 4500
-          MediumDistance: 7000
-          HighDistance: 9000
-        }
-      }
-      PlayerInteractDistance: 500
-      PlayerInteractAngleDeg: 50
-    }
   }
 }

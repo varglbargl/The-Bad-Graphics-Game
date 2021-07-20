@@ -53,6 +53,9 @@ function onRatKilled(player)
   if questsCompeted > 0 then
     player:GrantRewardPoints(questsCompeted * 10, "RatKill")
     player:AddResource("RP", questsCompeted * 10)
+    player:AddResource("XP", questsCompeted * 10)
+
+    Events.Broadcast("CheckLevelUp", player)
 
     for i = 1, 10 do
       if player.serverUserData["Quests"][1] and player.serverUserData["Quests"][1] >= 10 then

@@ -191,7 +191,7 @@ Assets {
         ChildIds: 5344869825570593304
         ChildIds: 14442376772136803661
         ChildIds: 15263575611351349156
-        ChildIds: 14987380054735818162
+        ChildIds: 15358199108783837778
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -243,7 +243,7 @@ Assets {
       }
       Objects {
         Id: 14442376772136803661
-        Name: "Text 02: !"
+        Name: "Prism - 6-Sided Half"
         Transform {
           Location {
             Z: 48.9734192
@@ -348,18 +348,19 @@ Assets {
       }
       Objects {
         Id: 15263575611351349156
-        Name: "Text 02: !"
+        Name: "Cube"
         Transform {
           Location {
             Z: 0.961105347
           }
           Rotation {
-            Pitch: -90
-            Roll: 180
+            Pitch: -135
+            Yaw: 90
+            Roll: 90
           }
           Scale {
-            X: 0.12
-            Y: 0.12
+            X: 0.1
+            Y: 0.1
             Z: 0.02
           }
         }
@@ -452,11 +453,10 @@ Assets {
         }
       }
       Objects {
-        Id: 14987380054735818162
-        Name: "Callout Sparkle"
+        Id: 15358199108783837778
+        Name: "Signal Flare"
         Transform {
           Location {
-            Z: -50
           }
           Rotation {
           }
@@ -467,6 +467,44 @@ Assets {
           }
         }
         ParentId: 16244570830671302314
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Sparks"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Smoke"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Central Hot Spot"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Coronal Glow"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Flash"
+            Bool: true
+          }
+          Overrides {
+            Name: "bp:Particle Scale Multiplier"
+            Float: 0.35
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 1
+              G: 1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Local Space"
+            Bool: true
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -481,7 +519,7 @@ Assets {
         }
         Blueprint {
           BlueprintAsset {
-            Id: 16834575711444591888
+            Id: 17754497882593074739
           }
           TeamSettings {
           }
@@ -698,9 +736,9 @@ Assets {
             Roll: -104.002029
           }
           Scale {
-            X: 0.1
-            Y: 0.2
-            Z: 1.1
+            X: 0.0999999791
+            Y: 0.200000092
+            Z: 0.931933403
           }
         }
         ParentId: 1011503542627030541
@@ -1078,12 +1116,12 @@ Assets {
       }
     }
     Assets {
-      Id: 16834575711444591888
-      Name: "Callout Sparkle"
+      Id: 17754497882593074739
+      Name: "Signal Flare"
       PlatformAssetType: 8
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_sparkles_volume_vfx"
+        AssetId: "fxbp_Signal_Flare"
       }
     }
     Assets {

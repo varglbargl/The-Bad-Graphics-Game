@@ -194,6 +194,7 @@ Objects {
     MinDistance: 800
     MaxDistance: 2000
     PositionOffset {
+      X: 1
       Z: -50
     }
     RotationOffset {
