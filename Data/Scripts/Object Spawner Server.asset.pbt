@@ -1,6 +1,6 @@
 Assets {
-  Id: 13057360465055397463
-  Name: "Enemy Rat Server"
+  Id: 635376554485353933
+  Name: "Object Spawner Server"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,31 +11,28 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:ObjectTable"
+        AssetReference {
+          Id: 841534158063459245
+        }
+      }
+      Overrides {
         Name: "cs:SpawnVFX"
         AssetReference {
           Id: 4048767687044730201
         }
       }
       Overrides {
-        Name: "cs:DespawnVFX"
-        AssetReference {
-          Id: 4048767687044730201
-        }
+        Name: "cs:RespawnTime"
+        Float: 30
       }
       Overrides {
-        Name: "cs:Hitbox"
-        ObjectReference {
-        }
+        Name: "cs:RandomSpawnRotation"
+        Bool: false
       }
       Overrides {
-        Name: "cs:Wander"
-        Bool: true
-      }
-      Overrides {
-        Name: "cs:LootDrop"
-        AssetReference {
-          Id: 16108562932233883341
-        }
+        Name: "cs:SpawnOnce"
+        Bool: false
       }
     }
   }

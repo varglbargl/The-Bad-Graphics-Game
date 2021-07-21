@@ -17,28 +17,24 @@ Objects {
   ChildIds: 724324913679364851
   ChildIds: 13429581632254988900
   ChildIds: 15794348866375307406
-  ChildIds: 13523464746032534107
-  ChildIds: 13410151037257972765
   ChildIds: 3188689987035251775
-  ChildIds: 18174600898058180228
-  ChildIds: 13333434867839266172
-  ChildIds: 3350160550469469697
-  ChildIds: 2975833772902388842
-  ChildIds: 10134934267894129664
-  ChildIds: 7203924255105773755
-  ChildIds: 7380113938464739384
-  ChildIds: 3189656499255343447
-  ChildIds: 13458826735868114289
-  ChildIds: 8417511076740722506
-  ChildIds: 940429799832424765
-  ChildIds: 7820281097886967192
-  ChildIds: 17292874734962372016
-  ChildIds: 10222172855987492633
-  ChildIds: 12445343338097033578
-  ChildIds: 5444238021819702538
-  ChildIds: 15162013212123227178
-  ChildIds: 12678772704604320590
-  ChildIds: 4211106929790579287
+  ChildIds: 1406579198303752029
+  ChildIds: 138978463570594018
+  ChildIds: 259873404015117178
+  ChildIds: 11653072511921977762
+  ChildIds: 15232545061297884106
+  ChildIds: 2759225643653524701
+  ChildIds: 1845388588002748122
+  ChildIds: 16777245215017381265
+  ChildIds: 13869929621808721867
+  ChildIds: 246053371067742743
+  ChildIds: 17330984206451750764
+  ChildIds: 3980842754280586020
+  ChildIds: 54866315110131471
+  ChildIds: 5161684161451461446
+  ChildIds: 18168945019108421997
+  ChildIds: 18152420428449356951
+  ChildIds: 7105566064484141277
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -54,16 +50,9 @@ Objects {
   }
 }
 Objects {
-  Id: 4211106929790579287
-  Name: "Destructible Jar"
+  Id: 7105566064484141277
+  Name: "Spear"
   Transform {
-    Location {
-      X: 815
-      Y: -490
-      Z: 1.52587891e-05
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -80,65 +69,35 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 5845038571325297108
-      value {
-        Overrides {
-          Name: "DisableCastShadows"
-          Bool: false
-        }
-        Overrides {
-          Name: "ma:Shared_Detail1:color"
-          Color {
-            R: 1
-            G: 0.5
-            B: 0.5
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "ma:Shared_BaseMaterial:color"
-          Color {
-            R: 0.75
-            G: 0.180000052
-            B: 0.0375000089
-            A: 1
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 13968435029310018508
+      key: 6458459856559832118
       value {
         Overrides {
           Name: "Name"
-          String: "Destructible Jar"
+          String: "Spear"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 750
-            Y: -595
-            Z: 1.52587891e-05
+            X: 904
+            Y: -65
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
     }
     TemplateAsset {
-      Id: 7387608343629949228
+      Id: 1812538127407825237
     }
   }
 }
 Objects {
-  Id: 12678772704604320590
-  Name: "Destructible Jar"
+  Id: 18152420428449356951
+  Name: "Sword"
   Transform {
-    Location {
-      X: 845
-      Y: -615
-      Z: 1.52587891e-05
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -155,65 +114,46 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 5845038571325297108
+      key: 6458459856559832118
       value {
         Overrides {
-          Name: "DisableCastShadows"
-          Bool: false
+          Name: "Name"
+          String: "Sword"
         }
         Overrides {
-          Name: "ma:Shared_Detail1:color"
-          Color {
-            R: 1
-            G: 0.5
-            B: 0.5
-            A: 1
+          Name: "Position"
+          Vector {
+            X: 803
+            Y: -65
           }
         }
         Overrides {
-          Name: "ma:Shared_BaseMaterial:color"
-          Color {
-            R: 0.75
-            G: 0.180000052
-            B: 0.0375000089
-            A: 1
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
     }
     ParameterOverrideMap {
-      key: 13968435029310018508
+      key: 13377200020816463118
       value {
         Overrides {
-          Name: "Name"
-          String: "Destructible Jar"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 815
-            Y: -490
-            Z: 1.52587891e-05
+          Name: "CoreProxy.IndicatorVisibility"
+          Enum {
+            Value: "mc:eindicatorvisibility:alwaysvisible"
           }
         }
       }
     }
     TemplateAsset {
-      Id: 7387608343629949228
+      Id: 5995751101697492025
     }
   }
 }
 Objects {
-  Id: 15162013212123227178
-  Name: "Destructible Jar"
+  Id: 18168945019108421997
+  Name: "Axe"
   Transform {
-    Location {
-      X: 925
-      Y: -555
-      Z: 1.52587891e-05
-    }
-    Rotation {
-    }
     Scale {
       X: 1
       Y: 1
@@ -230,62 +170,49 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 5845038571325297108
+      key: 11633069655001271229
       value {
         Overrides {
-          Name: "DisableCastShadows"
-          Bool: false
-        }
-        Overrides {
-          Name: "ma:Shared_Detail1:color"
-          Color {
-            R: 1
-            G: 0.5
-            B: 0.5
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "ma:Shared_BaseMaterial:color"
-          Color {
-            R: 0.75
-            G: 0.180000052
-            B: 0.0375000089
-            A: 1
+          Name: "CoreProxy.IndicatorVisibility"
+          Enum {
+            Value: "mc:eindicatorvisibility:alwaysvisible"
           }
         }
       }
     }
     ParameterOverrideMap {
-      key: 13968435029310018508
+      key: 13646150952846456020
       value {
         Overrides {
           Name: "Name"
-          String: "Destructible Jar"
+          String: "Axe"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 845
-            Y: -615
-            Z: 1.52587891e-05
+            X: 852
+            Y: -65
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
     }
     TemplateAsset {
-      Id: 7387608343629949228
+      Id: 11645453655226915086
     }
   }
 }
 Objects {
-  Id: 5444238021819702538
-  Name: "Destructible Jar"
+  Id: 5161684161451461446
+  Name: "Rat Spawner"
   Transform {
     Location {
-      X: 950
-      Y: -650
-      Z: 1.52587891e-05
+      X: 626
+      Y: -498
     }
     Rotation {
     }
@@ -296,7 +223,6 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -305,789 +231,266 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 5845038571325297108
+      key: 13325910459065280657
       value {
         Overrides {
-          Name: "DisableCastShadows"
-          Bool: false
+          Name: "Name"
+          String: "Rat Spawner"
         }
         Overrides {
-          Name: "ma:Shared_Detail1:color"
-          Color {
-            R: 1
-            G: 0.5
-            B: 0.5
-            A: 1
+          Name: "Position"
+          Vector {
+            X: 1583
+            Y: -53
           }
         }
         Overrides {
-          Name: "ma:Shared_BaseMaterial:color"
-          Color {
-            R: 0.75
-            G: 0.180000052
-            B: 0.0375000089
-            A: 1
+          Name: "Rotation"
+          Rotator {
           }
         }
       }
     }
+    TemplateAsset {
+      Id: 1451179288321205307
+    }
+  }
+}
+Objects {
+  Id: 54866315110131471
+  Name: "Rat Spawner"
+  Transform {
+    Location {
+      X: 980
+      Y: -846
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
     ParameterOverrideMap {
-      key: 13968435029310018508
+      key: 13325910459065280657
       value {
         Overrides {
           Name: "Name"
-          String: "Destructible Jar"
+          String: "Rat Spawner"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 626
+            Y: -498
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1451179288321205307
+    }
+  }
+}
+Objects {
+  Id: 3980842754280586020
+  Name: "Rat Spawner"
+  Transform {
+    Location {
+      X: 962
+      Y: -596
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 13325910459065280657
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Rat Spawner"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 980
+            Y: -846
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1451179288321205307
+    }
+  }
+}
+Objects {
+  Id: 17330984206451750764
+  Name: "Rat Spawner"
+  Transform {
+    Location {
+      X: 1116
+      Y: 76
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 13325910459065280657
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Rat Spawner"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 962
+            Y: -596
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1451179288321205307
+    }
+  }
+}
+Objects {
+  Id: 246053371067742743
+  Name: "Rat Spawner"
+  Transform {
+    Location {
+      X: 870
+      Y: 300
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 13325910459065280657
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Rat Spawner"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 1116
+            Y: 76
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1451179288321205307
+    }
+  }
+}
+Objects {
+  Id: 13869929621808721867
+  Name: "Level Segment - 4-Way"
+  Transform {
+    Location {
+      X: 1875
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1.25
+      Y: 1.25
+      Z: 1.25
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 144507038503807111
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Level Segment - 4-Way"
         }
         Overrides {
           Name: "Position"
           Vector {
             X: 925
-            Y: -555
-            Z: 1.52587891e-05
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7387608343629949228
-    }
-  }
-}
-Objects {
-  Id: 12445343338097033578
-  Name: "Destructible Jar"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5845038571325297108
-      value {
-        Overrides {
-          Name: "DisableCastShadows"
-          Bool: false
-        }
-        Overrides {
-          Name: "ma:Shared_Detail1:color"
-          Color {
-            R: 1
-            G: 0.5
-            B: 0.5
-            A: 1
-          }
-        }
-        Overrides {
-          Name: "ma:Shared_BaseMaterial:color"
-          Color {
-            R: 0.75
-            G: 0.180000052
-            B: 0.0375000089
-            A: 1
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 13968435029310018508
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Destructible Jar"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 950
-            Y: -650
-            Z: 1.52587891e-05
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7387608343629949228
-    }
-  }
-}
-Objects {
-  Id: 10222172855987492633
-  Name: "Quest - Wanted Poster"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 15049718848827633436
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Quest - Wanted Poster"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1400
-            Y: -302
-            Z: 159
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 4555270158870941161
-    }
-  }
-}
-Objects {
-  Id: 17292874734962372016
-  Name: "Good Graphics Rat"
-  Transform {
-    Location {
-      X: 2203.03687
-      Y: -311.51944
-      Z: -4.57763672e-05
-    }
-    Rotation {
-      Yaw: -179.999985
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5022282794013977737
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Good Graphics Rat"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 3351.56421
-            Y: 7.71675873
-            Z: -4.57763672e-05
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 180
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 5251258028689580085
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -0.183422729
-            Y: 7.07106495
-            Z: -32.4265862
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 15.3962088
-            Yaw: -0.847686768
-            Roll: -20.1581726
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 6878946638624220035
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -0.392407745
-            Y: 6.86611748
-            Z: -31.2816982
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 15.3962221
-            Yaw: -0.84765625
-            Roll: -20.1581116
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 11449705317125433992
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: 75
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 11541190853513288523
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1.0816406
-            Y: -10.5678234
-            Z: -31.6019039
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 23.7825394
-            Yaw: -32.7948914
-            Roll: 6.43644571
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 16493672704921518073
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 0.8487854
-            Y: -10.39956
-            Z: -30.455658
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 23.7825394
-            Yaw: -32.7948608
-            Roll: 6.43645763
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 757257612037628633
-    }
-  }
-}
-Objects {
-  Id: 7820281097886967192
-  Name: "Good Graphics Rat"
-  Transform {
-    Location {
-      X: 2699.29517
-      Y: 85.9488907
-      Z: -1.52587891e-05
-    }
-    Rotation {
-      Yaw: -179.999985
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5022282794013977737
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Good Graphics Rat"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 2203.03687
-            Y: -311.51944
-            Z: -4.57763672e-05
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 180
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 5251258028689580085
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -0.183422729
-            Y: 7.07106495
-            Z: -32.4265862
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 15.3962088
-            Yaw: -0.847686768
-            Roll: -20.1581726
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 6878946638624220035
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -0.392407745
-            Y: 6.86611748
-            Z: -31.2816982
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 15.3962221
-            Yaw: -0.84765625
-            Roll: -20.1581116
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 11449705317125433992
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            Z: 75
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 11541190853513288523
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1.0816406
-            Y: -10.5678234
-            Z: -31.6019039
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 23.7825394
-            Yaw: -32.7948914
-            Roll: 6.43644571
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 16493672704921518073
-      value {
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 0.8487854
-            Y: -10.39956
-            Z: -30.455658
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Pitch: 23.7825394
-            Yaw: -32.7948608
-            Roll: 6.43645763
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 757257612037628633
-    }
-  }
-}
-Objects {
-  Id: 940429799832424765
-  Name: "Good Graphics Rat"
-  Transform {
-    Location {
-      X: 1779.17603
-      Y: 5.01180267
-      Z: -1.52587891e-05
-    }
-    Rotation {
-      Yaw: -179.999985
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5022282794013977737
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Good Graphics Rat"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 2699.29517
-            Y: 85.9488907
-            Z: -1.52587891e-05
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 180
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 757257612037628633
-    }
-  }
-}
-Objects {
-  Id: 8417511076740722506
-  Name: "Good Graphics Rat"
-  Transform {
-    Location {
-      X: 791.377869
-      Y: 146.476013
-      Z: -4.57763672e-05
-    }
-    Rotation {
-      Yaw: -179.999985
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5022282794013977737
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Good Graphics Rat"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1779.17603
-            Y: 5.01180267
-            Z: -1.52587891e-05
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 180
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 757257612037628633
-    }
-  }
-}
-Objects {
-  Id: 13458826735868114289
-  Name: "Good Graphics Rat"
-  Transform {
-    Location {
-      X: 332.698334
-      Y: -213.905396
-      Z: -1.52587891e-05
-    }
-    Rotation {
-      Yaw: -179.999985
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  WantsNetworking: true
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5022282794013977737
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Good Graphics Rat"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 791.377869
-            Y: 146.476013
-            Z: -4.57763672e-05
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 180
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 757257612037628633
-    }
-  }
-}
-Objects {
-  Id: 3189656499255343447
-  Name: "Level Segment - Dead End 1"
-  Transform {
-    Location {
-      X: -750
-      Y: 25
-    }
-    Rotation {
-      Yaw: -179.999985
-    }
-    Scale {
-      X: 1
-      Y: -1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 4398763397678270665
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Level Segment - Dead End 1"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 4500
-            Y: 25
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: -1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 9681811192528342132
-    }
-  }
-}
-Objects {
-  Id: 7380113938464739384
-  Name: "Level Segment - Dead End 1"
-  Transform {
-    Location {
-      X: 2250
-      Y: -750
-    }
-    Rotation {
-      Yaw: -89.9999924
-    }
-    Scale {
-      X: 1
-      Y: -1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 4398763397678270665
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Level Segment - Dead End 1"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: -750
-            Y: 25
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 180
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: -1
-            Z: 1
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 9681811192528342132
-    }
-  }
-}
-Objects {
-  Id: 7203924255105773755
-  Name: "Level Segment - Dead End 1"
-  Transform {
-    Location {
-      X: 2250
-      Y: 750
-    }
-    Rotation {
-      Yaw: 89.9999924
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 4398763397678270665
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Level Segment - Dead End 1"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 2250
-            Y: -750
+            Y: -938
           }
         }
         Overrides {
@@ -1099,33 +502,30 @@ Objects {
         Overrides {
           Name: "Scale"
           Vector {
-            X: 1
-            Y: -1
-            Z: 1
+            X: 1.25
+            Y: 1.25
+            Z: 1.25
           }
         }
       }
     }
     TemplateAsset {
-      Id: 9681811192528342132
+      Id: 7753719261458182956
     }
   }
 }
 Objects {
-  Id: 10134934267894129664
-  Name: "Level Segment - Dead End 1"
+  Id: 16777245215017381265
+  Name: "Level Segment - 4-Way"
   Transform {
     Location {
-      X: 750
-      Y: 750
     }
     Rotation {
-      Yaw: 89.9999924
     }
     Scale {
-      X: 1
-      Y: 1
-      Z: 1
+      X: 1.25
+      Y: 1.25
+      Z: 1.25
     }
   }
   ParentId: 4781671109827199097
@@ -1137,50 +537,47 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 4398763397678270665
+      key: 144507038503807111
       value {
         Overrides {
           Name: "Name"
-          String: "Level Segment - Dead End 1"
+          String: "Level Segment - 4-Way"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 750
-            Y: -750
+            X: 1875
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -90
           }
         }
         Overrides {
           Name: "Scale"
           Vector {
-            X: 1
-            Y: -1
-            Z: 1
+            X: 1.25
+            Y: 1.25
+            Z: 1.25
           }
         }
       }
     }
     TemplateAsset {
-      Id: 9681811192528342132
+      Id: 7753719261458182956
     }
   }
 }
 Objects {
-  Id: 2975833772902388842
-  Name: "Level Segment - Dead End 1"
+  Id: 1845388588002748122
+  Name: "Destructible Spawner"
   Transform {
     Location {
-      X: 3750
-      Y: 750
+      X: 690
+      Y: -480
     }
     Rotation {
-      Yaw: 89.9999924
     }
     Scale {
       X: 1
@@ -1197,50 +594,40 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 4398763397678270665
+      key: 9159165566106103579
       value {
         Overrides {
           Name: "Name"
-          String: "Level Segment - Dead End 1"
+          String: "Destructible Spawner"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 3750
-            Y: -750
+            X: 1195
+            Y: -270
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: -90
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: -1
-            Z: 1
           }
         }
       }
     }
     TemplateAsset {
-      Id: 9681811192528342132
+      Id: 16483773504078787535
     }
   }
 }
 Objects {
-  Id: 3350160550469469697
-  Name: "Level Segment - Dead End 1"
+  Id: 2759225643653524701
+  Name: "Destructible Spawner"
   Transform {
     Location {
-      X: 2250
-      Y: 750
+      X: 525
+      Y: -510
     }
     Rotation {
-      Yaw: 89.9999924
     }
     Scale {
       X: 1
@@ -1257,42 +644,40 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 4398763397678270665
+      key: 9159165566106103579
       value {
         Overrides {
           Name: "Name"
-          String: "Level Segment - Dead End 1"
+          String: "Destructible Spawner"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 3750
-            Y: 750
+            X: 1065
+            Y: -275
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 90
           }
         }
       }
     }
     TemplateAsset {
-      Id: 9681811192528342132
+      Id: 16483773504078787535
     }
   }
 }
 Objects {
-  Id: 13333434867839266172
-  Name: "Level Segment - Dead End 1"
+  Id: 15232545061297884106
+  Name: "Destructible Spawner"
   Transform {
     Location {
-      X: 750
-      Y: 750
+      X: 620
+      Y: -605
     }
     Rotation {
-      Yaw: 89.9999924
     }
     Scale {
       X: 1
@@ -1309,35 +694,134 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 4398763397678270665
+      key: 9159165566106103579
       value {
         Overrides {
           Name: "Name"
-          String: "Level Segment - Dead End 1"
+          String: "Destructible Spawner"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 2250
-            Y: 750
+            X: 900
+            Y: -305
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 90
           }
         }
       }
     }
     TemplateAsset {
-      Id: 9681811192528342132
+      Id: 16483773504078787535
     }
   }
 }
 Objects {
-  Id: 18174600898058180228
-  Name: "Good Graphics Rat"
+  Id: 11653072511921977762
+  Name: "Destructible Spawner"
+  Transform {
+    Location {
+      X: 765
+      Y: -605
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9159165566106103579
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Destructible Spawner"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 995
+            Y: -400
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16483773504078787535
+    }
+  }
+}
+Objects {
+  Id: 259873404015117178
+  Name: "Destructible Spawner"
+  Transform {
+    Location {
+      X: 925
+      Y: -605
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9159165566106103579
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Destructible Spawner"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 1140
+            Y: -400
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16483773504078787535
+    }
+  }
+}
+Objects {
+  Id: 138978463570594018
+  Name: "Destructible Spawner"
   Transform {
     Scale {
       X: 1
@@ -1346,7 +830,6 @@ Objects {
     }
   }
   ParentId: 4781671109827199097
-  WantsNetworking: true
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1355,30 +838,72 @@ Objects {
   }
   TemplateInstance {
     ParameterOverrideMap {
-      key: 5022282794013977737
+      key: 9159165566106103579
       value {
         Overrides {
           Name: "Name"
-          String: "Good Graphics Rat"
+          String: "Destructible Spawner"
         }
         Overrides {
           Name: "Position"
           Vector {
-            X: 332.698334
-            Y: -213.905396
-            Z: -1.52587891e-05
+            X: 1354
+            Y: -216
           }
         }
         Overrides {
           Name: "Rotation"
           Rotator {
-            Yaw: 180
           }
         }
       }
     }
     TemplateAsset {
-      Id: 757257612037628633
+      Id: 16483773504078787535
+    }
+  }
+}
+Objects {
+  Id: 1406579198303752029
+  Name: "Rat Spawner"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 13325910459065280657
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Rat Spawner"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: 870
+            Y: 300
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 1451179288321205307
     }
   }
 }
@@ -1410,8 +935,8 @@ Objects {
         Overrides {
           Name: "Position"
           Vector {
-            X: 750
-            Y: 750
+            X: 925
+            Y: 937
           }
         }
         Overrides {
@@ -1420,105 +945,18 @@ Objects {
             Yaw: 90
           }
         }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.25
+            Y: 1.25
+            Z: 1.25
+          }
+        }
       }
     }
     TemplateAsset {
       Id: 9681811192528342132
-    }
-  }
-}
-Objects {
-  Id: 13410151037257972765
-  Name: "Level Segment - 4-Way"
-  Transform {
-    Location {
-      X: 2000
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 144507038503807111
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Level Segment - 4-Way"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 3000
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7753719261458182956
-    }
-  }
-}
-Objects {
-  Id: 13523464746032534107
-  Name: "Level Segment - 4-Way"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 144507038503807111
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Level Segment - 4-Way"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1500
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7753719261458182956
     }
   }
 }
@@ -1555,6 +993,14 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1.25
+            Y: 1.25
+            Z: 1.25
           }
         }
       }

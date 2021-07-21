@@ -5,7 +5,7 @@ Objects {
   Name: "That Beautiful Bean Footage"
   Transform {
     Location {
-      X: 14
+      X: 13
       Z: 2.5
     }
     Rotation {
@@ -189,17 +189,18 @@ Objects {
   Camera {
     UseAsDefault: true
     AttachToLocalPlayer: true
-    InitialDistance: 1000
+    InitialDistance: 800
     IsDistanceAdjustable: true
-    MinDistance: 800
+    MinDistance: 300
     MaxDistance: 2000
     PositionOffset {
       X: 1
-      Z: -50
+      Y: 50
+      Z: -25
     }
     RotationOffset {
     }
-    FieldOfView: 75
+    FieldOfView: 80
     ViewWidth: 1200
     RotationMode {
       Value: "mc:erotationmode:lookangle"

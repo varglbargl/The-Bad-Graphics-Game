@@ -12,5 +12,25 @@ Assets {
       VirtualFolderPath: "Weapons"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Destructibles"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Item Tables"
+      PlatformAssetType: 3
+    }
+    Folders {
+      VirtualFolderPath: "Quest Givers"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Spawners"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Consumables"
+      PlatformAssetType: 5
+    }
   }
 }

@@ -1,13 +1,13 @@
 Assets {
-  Id: 7387608343629949228
-  Name: "Destructible Jar"
+  Id: 16483773504078787535
+  Name: "Destructible Spawner"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 13968435029310018508
+      RootId: 9159165566106103579
       Objects {
-        Id: 13968435029310018508
-        Name: "Destructible Jar"
+        Id: 9159165566106103579
+        Name: "Destructible Spawner"
         Transform {
           Scale {
             X: 1
@@ -16,10 +16,8 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 5845038571325297108
-        ChildIds: 7032237904561269143
-        ChildIds: 6145394261888296787
-        WantsNetworking: true
+        ChildIds: 9021658762762813790
+        ChildIds: 6562356052527918151
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -37,7 +35,84 @@ Assets {
         }
       }
       Objects {
-        Id: 5845038571325297108
+        Id: 9021658762762813790
+        Name: "Object Spawner Server"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9159165566106103579
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:ObjectTable"
+            AssetReference {
+              Id: 8821218626252094872
+            }
+          }
+          Overrides {
+            Name: "cs:RespawnTime"
+            Float: 30
+          }
+          Overrides {
+            Name: "cs:RandomSpawnRotation"
+            Bool: false
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 635376554485353933
+          }
+        }
+      }
+      Objects {
+        Id: 6562356052527918151
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9159165566106103579
+        ChildIds: 17421431126574221446
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 17421431126574221446
         Name: "Fantasy Clay Pot 02"
         Transform {
           Location {
@@ -50,39 +125,38 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13968435029310018508
+        ParentId: 6562356052527918151
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
             AssetReference {
-              Id: 2555807082249945326
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 1
-              G: 0.235825
-              A: 1
+              Id: 3278701737571183783
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:id"
             AssetReference {
-              Id: 2555807082249945326
+              Id: 1639504043917405461
             }
           }
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
               R: 1
-              G: 0.721076131
-              B: 0.635
+              G: 0.400000036
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 0.400000036
               A: 1
             }
           }
         }
-        WantsNetworking: true
+        Lifespan: 0.001
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -112,93 +186,6 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 7032237904561269143
-        Name: "Hitbox"
-        Transform {
-          Location {
-            Z: 100
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1.5
-          }
-        }
-        ParentId: 13968435029310018508
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Trigger {
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:box"
-          }
-        }
-      }
-      Objects {
-        Id: 6145394261888296787
-        Name: "Destructible Prop Server"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13968435029310018508
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:Hitbox"
-            ObjectReference {
-              SubObjectId: 7032237904561269143
-            }
-          }
-          Overrides {
-            Name: "cs:DestroyVFX"
-            AssetReference {
-              Id: 9467663329305447255
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 3770894354438221197
-          }
-        }
-      }
     }
     Assets {
       Id: 8985846431173858098
@@ -209,10 +196,29 @@ Assets {
         AssetId: "sm_prop_fantasy_clay_pot_002_ref"
       }
     }
+    Assets {
+      Id: 3278701737571183783
+      Name: "Basic Hologram"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_basic_hologram"
+      }
+    }
+    Assets {
+      Id: 1639504043917405461
+      Name: "Glitchy Hologram"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "fxmi_hologram"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
   SerializationVersion: 92
+  VirtualFolderPath: "Spawners"
 }

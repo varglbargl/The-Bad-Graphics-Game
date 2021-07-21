@@ -1,29 +1,29 @@
 Assets {
-  Id: 3770894354438221197
-  Name: "Destructible Prop Server"
+  Id: 14687980911239174060
+  Name: "Dropped Loot Server"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
       Overrides {
-        Name: "cs:Hitbox"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:DestroyVFX"
+        Name: "cs:LootTable"
         AssetReference {
           Id: 841534158063459245
         }
       }
       Overrides {
-        Name: "cs:LootDrop"
+        Name: "cs:DroppedLoot"
         AssetReference {
-          Id: 16108562932233883341
+          Id: 841534158063459245
         }
       }
       Overrides {
-        Name: "cs:LootDropChance"
-        Float: 0.75
+        Name: "cs:PickupTrigger"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:DroppedLoot:isrep"
+        Bool: true
       }
     }
   }

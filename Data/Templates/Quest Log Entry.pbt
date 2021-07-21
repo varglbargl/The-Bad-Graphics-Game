@@ -101,7 +101,7 @@ Assets {
               B: 0.640000045
               A: 1
             }
-            Size: 24
+            Size: 22
             Justification {
               Value: "mc:etextjustify:left"
             }

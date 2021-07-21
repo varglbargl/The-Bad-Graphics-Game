@@ -420,6 +420,10 @@ Objects {
       Name: "bp:High Percent"
       Float: 100
     }
+    Overrides {
+      Name: "bp:Unbounded"
+      Bool: true
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

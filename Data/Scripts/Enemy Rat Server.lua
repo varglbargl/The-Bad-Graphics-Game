@@ -7,6 +7,8 @@ local DESPAWN_VFX = script:GetCustomProperty("DespawnVFX")
 local WANDER = script:GetCustomProperty("Wander")
 local HITBOX = script:GetCustomProperty("Hitbox"):WaitForObject()
 
+local LOOT_DROP = script:GetCustomProperty("LootDrop")
+
 local isDead = false
 local isFighting = false
 local maxHitPoints = 5
@@ -32,19 +34,6 @@ local defaultScale = enemy:GetWorldScale()
 
 enemy:SetWorldScale(Vector3.ONE * 0.25)
 enemy:ScaleTo(defaultScale, 0.2)
-
-function areTherePlayersNearby()
-  local players = Game.GetPlayers()
-
-  for _, player in ipairs(players) do
-    if Object.IsValid(player) and (player:GetWorldPosition() - spawnPoint).size < 8000 then
-      -- return "i hate players"
-      return true
-    end
-  end
-
-  return false
-end
 
 function startFighting(player)
   -- print("Oh ho ho you are so going down, "..player.name.."!")
@@ -143,6 +132,10 @@ function die(killer, damage)
 
   Events.Broadcast("RatKilled", isFighting)
 
+  if LOOT_DROP and math.random() < 0.75 then
+    World.SpawnAsset(LOOT_DROP, {position = enemy:GetWorldPosition()})
+  end
+
   Task.Spawn(function()
     if not Object.IsValid(enemy) then return end
     enemy:MoveTo(enemy:GetWorldPosition() + Vector3.UP * 25, 1)
@@ -155,33 +148,7 @@ function die(killer, damage)
     if not Object.IsValid(enemy) then return end
 
     enemy:Destroy()
-    respawn()
   end)
-end
-
-function despawn()
-  -- print("K, well if nobody needs me imma head back to hell. Peace.")
-
-  isDead = true
-  enemy:Destroy()
-  Task.Spawn(respawn)
-end
-
-function respawn()
-  Task.Wait(math.random(5, 10))
-
-  if areTherePlayersNearby() then
-    if SPAWN_VFX then
-      World.SpawnAsset(SPAWN_VFX, {position = spawnPoint})
-    end
-
-    World.SpawnAsset(myTemplateId, {position = spawnPoint, rotation = spawnRotation})
-    return
-  end
-
-  -- print("Guess I'll just wait here. Being dead.")
-
-  respawn()
 end
 
 function onWeaponHit(thisEnemy, weapon, damage)
@@ -213,11 +180,6 @@ Events.Connect("WeaponHit", onWeaponHit)
 function wanderLoop()
   Task.Wait(math.random(20, 80) / 10)
   if isFighting or isDead or not Object.IsValid(enemy) then return end
-
-  if areTherePlayersNearby() == false then
-    despawn()
-    return
-  end
 
   local toVector = Utils.groundBelowPoint(enemy:GetWorldPosition() + Rotation.New(0, 0, math.random(360)) * Vector3.FORWARD * 500)
   local fromVector = enemy:GetWorldPosition()

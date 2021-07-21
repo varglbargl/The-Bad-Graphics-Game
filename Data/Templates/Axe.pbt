@@ -87,7 +87,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.25
+            Duration: 0.4
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -120,7 +120,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.75
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -169,7 +169,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.25
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -202,7 +202,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.75
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -478,7 +478,6 @@ Assets {
         Transform {
           Location {
             X: 14.2275391
-            Y: -0.80078125
             Z: 61.3889465
           }
           Rotation {
@@ -487,7 +486,7 @@ Assets {
           Scale {
             X: -0.508583367
             Y: 0.123823039
-            Z: 0.0242360439
+            Z: 0.0147492113
           }
         }
         ParentId: 8317944665994324292
@@ -685,7 +684,6 @@ Assets {
         Transform {
           Location {
             X: -5.03027344
-            Y: -0.80078125
             Z: 61.3889465
           }
           Rotation {

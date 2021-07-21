@@ -26,7 +26,7 @@ local myXP = clientPlayer:GetResource("XP") or "nothin"
 PLAYER_NAME.text = clientPlayer.name
 
 function onResourceChanged(player, name, newTotal)
-  print(clientPlayer.name.."'s "..name.." changed to "..newTotal.."!")
+  -- print(clientPlayer.name.."'s "..name.." changed to "..newTotal.."!")
   if name == "HitPoints" then
 
     if myHitPoints ~= "nothin" then
@@ -82,7 +82,6 @@ function onResourceChanged(player, name, newTotal)
 end
 
 function onPrivateNetworkedDataChanged(player, key)
-  print("Hello, "..key)
   if player ~= clientPlayer then return end
 
   local data = clientPlayer:GetPrivateNetworkedData(key)

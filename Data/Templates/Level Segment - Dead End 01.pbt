@@ -10,9 +10,9 @@ Assets {
         Name: "Level Segment - Dead End 1"
         Transform {
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 1.49999988
+            Y: 1.49999988
+            Z: 1.49999988
           }
         }
         ParentId: 4781671109827199097

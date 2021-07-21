@@ -1,4 +1,13 @@
 Assets {
+  Id: 18386794418993039384
+  Name: "Fantasy Spell Ingredient 045"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ingredient_045"
+  }
+}
+Assets {
   Id: 17942071526168833637
   Name: "Icon Health"
   PlatformAssetType: 9
@@ -14,6 +23,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Medal"
+  }
+}
+Assets {
+  Id: 17704998120967896620
+  Name: "Fantasy Staff 022"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Weapon_Staff_022"
   }
 }
 Assets {
@@ -41,6 +59,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Ingredient_030"
+  }
+}
+Assets {
+  Id: 17058500323962540517
+  Name: "Fantasy Rune 003"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Rune_003"
   }
 }
 Assets {
@@ -107,6 +134,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13077568766725449866
+  Name: "Sci-fi 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Scifi_Fill_006"
+  }
+}
+Assets {
   Id: 12937392106759985119
   Name: "Fantasy Spell Ingredient 026"
   PlatformAssetType: 9
@@ -122,6 +158,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_Boom"
+  }
+}
+Assets {
+  Id: 12632535568444859210
+  Name: "Icon Settings"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Settings"
   }
 }
 Assets {
@@ -149,15 +194,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Japan_Frame_002"
-  }
-}
-Assets {
-  Id: 10311656782357036679
-  Name: "Fantasy Ability Purple 004"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Fantasy_Ability_Purple_004"
   }
 }
 Assets {
@@ -206,12 +242,39 @@ Assets {
   }
 }
 Assets {
+  Id: 6630271963401488717
+  Name: "Fantasy Spear 007"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Weapon_Spear_007"
+  }
+}
+Assets {
   Id: 6122218759817200947
   Name: "Moon"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Icon_Moon"
+  }
+}
+Assets {
+  Id: 6018683890755542423
+  Name: "Icon Manticore"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Manticore"
+  }
+}
+Assets {
+  Id: 5921517963594042962
+  Name: "Frame Beveled 002"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "FrameSolid8px__019"
   }
 }
 Assets {
@@ -233,12 +296,48 @@ Assets {
   }
 }
 Assets {
+  Id: 4443480492449358430
+  Name: "Fantasy Jewelry 026"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Jewelry_026"
+  }
+}
+Assets {
   Id: 3538782503367545712
   Name: "BG Flat 003"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_21"
+  }
+}
+Assets {
+  Id: 3300674950980942385
+  Name: "Oswald Italic"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "OswaldItalic_ref"
+  }
+}
+Assets {
+  Id: 2842631969599840963
+  Name: "Fantasy Chain 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Chain_001"
+  }
+}
+Assets {
+  Id: 2763568895965979007
+  Name: "Military Ability Knife Throw"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Military_Ability_Red_002"
   }
 }
 Assets {
@@ -278,12 +377,30 @@ Assets {
   }
 }
 Assets {
+  Id: 2119859817031573225
+  Name: "Fantasy Wood 001"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Wood_001"
+  }
+}
+Assets {
   Id: 1573984263008615084
   Name: "BG Highlighted 001"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundHighlighted_020"
+  }
+}
+Assets {
+  Id: 1512378671597293956
+  Name: "Fantasy Ability Red 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Ability_Red_005"
   }
 }
 Assets {
@@ -296,11 +413,11 @@ Assets {
   }
 }
 Assets {
-  Id: 1130646137273858739
-  Name: "Sci-fi Gear Gloves 009"
+  Id: 320202076602979643
+  Name: "Fantasy Ability Red 008"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_SciFi_Gear_Gloves_009"
+    AssetId: "UI_Fantasy_Ability_Red_008"
   }
 }

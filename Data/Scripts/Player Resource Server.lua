@@ -84,11 +84,7 @@ end
 function onRatKilled(player)
   if not Object.IsValid(player) then return end
 
-  local amount = math.random(1, 3)
-
   player:AddResource("XP", 1)
-  player:GrantRewardPoints(amount, "RatKill")
-  player:AddResource("RP", amount)
 
   checkLevelUp(player)
 end

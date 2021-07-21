@@ -1,0 +1,87 @@
+Assets {
+  Id: 8107474354997449738
+  Name: "Bad Graphics Flat"
+  PlatformAssetType: 13
+  SerializationVersion: 92
+  CustomMaterialAsset {
+    BaseMaterialId: 658768278076456267
+    ParameterOverrides {
+      Overrides {
+        Name: "faceted"
+        Bool: true
+      }
+      Overrides {
+        Name: "metallic"
+        Float: 0
+      }
+      Overrides {
+        Name: "specular"
+        Float: 0
+      }
+      Overrides {
+        Name: "roughness"
+        Float: 2
+      }
+      Overrides {
+        Name: "emissive_boost"
+        Float: 0
+      }
+      Overrides {
+        Name: "color"
+        Color {
+          R: 0.132
+          G: 0.0351999961
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "fresnel_color"
+        Color {
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "fresnel_emissive_boost"
+        Float: 0
+      }
+      Overrides {
+        Name: "fresnel_sharpness"
+        Float: 1
+      }
+      Overrides {
+        Name: "gradient_worldspace"
+        Bool: true
+      }
+      Overrides {
+        Name: "gradient_shift"
+        Float: 0
+      }
+      Overrides {
+        Name: "gradient_falloff"
+        Float: 1
+      }
+      Overrides {
+        Name: "gradient_color"
+        Color {
+          R: 0.25
+          G: 0.1875
+          B: 0.1875
+          A: 1
+        }
+      }
+      Overrides {
+        Name: "fresnel_power"
+        Float: 0
+      }
+    }
+    Assets {
+      Id: 658768278076456267
+      Name: "Advanced Material"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "universal_material_001"
+      }
+    }
+  }
+}
