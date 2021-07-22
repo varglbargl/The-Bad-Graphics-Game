@@ -92,12 +92,17 @@ function onPrivateNetworkedDataChanged(player, key)
 
       local stat1, stat2, stat3 = Utils.getRandomStats()
 
-      Chat.LocalMessage(" ")
-      Chat.LocalMessage("You gained a level! You are now a Level "..myLevel.." "..data..[[!]])
+      Chat.LocalMessage("     You gained a level! You are now a Level "..myLevel.." "..data..[[!]])
       Chat.LocalMessage("       +"..math.random(1, 4).." "..stat1)
       Chat.LocalMessage("       +"..math.random(1, 4).." "..stat2)
       Chat.LocalMessage("        -"..math.random(1, 3).." "..stat3)
-      Chat.LocalMessage(" ")
+
+      Events.Broadcast("LeveledUp")
+
+      if math.random() < 0.5 then
+        Events.Broadcast("NewGear")
+      end
+
     else
       myRank = data
       PLAYER_RANK.text = myRank

@@ -10,6 +10,12 @@ Assets {
           Id: 16574734029457462020
         }
       }
+      Overrides {
+        Name: "cs:CompletedSFX"
+        AssetReference {
+          Id: 14428918965797542220
+        }
+      }
     }
   }
   SerializationVersion: 92

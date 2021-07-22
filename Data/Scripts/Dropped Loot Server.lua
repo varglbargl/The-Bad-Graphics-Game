@@ -4,6 +4,8 @@ local PICKUP_TRIGGER = script:GetCustomProperty("PickupTrigger"):WaitForObject()
 
 local loot = LootTable[math.random(1, #LootTable)]
 
+PICKUP_TRIGGER.collision = Collision.FORCE_OFF
+
 function getYeLoot(thisTrigger, other)
   if not Object.IsValid(other) or not other:IsA("Player") then return end
 
@@ -30,3 +32,7 @@ else
 end
 
 script:SetNetworkedCustomProperty("DroppedLoot", loot)
+
+Task.Wait()
+
+PICKUP_TRIGGER.collision = Collision.FORCE_ON

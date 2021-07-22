@@ -1,13 +1,13 @@
 Assets {
-  Id: 274740592448854294
-  Name: "RP Coin"
+  Id: 3520794448876378027
+  Name: "RP Coin Stack"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 17073167480929587260
+      RootId: 6052349134032260063
       Objects {
-        Id: 17073167480929587260
-        Name: "RP Coin"
+        Id: 6052349134032260063
+        Name: "RP Coin Stack"
         Transform {
           Scale {
             X: 1
@@ -16,8 +16,8 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 12555672650013800056
-        ChildIds: 4479777417088167026
+        ChildIds: 13683615892692217544
+        ChildIds: 12657344976250341757
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -39,7 +39,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12555672650013800056
+        Id: 13683615892692217544
         Name: "Collectible Server"
         Transform {
           Location {
@@ -52,7 +52,17 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17073167480929587260
+        ParentId: 6052349134032260063
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:MinAmount"
+            Int: 4
+          }
+          Overrides {
+            Name: "cs:MaxAmount"
+            Int: 7
+          }
+        }
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -73,7 +83,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4479777417088167026
+        Id: 12657344976250341757
         Name: "ClientContext"
         Transform {
           Location {
@@ -86,11 +96,15 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 17073167480929587260
-        ChildIds: 4297476661660317828
-        ChildIds: 11823833101228106235
-        ChildIds: 1310887816374901589
-        ChildIds: 5653337688479880145
+        ParentId: 6052349134032260063
+        ChildIds: 12560906745071173966
+        ChildIds: 12123772591612528233
+        ChildIds: 10486737853227185864
+        ChildIds: 8116518522951080336
+        ChildIds: 5429994281452556071
+        ChildIds: 4322135462839471103
+        ChildIds: 5064284263068028620
+        ChildIds: 13460228244263201708
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -108,11 +122,11 @@ Assets {
         }
       }
       Objects {
-        Id: 4297476661660317828
+        Id: 12560906745071173966
         Name: "Pipe - 8-Sided"
         Transform {
           Location {
-            Y: -5.68968964
+            Y: 3.99999619
             Z: 28
           }
           Rotation {
@@ -124,7 +138,7 @@ Assets {
             Z: 0.111244701
           }
         }
-        ParentId: 4479777417088167026
+        ParentId: 12657344976250341757
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -172,12 +186,12 @@ Assets {
         }
       }
       Objects {
-        Id: 11823833101228106235
+        Id: 12123772591612528233
         Name: "Text 01: R"
         Transform {
           Location {
             X: -17.3778076
-            Y: -6.07840729
+            Y: 3.61127853
             Z: 17.4939575
           }
           Rotation {
@@ -188,7 +202,7 @@ Assets {
             Z: 0.320000023
           }
         }
-        ParentId: 4479777417088167026
+        ParentId: 12657344976250341757
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -280,12 +294,12 @@ Assets {
         }
       }
       Objects {
-        Id: 1310887816374901589
+        Id: 10486737853227185864
         Name: "Text 01: P"
         Transform {
           Location {
-            X: 3.42218018
-            Y: -6.07840729
+            X: 3.42211914
+            Y: 3.61127853
             Z: 17.4939575
           }
           Rotation {
@@ -296,7 +310,7 @@ Assets {
             Z: 0.320000023
           }
         }
-        ParentId: 4479777417088167026
+        ParentId: 12657344976250341757
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -388,11 +402,11 @@ Assets {
         }
       }
       Objects {
-        Id: 5653337688479880145
+        Id: 8116518522951080336
         Name: "Prism - 8-Sided"
         Transform {
           Location {
-            Y: -1.52587891e-05
+            Y: 9.68967438
             Z: 28
           }
           Rotation {
@@ -404,7 +418,267 @@ Assets {
             Z: 0.0683980212
           }
         }
-        ParentId: 4479777417088167026
+        ParentId: 12657344976250341757
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2555807082249945326
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.50728476
+              G: 0.0699999928
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7477259265191497219
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 5429994281452556071
+        Name: "Pipe - 8-Sided"
+        Transform {
+          Location {
+            X: -16
+            Y: -8.00000763
+            Z: 35.9999962
+          }
+          Rotation {
+            Roll: 89.9999771
+          }
+          Scale {
+            X: 0.587802827
+            Y: 0.587802649
+            Z: 0.111244701
+          }
+        }
+        ParentId: 12657344976250341757
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2555807082249945326
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.50728476
+              G: 0.0699999928
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7076138976984581420
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 4322135462839471103
+        Name: "Prism - 8-Sided"
+        Transform {
+          Location {
+            X: -16
+            Y: -2.31032562
+            Z: 35.9999962
+          }
+          Rotation {
+            Roll: 89.9999771
+          }
+          Scale {
+            X: 0.47999984
+            Y: 0.480000228
+            Z: 0.0683980212
+          }
+        }
+        ParentId: 12657344976250341757
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2555807082249945326
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.50728476
+              G: 0.0699999928
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7477259265191497219
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 5064284263068028620
+        Name: "Pipe - 8-Sided"
+        Transform {
+          Location {
+            X: 8
+            Y: -20.0000134
+            Z: 43.9999847
+          }
+          Rotation {
+            Roll: 89.9999542
+          }
+          Scale {
+            X: 0.587802827
+            Y: 0.587802649
+            Z: 0.111244701
+          }
+        }
+        ParentId: 12657344976250341757
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2555807082249945326
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.50728476
+              G: 0.0699999928
+              B: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 7076138976984581420
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 13460228244263201708
+        Name: "Prism - 8-Sided"
+        Transform {
+          Location {
+            X: 8
+            Y: -14.3103352
+            Z: 43.9999847
+          }
+          Rotation {
+            Roll: 89.9999542
+          }
+          Scale {
+            X: 0.47999984
+            Y: 0.480000228
+            Z: 0.0683980212
+          }
+        }
+        ParentId: 12657344976250341757
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"

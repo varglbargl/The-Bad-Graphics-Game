@@ -60,7 +60,7 @@ Assets {
           }
           Overrides {
             Name: "cs:MinAmount"
-            Int: 5
+            Int: 2
           }
           Overrides {
             Name: "cs:MaxAmount"

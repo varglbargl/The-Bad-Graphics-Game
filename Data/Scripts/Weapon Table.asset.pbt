@@ -16,6 +16,18 @@ Assets {
           Id: 5995751101697492025
         }
       }
+      Overrides {
+        Name: "cs:Spear"
+        AssetReference {
+          Id: 1812538127407825237
+        }
+      }
+      Overrides {
+        Name: "cs:Greatslab"
+        AssetReference {
+          Id: 3958108119686069303
+        }
+      }
     }
   }
   SerializationVersion: 92

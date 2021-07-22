@@ -1,13 +1,13 @@
 Assets {
-  Id: 1812538127407825237
-  Name: "Spear"
+  Id: 3958108119686069303
+  Name: "Greatslab"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 6458459856559832118
       Objects {
         Id: 6458459856559832118
-        Name: "Spear"
+        Name: "Greatslab"
         Transform {
           Scale {
             X: 1
@@ -25,12 +25,12 @@ Assets {
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 448907212462919524
+              Id: 6028427916055064567
             }
           }
           Overrides {
             Name: "cs:Damage"
-            Int: 2
+            Int: 3
           }
           Overrides {
             Name: "cs:AnimationStance"
@@ -219,14 +219,14 @@ Assets {
         Name: "Hitbox"
         Transform {
           Location {
-            Z: 125
+            Z: 100
           }
           Rotation {
           }
           Scale {
             X: 1
             Y: 1
-            Z: 3
+            Z: 2.5
           }
         }
         ParentId: 6458459856559832118
@@ -312,7 +312,8 @@ Assets {
         ParentId: 6458459856559832118
         ChildIds: 1354902791745501267
         ChildIds: 9639019214606763532
-        ChildIds: 3049382244227598978
+        ChildIds: 15992789267517723461
+        ChildIds: 6649099017743291481
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -370,14 +371,14 @@ Assets {
         Name: "Pyramid - 4-Sided Truncated"
         Transform {
           Location {
-            Z: -76.0741425
+            Z: -69.8074493
           }
           Rotation {
           }
           Scale {
-            X: 0.067330718
-            Y: 0.067330718
-            Z: 5.34201956
+            X: 0.0741610453
+            Y: 0.0741610453
+            Z: 2.55199504
           }
         }
         ParentId: 13077031324402482241
@@ -468,20 +469,126 @@ Assets {
         }
       }
       Objects {
-        Id: 3049382244227598978
+        Id: 15992789267517723461
         Name: "Prism - 8-Sided Half"
         Transform {
           Location {
-            Z: 187.999985
+            Z: 14.7218437
           }
           Rotation {
-            Pitch: 90
-            Roll: -90
+            Pitch: -90
+            Roll: 90.0000076
           }
           Scale {
-            X: 0.5
-            Y: 0.2
-            Z: 0.1
+            X: 0.128208458
+            Y: 0.494841456
+            Z: 0.0961271152
+          }
+        }
+        ParentId: 13077031324402482241
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2555807082249945326
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 12446131267530965574
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 24
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 24
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 24
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 24
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.2
+              G: 0.2
+              B: 0.2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:color"
+            Color {
+              R: 0.0447589979
+              G: 0.0840553939
+              B: 0.143
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.509
+              G: 0.318125039
+              B: 0.0509000123
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12095835209017042614
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 6649099017743291481
+        Name: "Prism - 4-Sided Trapezoid Right"
+        Transform {
+          Location {
+            X: -19.8048706
+            Y: -2.8427124
+            Z: 14.999999
+          }
+          Rotation {
+            Pitch: -90
+            Roll: 90.0000076
+          }
+          Scale {
+            X: -1.60193956
+            Y: 0.782826066
+            Z: 0.057148125
           }
         }
         ParentId: 13077031324402482241
@@ -556,7 +663,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 11079778742113513846
+            Id: 18041480253613221304
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -573,12 +680,12 @@ Assets {
       }
     }
     Assets {
-      Id: 448907212462919524
-      Name: "Fantasy Spear 005"
+      Id: 6028427916055064567
+      Name: "Fantasy Sword 011"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Weapon_Spear_005"
+        AssetId: "UI_Fantasy_Weapon_Sword_011"
       }
     }
     Assets {
@@ -600,12 +707,21 @@ Assets {
       }
     }
     Assets {
-      Id: 11079778742113513846
-      Name: "Diamond"
+      Id: 12095835209017042614
+      Name: "Cube"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_diamond_001"
+        AssetId: "sm_cube_002"
+      }
+    }
+    Assets {
+      Id: 18041480253613221304
+      Name: "Prism - 4-Sided Trapezoid Right"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_prism_trapezoid_001"
       }
     }
     PrimaryAssetId {

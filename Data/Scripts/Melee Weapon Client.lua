@@ -1,0 +1,37 @@
+local Utils = require(script:GetCustomProperty("Utils"))
+
+local EQUIP_SFX = script:GetCustomProperty("EquipSFX")
+
+local weapon = script:FindAncestorByType("Equipment")
+
+local ICON = weapon:GetCustomProperty("Icon")
+
+local prefix, suffix = Utils.getItemEnchant()
+
+function onEquipped(thisWeapon, owner)
+  Chat.LocalMessage("       New weapon! Get equipped with: "..prefix.." "..weapon.name.." of "..suffix.."!")
+
+  if EQUIP_SFX then
+    Utils.playSoundEffect(EQUIP_SFX)
+  end
+
+  if ICON then
+    Events.Broadcast("UpdateWeapon")
+  end
+end
+
+function onUnequipped(thisWeapon, owner)
+  Events.Broadcast("UpdateWeapon")
+end
+
+if ICON then
+  -- handler params: Equipment_equipment, Player_player
+  weapon.equippedEvent:Connect(onEquipped)
+
+  -- handler params: Equipment_equipment, Player_player
+  weapon.unequippedEvent:Connect(onUnequipped)
+end
+
+if weapon.owner then
+  onEquipped(weapon, weapon.owner)
+end

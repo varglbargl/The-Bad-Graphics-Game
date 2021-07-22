@@ -1,3 +1,5 @@
+local Utils = require(script:GetCustomProperty("Utils"))
+
 local RESOURCE = script:GetCustomProperty("Resource")
 local MIN_AMOUNT = script:GetCustomProperty("MinAmount")
 local MAX_AMOUNT = script:GetCustomProperty("MaxAmount")
@@ -11,9 +13,17 @@ function onPickup(thisLoot, owner)
   if RESOURCE == "HP" or RESOURCE == "Health" or RESOURCE == "HitPoints" then
     owner.hitPoints = math.min(owner.hitPoints + amount, owner.maxHitPoints)
     Events.Broadcast("PlayerHealed", owner)
+  elseif RESOURCE == "Gear" then
+    Utils.throttleToPlayer(owner, "NewGear")
   elseif RESOURCE == "RP" or RESOURCE == "RewardPoints" then
-    owner:GrantRewardPoints(amount, "Collectible")
+    owner:GrantRewardPoints(amount, "Consumable")
     owner:AddResource("RP", amount)
+  elseif RESOURCE == "Grip" then
+    local currentGrip = owner:GetResource("Grip")
+
+    if currentGrip == 0 then return end
+
+    owner:SetResource("Grip", math.min(currentGrip + amount, 25))
   else
     owner:AddResource(RESOURCE, amount)
   end

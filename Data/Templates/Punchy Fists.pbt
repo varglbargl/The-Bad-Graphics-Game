@@ -1,13 +1,13 @@
 Assets {
-  Id: 1812538127407825237
-  Name: "Spear"
+  Id: 6861445034179507918
+  Name: "Punchy Fists"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 6458459856559832118
       Objects {
         Id: 6458459856559832118
-        Name: "Spear"
+        Name: "Punchy Fists"
         Transform {
           Scale {
             X: 1
@@ -17,7 +17,7 @@ Assets {
         }
         ParentId: 4781671109827199097
         ChildIds: 9052591992155043903
-        ChildIds: 4642945491514128232
+        ChildIds: 2213197386447253557
         ChildIds: 13377200020816463118
         ChildIds: 9325027131836092444
         ChildIds: 13077031324402482241
@@ -25,16 +25,16 @@ Assets {
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 448907212462919524
+              Id: 841534158063459245
             }
           }
           Overrides {
             Name: "cs:Damage"
-            Int: 2
+            Int: 1
           }
           Overrides {
             Name: "cs:AnimationStance"
-            String: "2hand_melee_ready"
+            String: "unarmed_ready"
           }
         }
         WantsNetworking: true
@@ -51,14 +51,14 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Equipment {
-          SocketName: "right_prop"
+          SocketName: "head"
           PickupTrigger {
           }
         }
       }
       Objects {
         Id: 9052591992155043903
-        Name: "Ability"
+        Name: "Punch"
         Transform {
           Location {
           }
@@ -87,7 +87,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.4
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -98,7 +98,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -109,7 +109,7 @@ Assets {
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -120,7 +120,6 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -128,20 +127,23 @@ Assets {
               Value: "mc:eabilitysetfacing:none"
             }
           }
-          Animation: "2hand_sword_slash_left"
+          Animation: "unarmed_punch_right"
           CanBePrevented: true
           KeyBinding_v2 {
-            Value: "mc:egameaction:primaryaction"
+            Value: "mc:egameaction:secondaryaction"
           }
         }
       }
       Objects {
-        Id: 4642945491514128232
-        Name: "Ability"
+        Id: 2213197386447253557
+        Name: "Punch"
         Transform {
           Location {
           }
           Rotation {
+            Pitch: 6.83018879e-06
+            Yaw: -8.75117894e-06
+            Roll: -3.8419812e-06
           }
           Scale {
             X: 1
@@ -166,7 +168,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.4
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -177,7 +179,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -188,7 +190,7 @@ Assets {
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -199,7 +201,6 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -207,7 +208,7 @@ Assets {
               Value: "mc:eabilitysetfacing:none"
             }
           }
-          Animation: "2hand_sword_slash_right"
+          Animation: "unarmed_punch_left"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:primaryaction"
@@ -219,14 +220,14 @@ Assets {
         Name: "Hitbox"
         Transform {
           Location {
-            Z: 125
+            X: 100
           }
           Rotation {
           }
           Scale {
-            X: 1
+            X: 1.5
             Y: 1
-            Z: 3
+            Z: 1.5
           }
         }
         ParentId: 6458459856559832118
@@ -249,7 +250,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           TriggerShape_v2 {
-            Value: "mc:etriggershape:capsule"
+            Value: "mc:etriggershape:box"
           }
         }
       }
@@ -274,6 +275,10 @@ Assets {
             ObjectReference {
               SubObjectId: 13377200020816463118
             }
+          }
+          Overrides {
+            Name: "cs:Gripless"
+            Bool: true
           }
         }
         WantsNetworking: true
@@ -311,8 +316,6 @@ Assets {
         }
         ParentId: 6458459856559832118
         ChildIds: 1354902791745501267
-        ChildIds: 9639019214606763532
-        ChildIds: 3049382244227598978
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -347,6 +350,14 @@ Assets {
           }
         }
         ParentId: 13077031324402482241
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:EquipSFX"
+            AssetReference {
+              Id: 841534158063459245
+            }
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -364,248 +375,6 @@ Assets {
             Id: 1573193169450523257
           }
         }
-      }
-      Objects {
-        Id: 9639019214606763532
-        Name: "Pyramid - 4-Sided Truncated"
-        Transform {
-          Location {
-            Z: -76.0741425
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.067330718
-            Y: 0.067330718
-            Z: 5.34201956
-          }
-        }
-        ParentId: 13077031324402482241
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2555807082249945326
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 12446131267530965574
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.2
-              G: 0.2
-              B: 0.2
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim2:color"
-            Color {
-              R: 0.0447589979
-              G: 0.0840553939
-              B: 0.143
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.1
-              G: 0.0413333289
-              B: 0.02
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 5245202911989870293
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 3049382244227598978
-        Name: "Prism - 8-Sided Half"
-        Transform {
-          Location {
-            Z: 187.999985
-          }
-          Rotation {
-            Pitch: 90
-            Roll: -90
-          }
-          Scale {
-            X: 0.5
-            Y: 0.2
-            Z: 0.1
-          }
-        }
-        ParentId: 13077031324402482241
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2555807082249945326
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 12446131267530965574
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.2
-              G: 0.2
-              B: 0.2
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim2:color"
-            Color {
-              R: 0.0447589979
-              G: 0.0840553939
-              B: 0.143
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.2
-              G: 0.2
-              B: 0.2
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 11079778742113513846
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-    }
-    Assets {
-      Id: 448907212462919524
-      Name: "Fantasy Spear 005"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Weapon_Spear_005"
-      }
-    }
-    Assets {
-      Id: 5245202911989870293
-      Name: "Pyramid - 4-Sided Truncated"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pyramid_truncated_001"
-      }
-    }
-    Assets {
-      Id: 12446131267530965574
-      Name: "Wood Raw"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_wood_raw_001_uv"
-      }
-    }
-    Assets {
-      Id: 11079778742113513846
-      Name: "Diamond"
-      PlatformAssetType: 1
-      PrimaryAsset {
-        AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_diamond_001"
       }
     }
     PrimaryAssetId {

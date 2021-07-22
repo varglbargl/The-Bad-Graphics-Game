@@ -16,6 +16,24 @@ Assets {
           Id: 1881635375220224422
         }
       }
+      Overrides {
+        Name: "cs:RandomGear"
+        AssetReference {
+          Id: 10491491520628892719
+        }
+      }
+      Overrides {
+        Name: "cs:GripPotion"
+        AssetReference {
+          Id: 7406570465400694204
+        }
+      }
+      Overrides {
+        Name: "cs:RPCoinStack"
+        AssetReference {
+          Id: 3520794448876378027
+        }
+      }
     }
   }
   SerializationVersion: 92

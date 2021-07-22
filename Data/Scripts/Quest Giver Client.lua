@@ -6,6 +6,8 @@ local ACCEPT_SFX = script:GetCustomProperty("AcceptSFX")
 
 local clientPlayer = Game.GetLocalPlayer()
 
+TRIGGER.interactionLabel = "ACCEPT QUEST"
+
 function onInteracted(thisTrigger, other)
 	if other == clientPlayer then
     EXCLAMATION_POINT.visibility = Visibility.FORCE_OFF

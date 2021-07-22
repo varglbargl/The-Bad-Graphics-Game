@@ -22,15 +22,15 @@ function onBeginOverlap(whichTrigger, other)
           droppedLoot.lifeSpan = 10
         end
 
-        local moveToLocation = Rotation.New(0, 0, math.random(-30, 30)) * (prop:GetWorldPosition() - other:GetWorldPosition()):GetNormalized() * 50
+        -- local moveToLocation = Rotation.New(0, 0, math.random(-30, 30)) * (prop:GetWorldPosition() - other:GetWorldPosition()):GetNormalized() * 500
 
-        local hitResult = World.Raycast(prop:GetWorldPosition(), moveToLocation)
+        -- local hitResult = World.Raycast(prop:GetWorldPosition(), moveToLocation)
 
-        if hitResult then
-          moveToLocation = hitResult:GetImpactPosition()
-        end
+        -- if hitResult then
+        --   moveToLocation = hitResult:GetImpactPosition()
+        -- end
 
-        droppedLoot:MoveTo(moveToLocation, 1)
+        -- droppedLoot:MoveTo(moveToLocation, 1)
       end
     end
 

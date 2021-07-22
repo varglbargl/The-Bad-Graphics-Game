@@ -10,6 +10,16 @@ Assets {
           Id: 16574734029457462020
         }
       }
+      Overrides {
+        Name: "cs:Gripless"
+        Bool: false
+      }
+      Overrides {
+        Name: "cs:ExplodeVFX"
+        AssetReference {
+          Id: 15449809418692107465
+        }
+      }
     }
   }
   SerializationVersion: 92

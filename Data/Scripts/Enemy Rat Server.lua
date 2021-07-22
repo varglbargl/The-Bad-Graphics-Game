@@ -36,6 +36,7 @@ enemy:SetWorldScale(Vector3.ONE * 0.25)
 enemy:ScaleTo(defaultScale, 0.2)
 
 function startFighting(player)
+  if not Object.IsValid(player) then return end
   -- print("Oh ho ho you are so going down, "..player.name.."!")
 
   isFighting = player
@@ -160,10 +161,10 @@ function onWeaponHit(thisEnemy, weapon, damage)
   local attacker = nil
 
   if weapon then
-    attacker = weapon.owner
+    attacker = weapon.owner or weapon.serverUserData["Thrower"]
   end
 
-  if not isFighting then
+  if attacker and not isFighting then
     startFighting(attacker)
   end
 
