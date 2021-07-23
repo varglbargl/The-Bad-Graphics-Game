@@ -1,13 +1,13 @@
 Assets {
-  Id: 5057275592716405596
-  Name: "Destructible Chest"
+  Id: 6358059585692037315
+  Name: "Destructible Crate 01"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 15920486328875349999
+      RootId: 13968435029310018508
       Objects {
-        Id: 15920486328875349999
-        Name: "Destructible Chest"
+        Id: 13968435029310018508
+        Name: "Destructible Barrel 01"
         Transform {
           Scale {
             X: 1
@@ -16,10 +16,10 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 2326694219132366062
-        ChildIds: 8837113493399070011
-        ChildIds: 12425745303899576411
-        ChildIds: 17939131594288453255
+        ChildIds: 11743741596550828053
+        ChildIds: 17825490357740183456
+        ChildIds: 7032237904561269143
+        ChildIds: 6145394261888296787
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -38,7 +38,7 @@ Assets {
         }
       }
       Objects {
-        Id: 2326694219132366062
+        Id: 11743741596550828053
         Name: "Collision"
         Transform {
           Location {
@@ -52,7 +52,7 @@ Assets {
             Z: 0.8
           }
         }
-        ParentId: 15920486328875349999
+        ParentId: 13968435029310018508
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -84,7 +84,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8837113493399070011
+        Id: 17825490357740183456
         Name: "ClientContext"
         Transform {
           Location {
@@ -97,8 +97,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15920486328875349999
-        ChildIds: 13198351863021285554
+        ParentId: 13968435029310018508
+        ChildIds: 11427647333476476292
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -116,7 +116,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13198351863021285554
+        Id: 11427647333476476292
         Name: "NewFolder"
         Transform {
           Location {
@@ -129,10 +129,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8837113493399070011
-        ChildIds: 5118157087281283166
-        ChildIds: 10796694165602281961
-        ChildIds: 12666579197994527275
+        ParentId: 17825490357740183456
+        ChildIds: 5578545311943745176
+        ChildIds: 13523653482240225762
+        ChildIds: 10356483450233726635
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -150,7 +150,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5118157087281283166
+        Id: 5578545311943745176
         Name: "Simple Look At Local View"
         Transform {
           Location {
@@ -163,7 +163,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13198351863021285554
+        ParentId: 11427647333476476292
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -183,8 +183,8 @@ Assets {
         }
       }
       Objects {
-        Id: 10796694165602281961
-        Name: "Chest Small Opened"
+        Id: 13523653482240225762
+        Name: "Wooden Barrel"
         Transform {
           Location {
             Z: 9.16543579
@@ -193,12 +193,12 @@ Assets {
             Yaw: -90
           }
           Scale {
-            X: 1
-            Y: 0.01
-            Z: 1
+            X: 0.734569669
+            Y: 0.00734569458
+            Z: 0.73456943
           }
         }
-        ParentId: 13198351863021285554
+        ParentId: 11427647333476476292
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_Detail1:id"
@@ -209,8 +209,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_Detail1:color"
             Color {
-              R: 0.615
-              G: 0.358750015
+              R: 0.05
+              G: 0.05
+              B: 0.05
               A: 1
             }
           }
@@ -220,12 +221,6 @@ Assets {
               R: 0.5
               G: 0.166666687
               A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Detail2:id"
-            AssetReference {
-              Id: 6577003678095369936
             }
           }
         }
@@ -243,12 +238,13 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3937490737681505519
+            Id: 4999804313640772946
           }
           Teams {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -259,8 +255,8 @@ Assets {
         }
       }
       Objects {
-        Id: 12666579197994527275
-        Name: "Chest Small Opened"
+        Id: 10356483450233726635
+        Name: "Wooden Barrel"
         Transform {
           Location {
             Z: 7.82744837
@@ -269,12 +265,12 @@ Assets {
             Yaw: -90
           }
           Scale {
-            X: 1.04046524
-            Y: 0.01
-            Z: 1.02471685
+            X: 0.764294267
+            Y: 0.00734569458
+            Z: 0.761352479
           }
         }
-        ParentId: 13198351863021285554
+        ParentId: 11427647333476476292
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -288,12 +284,6 @@ Assets {
               Id: 16986353429576899497
             }
           }
-          Overrides {
-            Name: "ma:Shared_Detail2:id"
-            AssetReference {
-              Id: 6577003678095369936
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -309,12 +299,13 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 3937490737681505519
+            Id: 4999804313640772946
           }
           Teams {
             IsTeamCollisionEnabled: true
             IsEnemyCollisionEnabled: true
           }
+          DisableReceiveDecals: true
           StaticMesh {
             Physics {
               Mass: 100
@@ -325,7 +316,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12425745303899576411
+        Id: 7032237904561269143
         Name: "Hitbox"
         Transform {
           Location {
@@ -339,7 +330,7 @@ Assets {
             Z: 1.5
           }
         }
-        ParentId: 15920486328875349999
+        ParentId: 13968435029310018508
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -364,7 +355,7 @@ Assets {
         }
       }
       Objects {
-        Id: 17939131594288453255
+        Id: 6145394261888296787
         Name: "Destructible Prop Server"
         Transform {
           Location {
@@ -377,12 +368,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 15920486328875349999
+        ParentId: 13968435029310018508
         UnregisteredParameters {
           Overrides {
             Name: "cs:Hitbox"
             ObjectReference {
-              SubObjectId: 12425745303899576411
+              SubObjectId: 7032237904561269143
             }
           }
           Overrides {
@@ -393,13 +384,7 @@ Assets {
           }
           Overrides {
             Name: "cs:LootDropChance"
-            Float: 1
-          }
-          Overrides {
-            Name: "cs:LootDrop"
-            AssetReference {
-              Id: 10101702818438590485
-            }
+            Float: 0.5
           }
         }
         WantsNetworking: true
@@ -432,21 +417,12 @@ Assets {
       }
     }
     Assets {
-      Id: 3937490737681505519
-      Name: "Chest Small Closed"
+      Id: 4999804313640772946
+      Name: "Simple Crate 150cm"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_chest_001"
-      }
-    }
-    Assets {
-      Id: 6577003678095369936
-      Name: "Invisible"
-      PlatformAssetType: 2
-      PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_invisible_001"
+        AssetId: "sm_crate_simple_150cm_001"
       }
     }
     PrimaryAssetId {

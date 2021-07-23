@@ -98,7 +98,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.2
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -109,7 +109,7 @@ Assets {
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.2
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -120,7 +120,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 1
+            Duration: 0.6
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -166,7 +166,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.4
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -177,7 +177,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.2
+            Duration: 0.6
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -207,7 +207,7 @@ Assets {
               Value: "mc:eabilitysetfacing:none"
             }
           }
-          Animation: "2hand_sword_slash_right"
+          Animation: "2hand_sword_slash_spin"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:primaryaction"

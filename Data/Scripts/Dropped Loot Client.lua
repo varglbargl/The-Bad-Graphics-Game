@@ -14,7 +14,7 @@ function onNetworkedPropertyChanged()
 end
 
 function showItem(item)
-  World.SpawnAsset(item, {parent = script.parent, rotation = Rotation.New(25, 25, 25), position = Vector3.New(10, 0, 0)})
+  World.SpawnAsset(item, {parent = script.parent, rotation = Rotation.New(-25, 25, 25), position = Vector3.New(10, 0, 0)})
 end
 
 if loot then

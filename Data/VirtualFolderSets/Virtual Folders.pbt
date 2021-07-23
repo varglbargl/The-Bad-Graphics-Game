@@ -32,5 +32,13 @@ Assets {
       VirtualFolderPath: "Consumables"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Rats"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Level Segments"
+      PlatformAssetType: 5
+    }
   }
 }

@@ -1,6 +1,6 @@
 Assets {
-  Id: 6845418575452539766
-  Name: "Player Resource Server"
+  Id: 17817142462004259520
+  Name: "Level Generator Server"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,9 +11,15 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:LevelUpVFX"
+        Name: "cs:LevelSegmentTable"
         AssetReference {
-          Id: 16628715035297188195
+          Id: 1789788171832080019
+        }
+      }
+      Overrides {
+        Name: "cs:DeadEnd"
+        AssetReference {
+          Id: 16380665429490410288
         }
       }
     }

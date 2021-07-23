@@ -465,7 +465,8 @@ end
 -- GENERAL UTILITY
 
 function Utils.groundBelowPoint(vec3)
-  local hitResult = World.Raycast(vec3 + Vector3.UP * 200, vec3 - Vector3.UP * 10000, {ignorePlayers = true})
+  local hitResult = World.Raycast(vec3 + Vector3.UP * 50, vec3 - Vector3.UP * 10000, {ignorePlayers = true})
+
   if hitResult then
     return hitResult:GetImpactPosition()
   else
@@ -474,6 +475,8 @@ function Utils.groundBelowPoint(vec3)
 end
 
 function Utils.playSoundEffect(audio, location, volume, pitch)
+  if not audio then return end
+
   volume = volume or 1
   pitch = pitch or 0
 

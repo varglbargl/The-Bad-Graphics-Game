@@ -82,22 +82,22 @@ function onNewGear()
 
   if randomSlot == 1 then
     setRandomIcon(HAT, hatIcons)
-    if shoudAnnounce then Chat.LocalMessage("       New hat! Get equipped with: "..prefix.." Headpiece of "..suffix.."!") end
+    if shoudAnnounce then Chat.LocalMessage("      New hat! Get equipped with: "..prefix.." Headpiece of "..suffix.."!") end
   elseif randomSlot == 2 then
     setRandomIcon(CAPE, capeIcons)
-    if shoudAnnounce then Chat.LocalMessage("       New cape! Get equipped with: "..prefix.." Cloak of "..suffix.."!") end
+    if shoudAnnounce then Chat.LocalMessage("      New cape! Get equipped with: "..prefix.." Cloak of "..suffix.."!") end
   elseif randomSlot == 3 then
     setRandomIcon(RING, ringIcons)
-    if shoudAnnounce then Chat.LocalMessage("       New ring! Get equipped with: "..prefix.." Ring of "..suffix.."!") end
+    if shoudAnnounce then Chat.LocalMessage("      New ring! Get equipped with: "..prefix.." Ring of "..suffix.."!") end
   elseif randomSlot == 4 then
     setRandomIcon(ARMOR, armorIcons)
-    if shoudAnnounce then Chat.LocalMessage("       New armor! Get equipped with: "..prefix.." Chestpiece of "..suffix.."!") end
+    if shoudAnnounce then Chat.LocalMessage("      New armor! Get equipped with: "..prefix.." Chestpiece of "..suffix.."!") end
   elseif randomSlot == 5 then
     setRandomIcon(BRACER, bracerIcons)
-    if shoudAnnounce then Chat.LocalMessage("       New bracers! Get equipped with: "..prefix.." Bracers of "..suffix.."!") end
+    if shoudAnnounce then Chat.LocalMessage("      New bracers! Get equipped with: "..prefix.." Bracers of "..suffix.."!") end
   else
     setRandomIcon(SHOE, shoeIcons)
-    if shoudAnnounce then Chat.LocalMessage("       New shoes! Get equipped with: "..prefix.." Boots of "..suffix.."!") end
+    if shoudAnnounce then Chat.LocalMessage("      New shoes! Get equipped with: "..prefix.." Boots of "..suffix.."!") end
   end
 end
 

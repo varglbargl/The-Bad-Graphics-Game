@@ -16,11 +16,7 @@ Objects {
   }
   ChildIds: 724324913679364851
   ChildIds: 13429581632254988900
-  ChildIds: 15794348866375307406
-  ChildIds: 3188689987035251775
-  ChildIds: 16777245215017381265
-  ChildIds: 13869929621808721867
-  ChildIds: 14526442240845543077
+  ChildIds: 17065767821936964946
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -36,168 +32,14 @@ Objects {
   }
 }
 Objects {
-  Id: 14526442240845543077
-  Name: "Quest Giver Spawner"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 13325910459065280657
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Quest Giver Spawner"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1880
-            Y: -334.999969
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 90
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 10415504155398615059
-    }
-  }
-}
-Objects {
-  Id: 13869929621808721867
-  Name: "Level Segment - 4-Way"
-  Transform {
-    Location {
-      X: 1875
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1.25
-      Y: 1.25
-      Z: 1.25
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 144507038503807111
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Level Segment - 4-Way"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 925
-            Y: -938
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: -90
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1.25
-            Y: 1.25
-            Z: 1.25
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7753719261458182956
-    }
-  }
-}
-Objects {
-  Id: 16777245215017381265
-  Name: "Level Segment - 4-Way"
+  Id: 17065767821936964946
+  Name: "Spawn Zone"
   Transform {
     Location {
     }
     Rotation {
     }
     Scale {
-      X: 1.25
-      Y: 1.25
-      Z: 1.25
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 144507038503807111
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Level Segment - 4-Way"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 1875
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1.25
-            Y: 1.25
-            Z: 1.25
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7753719261458182956
-    }
-  }
-}
-Objects {
-  Id: 3188689987035251775
-  Name: "Level Segment - Dead End 1"
-  Transform {
-    Scale {
       X: 1
       Y: 1
       Z: 1
@@ -210,90 +52,15 @@ Objects {
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 4398763397678270665
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Level Segment - Dead End 1"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-            X: 925
-            Y: 937
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-            Yaw: 90
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1.25
-            Y: 1.25
-            Z: 1.25
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 9681811192528342132
-    }
-  }
-}
-Objects {
-  Id: 15794348866375307406
-  Name: "Level Segment - 4-Way"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 4781671109827199097
-  Collidable_v2 {
+  CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 144507038503807111
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Level Segment - 4-Way"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1.25
-            Y: 1.25
-            Z: 1.25
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 7753719261458182956
-    }
+  Folder {
+    IsFilePartition: true
+    FilePartitionName: "Spawn Zone"
   }
 }
 Objects {
@@ -499,7 +266,6 @@ Objects {
   Name: "Sky Sphere"
   Transform {
     Location {
-      Z: 700
     }
     Rotation {
     }

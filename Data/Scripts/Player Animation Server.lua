@@ -1,4 +1,5 @@
 function updateIdle(player, stance)
+  player.animationStance = stance
   player.serverUserData["IdleAnimation"] = stance
 end
 

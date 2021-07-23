@@ -13,12 +13,11 @@ local isDead = false
 local isFighting = false
 local maxHitPoints = 5
 local hitPoints = maxHitPoints
-local myTemplateId = script:FindTemplateRoot().sourceTemplateId
-
-HITBOX.serverUserData["Enemy"] = enemy
 
 local spawnPoint = Utils.groundBelowPoint(enemy:GetWorldPosition())
-local spawnRotation = enemy:GetWorldRotation()
+
+enemy:SetWorldRotation(Rotation.New(0, 0, math.random(1, 360)))
+HITBOX.serverUserData["Enemy"] = enemy
 
 if not spawnPoint then
   spawnPoint = enemy:GetWorldPosition()
@@ -62,9 +61,15 @@ function fight(player)
     local distanceToPlayer = (player:GetWorldPosition() - fromVector).size
 
     if distanceToPlayer < 500 and distanceToPlayer > 150 then
-      enemy:MoveTo(Utils.groundBelowPoint(player:GetWorldPosition() + (fromVector - player:GetWorldPosition()):GetNormalized() * 200), distanceToPlayer / 800)
-      Task.Wait(distanceToPlayer / 800)
-      attack(player)
+      local toPosition = Utils.groundBelowPoint(player:GetWorldPosition() + (fromVector - player:GetWorldPosition()):GetNormalized() * 200)
+
+      if toPosition then
+        enemy:MoveTo(toPosition, distanceToPlayer / 800)
+
+        Task.Wait(distanceToPlayer / 800)
+
+        attack(player)
+      end
     elseif distanceToPlayer >= 150 then
 
       local toVector = Utils.groundBelowPoint(fromVector + (player:GetWorldPosition() - fromVector):GetNormalized() * 400)
@@ -78,7 +83,7 @@ function fight(player)
       attack(player)
     end
 
-    Task.Wait(0.75)
+    Task.Wait(0.5)
   end
 
   -- something has gone wrong idk what but just reset safely okay?
@@ -134,22 +139,21 @@ function die(killer, damage)
   Events.Broadcast("RatKilled", isFighting)
 
   if LOOT_DROP and math.random() < 0.75 then
-    World.SpawnAsset(LOOT_DROP, {position = enemy:GetWorldPosition()})
+    local loot = World.SpawnAsset(LOOT_DROP, {position = enemy:GetWorldPosition()})
+
+    loot.lifeSpan = 10
   end
 
-  Task.Spawn(function()
-    if not Object.IsValid(enemy) then return end
-    enemy:MoveTo(enemy:GetWorldPosition() + Vector3.UP * 25, 1)
+  enemy:MoveTo(enemy:GetWorldPosition() + Vector3.UP * 25, 1)
 
-    Task.Wait(2)
-    if not Object.IsValid(enemy) then return end
-    enemy:MoveTo(enemy:GetWorldPosition() + Vector3.UP * -500, 5)
+  Task.Wait(2)
+  if not Object.IsValid(enemy) then return end
+  enemy:MoveTo(enemy:GetWorldPosition() + Vector3.UP * -500, 5)
 
-    Task.Wait(5)
-    if not Object.IsValid(enemy) then return end
+  Task.Wait(5)
+  if not Object.IsValid(enemy) then return end
 
-    enemy:Destroy()
-  end)
+  enemy:Destroy()
 end
 
 function onWeaponHit(thisEnemy, weapon, damage)

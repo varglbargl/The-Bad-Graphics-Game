@@ -28,6 +28,18 @@ Assets {
           Id: 5057275592716405596
         }
       }
+      Overrides {
+        Name: "cs:DestructibleCrate01"
+        AssetReference {
+          Id: 6358059585692037315
+        }
+      }
+      Overrides {
+        Name: "cs:DestructibleChest02"
+        AssetReference {
+          Id: 5794091055725121046
+        }
+      }
     }
   }
   SerializationVersion: 92

@@ -26,6 +26,21 @@ Assets {
           Id: 841534158063459245
         }
       }
+      Overrides {
+        Name: "cs:LogFullSFX"
+        AssetReference {
+          Id: 8535632808578188796
+        }
+      }
+    }
+    Assets {
+      Id: 8535632808578188796
+      Name: "UI Buzzer Error Denied 01 SFX"
+      PlatformAssetType: 7
+      PrimaryAsset {
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_ui_buzzer_error_denied_01_Cue_ref"
+      }
     }
   }
   SerializationVersion: 92

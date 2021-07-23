@@ -94,9 +94,7 @@ function idleLoop()
     local message = ratName.." "..idleMessages[math.random(1, #idleMessages)]
     Chat.LocalMessage(message)
 
-    if IDLE_SFX then
-      Utils.playSoundEffect(IDLE_SFX, enemy:GetWorldPosition(), 0.2, math.random(-2, 2) * 100)
-    end
+    Utils.playSoundEffect(IDLE_SFX, enemy:GetWorldPosition(), 0.2, math.random(-2, 2) * 100)
   end
 
   idleLoop()

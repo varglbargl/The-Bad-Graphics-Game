@@ -174,6 +174,47 @@ Objects {
   }
 }
 Objects {
+  Id: 11133586280546215535
+  Name: "Level Generator Server"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13429581632254988900
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:SpawnZoneBoundingBox"
+      ObjectReference {
+        SelfId: 2052188784207703329
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17817142462004259520
+    }
+  }
+}
+Objects {
   Id: 7306507827204024982
   Name: "Client Scripts and UI"
   Transform {
@@ -5141,12 +5182,12 @@ Objects {
   ChildIds: 7507324574391072057
   ChildIds: 13279935066986218253
   ChildIds: 9371809760836021493
+  ChildIds: 14303111146653652872
   ChildIds: 4476389825764374021
   ChildIds: 16216536699974594015
   ChildIds: 320033591642224215
   ChildIds: 683550270177950600
   ChildIds: 1586269878899783714
-  ChildIds: 14303111146653652872
   ChildIds: 612720742942224978
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -5350,77 +5391,6 @@ Objects {
     Image {
       Brush {
         Id: 18386794418993039384
-      }
-      Color {
-        R: 0.75
-        G: 0.64
-        B: 0.6
-        A: 1
-      }
-      TeamSettings {
-      }
-      ShadowColor {
-        A: 0.4
-      }
-      ShadowOffset {
-        Y: 6
-      }
-      ScreenshotIndex: 1
-    }
-    AnchorLayout {
-      SelfAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-      TargetAnchor {
-        Anchor {
-          Value: "mc:euianchor:topcenter"
-        }
-      }
-    }
-  }
-}
-Objects {
-  Id: 14303111146653652872
-  Name: "Weapon"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 5086927059198887695
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  EditorIndicatorVisibility {
-    Value: "mc:eindicatorvisibility:visiblewhenselected"
-  }
-  Control {
-    Width: 100
-    Height: 100
-    UIX: -135
-    UIY: 190
-    RenderTransformPivot {
-      Anchor {
-        Value: "mc:euianchor:middlecenter"
-      }
-    }
-    Image {
-      Brush {
-        Id: 6548253334508508867
       }
       Color {
         R: 0.75
@@ -6140,6 +6110,77 @@ Objects {
     Image {
       Brush {
         Id: 15106036910395641140
+      }
+      Color {
+        R: 0.75
+        G: 0.64
+        B: 0.6
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 0.4
+      }
+      ShadowOffset {
+        Y: 6
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 14303111146653652872
+  Name: "Weapon"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 5086927059198887695
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 100
+    Height: 100
+    UIX: -135
+    UIY: 190
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 6548253334508508867
       }
       Color {
         R: 0.75
@@ -16556,6 +16597,12 @@ Objects {
         SelfId: 11239126286458703741
       }
     }
+    Overrides {
+      Name: "cs:NoWeapon"
+      AssetReference {
+        Id: 3519194267397355420
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -16659,7 +16706,7 @@ Objects {
   Name: "Spawn Point"
   Transform {
     Location {
-      Z: 115
+      X: -750
     }
     Rotation {
     }
@@ -16681,9 +16728,59 @@ Objects {
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:alwaysvisible"
+  }
   PlayerSpawnPoint {
     TeamInt: 1
     PlayerScaleMultiplier: 1
+    SpawnKey: "Enterance"
+    SpawnEffectsTemplate {
+      Id: 4048767687044730201
+    }
+  }
+}
+Objects {
+  Id: 18101506983861010249
+  Name: "Spawn Settings"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 13429581632254988900
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Settings {
+    IsDefault: true
+    RespawnSettings {
+      RespawnDelay: 10
+      RespawnMode_v2 {
+        Value: "mc:erespawnmode:atclosestspawnpoint"
+      }
+      StartSpawned: true
+      SpawnMode {
+        Value: "mc:espawnmode:random"
+      }
+      SpawnKey: "Enterance"
+      RespawnKey: "Graveyard"
+    }
   }
 }
 Objects {

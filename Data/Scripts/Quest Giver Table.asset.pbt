@@ -28,6 +28,18 @@ Assets {
           Id: 14952091205081724391
         }
       }
+      Overrides {
+        Name: "cs:QuestRattysRevenge"
+        AssetReference {
+          Id: 2006601669051169676
+        }
+      }
+      Overrides {
+        Name: "cs:QuestCrystalBall"
+        AssetReference {
+          Id: 216643976278998080
+        }
+      }
     }
   }
   SerializationVersion: 92

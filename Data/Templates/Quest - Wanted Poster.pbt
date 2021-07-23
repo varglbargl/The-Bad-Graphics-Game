@@ -112,9 +112,9 @@ Assets {
             Yaw: -90
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 1011503542627030541

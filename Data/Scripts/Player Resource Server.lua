@@ -1,5 +1,7 @@
 local Utils = require(script:GetCustomProperty("Utils"))
 
+local LEVEL_UP_VFX = script:GetCustomProperty("LevelUpVFX")
+
 function onPlayerDamaged(player)
   player:SetResource("HitPoints", math.max(0, player.hitPoints))
 
@@ -101,6 +103,10 @@ function checkLevelUp(player)
   end
 
   if levelsGained > 0 then
+    if LEVEL_UP_VFX then
+      World.SpawnAsset(LEVEL_UP_VFX, {position = player:GetWorldPosition()})
+    end
+
     player.serverUserData["Level"] = math.floor(currentXP / 25) + 1
     player.hitPoints = math.min(player.hitPoints + 10, player.maxHitPoints)
     player:SetResource("HitPoints", player.hitPoints)

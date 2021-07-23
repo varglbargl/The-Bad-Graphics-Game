@@ -4,6 +4,8 @@ local PICKUP_TRIGGER = script:GetCustomProperty("PickupTrigger"):WaitForObject()
 
 local loot = LootTable[math.random(1, #LootTable)]
 
+local lootName = string.upper(string.match(loot, ":(.+)")) or "LOOT"
+
 PICKUP_TRIGGER.collision = Collision.FORCE_OFF
 
 function getYeLoot(thisTrigger, other)
@@ -25,7 +27,7 @@ function getYeLoot(thisTrigger, other)
 end
 
 if PICKUP_TRIGGER.isInteractable then
-  PICKUP_TRIGGER.interactionLabel = "GET YE LOOT"
+  PICKUP_TRIGGER.interactionLabel = "GET YE "..lootName
   PICKUP_TRIGGER.interactedEvent:Connect(getYeLoot)
 else
   PICKUP_TRIGGER.beginOverlapEvent:Connect(getYeLoot)

@@ -28,6 +28,18 @@ Assets {
           Id: 3958108119686069303
         }
       }
+      Overrides {
+        Name: "cs:Staff"
+        AssetReference {
+          Id: 16579771856403188121
+        }
+      }
+      Overrides {
+        Name: "cs:Hammer"
+        AssetReference {
+          Id: 2205487474116222797
+        }
+      }
     }
   }
   SerializationVersion: 92

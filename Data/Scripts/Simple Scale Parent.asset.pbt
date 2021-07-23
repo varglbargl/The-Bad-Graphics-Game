@@ -9,6 +9,10 @@ Assets {
         Float: 0.1
       }
       Overrides {
+        Name: "cs:DelayStart"
+        Float: 0
+      }
+      Overrides {
         Name: "cs:IsLocal"
         Bool: false
       }

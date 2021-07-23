@@ -33,6 +33,10 @@ Assets {
         ChildIds: 1674986675461817433
         ChildIds: 6484170994710582446
         ChildIds: 14227492933946925396
+        ChildIds: 16143623175686515357
+        ChildIds: 13401542246063045022
+        ChildIds: 3435679206413800381
+        ChildIds: 11062497117236459924
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -80,7 +84,7 @@ Assets {
           Overrides {
             Name: "cs:AcceptSFX"
             AssetReference {
-              Id: 393866312278010883
+              Id: 1298475152617809123
             }
           }
         }
@@ -114,9 +118,9 @@ Assets {
             Yaw: -90
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 14289059249346616943
@@ -1303,7 +1307,9 @@ Assets {
           FontAsset {
           }
           Color {
-            R: 0.05
+            R: 0.5
+            G: 0.025000006
+            B: 0.025000006
             A: 1
           }
           HorizontalSize: 1
@@ -1708,14 +1714,439 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 16143623175686515357
+        Name: "Pyramid - 4-Sided Truncated"
+        Transform {
+          Location {
+            X: 87.5107422
+            Y: -72.2071533
+            Z: 189.893494
+          }
+          Rotation {
+            Pitch: -56.6236877
+            Yaw: 146.671494
+            Roll: 14.3014269
+          }
+          Scale {
+            X: 0.067330718
+            Y: 0.067330718
+            Z: 1.68973565
+          }
+        }
+        ParentId: 14289059249346616943
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2555807082249945326
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:id"
+            AssetReference {
+              Id: 12446131267530965574
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 24
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 24
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:utile"
+            Float: 24
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:vtile"
+            Float: 24
+          }
+          Overrides {
+            Name: "ma:Shared_Trim:color"
+            Color {
+              R: 0.2
+              G: 0.2
+              B: 0.2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Trim2:color"
+            Color {
+              R: 0.0447589979
+              G: 0.0840553939
+              B: 0.143
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.1
+              G: 0.0413333289
+              B: 0.02
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 5245202911989870293
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 13401542246063045022
+        Name: "Prism - 6-Sided Half"
+        Transform {
+          Location {
+            X: 18.9567871
+            Y: -49.710968
+            Z: 218.7341
+          }
+          Rotation {
+            Pitch: -56.6236267
+            Yaw: 146.671463
+            Roll: -75.6985474
+          }
+          Scale {
+            X: -0.508583367
+            Y: 0.123823039
+            Z: 0.0147492113
+          }
+        }
+        ParentId: 14289059249346616943
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 6954370053071083141
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 2
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:vtile"
+            Float: 2
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 1.5
+              G: 1.5
+              B: 1.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2555807082249945326
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.2
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 1
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.2
+              G: 0.2
+              B: 0.2
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6457800903264693541
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 3435679206413800381
+        Name: "Ring - Quarter Beveled Thick"
+        Transform {
+          Location {
+            X: 25.7727051
+            Y: -52.4185181
+            Z: 219.064056
+          }
+          Rotation {
+            Pitch: -56.6234131
+            Yaw: 146.671555
+            Roll: 104.301285
+          }
+          Scale {
+            X: 0.254182726
+            Y: 0.381274134
+            Z: 0.0205892846
+          }
+        }
+        ParentId: 14289059249346616943
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 6954370053071083141
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 2
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:vtile"
+            Float: 2
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 1.5
+              G: 1.5
+              B: 1.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2555807082249945326
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 6
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 8
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.2
+              G: 0.2
+              B: 0.2
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 17608613418967438301
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 11062497117236459924
+        Name: "Prism - 6-Sided Half"
+        Transform {
+          Location {
+            X: 27.8083496
+            Y: -55.5317383
+            Z: 234.815918
+          }
+          Rotation {
+            Pitch: -56.6234741
+            Yaw: 146.671478
+            Roll: -75.6986084
+          }
+          Scale {
+            X: -0.11672122
+            Y: 0.122198723
+            Z: 0.0491229594
+          }
+        }
+        ParentId: 14289059249346616943
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 6954370053071083141
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:utile"
+            Float: 2
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:vtile"
+            Float: 2
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 1.5
+              G: 1.5
+              B: 1.5
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 2555807082249945326
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.25
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.2
+              G: 0.2
+              B: 0.2
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 6457800903264693541
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
     }
     Assets {
-      Id: 393866312278010883
-      Name: "\"Tense Desolate Horror Wasteland\" Piano Music Stingers Set 01"
+      Id: 1298475152617809123
+      Name: "Cartoon Wood Twang Spring Jump Set 01 SFX"
       PlatformAssetType: 10
       PrimaryAsset {
         AssetType: "AudioBlueprintAssetRef"
-        AssetId: "abp_TenseDesolateHorrorWasteland_stingers_kit2_ref"
+        AssetId: "sfxabp_funny_ruler_wood_twang_jump_bounce_ref"
       }
     }
     Assets {
@@ -1833,6 +2264,24 @@ Assets {
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
         AssetId: "sm_rocks_small_001"
+      }
+    }
+    Assets {
+      Id: 12446131267530965574
+      Name: "Wood Raw"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_wood_raw_001_uv"
+      }
+    }
+    Assets {
+      Id: 6954370053071083141
+      Name: "Metal Iron 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_metal_iron_001"
       }
     }
     PrimaryAssetId {

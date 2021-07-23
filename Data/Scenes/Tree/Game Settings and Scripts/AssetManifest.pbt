@@ -953,6 +953,15 @@ Assets {
   }
 }
 Assets {
+  Id: 3519194267397355420
+  Name: "Fantasy Glove 021"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Gear_Glove_021"
+  }
+}
+Assets {
   Id: 3308177430651849247
   Name: "Survival Watch 001"
   PlatformAssetType: 9

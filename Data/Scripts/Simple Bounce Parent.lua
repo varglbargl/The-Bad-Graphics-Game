@@ -6,6 +6,10 @@ if AIR_TIME == 0 or BOUNCE_HEIGHT == 0 then
   return
 end
 
+if START_OFFSET == 0 then
+  START_OFFSET = math.random() * AIR_TIME
+end
+
 local curveKeys = {
   CurveKey.New(0, 0, {interpolation = CurveInterpolation.CUBIC, leaveTangent = 4}),
   CurveKey.New(AIR_TIME, 0, {interpolation = CurveInterpolation.CUBIC, arriveTangent = -4})

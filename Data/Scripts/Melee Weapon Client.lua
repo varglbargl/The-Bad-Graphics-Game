@@ -9,11 +9,9 @@ local ICON = weapon:GetCustomProperty("Icon")
 local prefix, suffix = Utils.getItemEnchant()
 
 function onEquipped(thisWeapon, owner)
-  Chat.LocalMessage("       New weapon! Get equipped with: "..prefix.." "..weapon.name.." of "..suffix.."!")
+  Chat.LocalMessage("      New weapon! Get equipped with: "..prefix.." "..weapon.name.." of "..suffix.."!")
 
-  if EQUIP_SFX then
-    Utils.playSoundEffect(EQUIP_SFX)
-  end
+  Utils.playSoundEffect(EQUIP_SFX)
 
   if ICON then
     Events.Broadcast("UpdateWeapon")

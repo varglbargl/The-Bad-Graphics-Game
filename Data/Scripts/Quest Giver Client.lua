@@ -3,6 +3,7 @@ local Utils = require(script:GetCustomProperty("Utils"))
 local EXCLAMATION_POINT = script:GetCustomProperty("ExclamationPoint"):WaitForObject()
 local TRIGGER = script:GetCustomProperty("Trigger"):WaitForObject()
 local ACCEPT_SFX = script:GetCustomProperty("AcceptSFX")
+local LOG_FULL_SFX = script:GetCustomProperty("LogFullSFX")
 
 local clientPlayer = Game.GetLocalPlayer()
 
@@ -10,14 +11,17 @@ TRIGGER.interactionLabel = "ACCEPT QUEST"
 
 function onInteracted(thisTrigger, other)
 	if other == clientPlayer then
-    EXCLAMATION_POINT.visibility = Visibility.FORCE_OFF
-    TRIGGER.collision = Collision.FORCE_OFF
+    if not clientPlayer.clientUserData["Quests"] or #clientPlayer.clientUserData["Quests"] < 10 then
+      EXCLAMATION_POINT.visibility = Visibility.FORCE_OFF
+      TRIGGER.collision = Collision.FORCE_OFF
 
-    if ACCEPT_SFX then
       Utils.playSoundEffect(ACCEPT_SFX, TRIGGER:GetWorldPosition(), 0.75, math.random(-2, 2) * 100)
+      Utils.showFlyupText("QUEST ACCEPTED")
+      Utils.throttleToServer("AcceptQuest")
+    else
+      Utils.playSoundEffect(LOG_FULL_SFX, TRIGGER:GetWorldPosition(), 0.75, math.random(-2, 2) * 100)
+      Utils.showFlyupText("QUEST LOG FULL", nil, Utils.color.hurt)
     end
-
-    Utils.throttleToServer("AcceptQuest")
 	end
 end
 

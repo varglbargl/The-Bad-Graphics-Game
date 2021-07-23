@@ -1,32 +1,20 @@
 local Utils = require(script:GetCustomProperty("Utils"))
-local ObjectTable = require(script:GetCustomProperty("ObjectTable"))
 
 local SPAWN_VFX = script:GetCustomProperty("SpawnVFX")
-local RESPAWN_TIME = script:GetCustomProperty("RespawnTime")
-local RANDOM_SPAWN_ROTATION = script:GetCustomProperty("RandomSpawnRotation")
-local SPAWN_ONCE = script:GetCustomProperty("SpawnOnce")
 
-local spawnPoint = Utils.groundBelowPoint(script:GetWorldPosition())
+local RAT_TABLE = require(script:GetCustomProperty("RatTable"))
+local QUEST_TABLE = require(script:GetCustomProperty("QuestTable"))
+local DESTRUCTIBLE_TABLE = require(script:GetCustomProperty("DestructibleTable"))
 
-assert(spawnPoint, script.id.." is in an invalid location. Can't find any ground below it to spawn something on.")
+local RAT_LOCATIONS = script:GetCustomProperty("RatLocations"):WaitForObject()
+local QUEST_LOCATIONS = script:GetCustomProperty("QuestLocations"):WaitForObject()
+local DESTRUCTIBLE_LOCATIONS = script:GetCustomProperty("DestructibleLocations"):WaitForObject()
 
-local spawnRotation = nil
-
-if RANDOM_SPAWN_ROTATION then
-  spawnRotation = Rotation.New(0, 0, math.random(1, 360))
-else
-  spawnRotation = script:GetWorldRotation()
-end
-
-local spawnedObject = nil
-local destroyEvent = nil
-local shouldSpawn = true
-
-function areTherePlayersNearby()
+function areTherePlayersNearby(where)
   local players = Game.GetPlayers()
 
   for _, player in ipairs(players) do
-    if Object.IsValid(player) and (player:GetWorldPosition() - spawnPoint).size < 8000 then
+    if Object.IsValid(player) and (player:GetWorldPosition() - where).size < 4000 then
       return "I hate players."
     end
   end
@@ -34,67 +22,97 @@ function areTherePlayersNearby()
   return false
 end
 
-function spawnObject()
-  if Object.IsValid(spawnedObject) or not shouldSpawn then return end
+function spawnObject(settings)
+  if not settings.shouldSpawn  then return end
 
   if SPAWN_VFX then
-    local spawnVfx = World.SpawnAsset(SPAWN_VFX, {position = spawnPoint})
+    local spawnVfx = World.SpawnAsset(SPAWN_VFX, {position = settings.spawnPoint})
 
     if spawnVfx.lifeSpan == 0 then
       spawnVfx.lifeSpan = 5
     end
   end
 
-  local objectToSpawn = ObjectTable[math.random(1, #ObjectTable)]
+  local objectToSpawn = settings.objectTable[math.random(1, #settings.objectTable)]
 
-  spawnedObject = World.SpawnAsset(objectToSpawn, {position = spawnPoint, rotation = spawnRotation})
+  settings.spawnedObject = World.SpawnAsset(objectToSpawn, {position = settings.spawnPoint, rotation = settings.spawnRotation})
 
-  if SPAWN_ONCE then return end
-
-  -- handler params: CoreObject_coreObject
-  destroyEvent = spawnedObject.destroyEvent:Connect(respawnTimer)
-end
-
-function despawnObject()
-  if not Object.IsValid(spawnedObject) then return end
-
-  if destroyEvent then
-    destroyEvent:Disconnect()
-    destroyEvent = nil
-  end
-end
-
-function respawnTimer()
-  shouldSpawn = false
-
-  if destroyEvent then
-    destroyEvent:Disconnect()
-    destroyEvent = nil
+  if settings.respawnTime then
+    -- handler params: CoreObject_coreObject
+    settings.destroyEvent = settings.spawnedObject.destroyEvent:Connect(function() respawnTimer(settings) end)
   end
 
-  Task.Wait(RESPAWN_TIME)
-
-  shouldSpawn = true
+  return settings.spawnedObject
 end
 
-function spawnLoop()
-  if areTherePlayersNearby() and not Object.IsValid(spawnedObject) then
+function despawnObject(settings)
+  if settings.destroyEvent then
+    settings.destroyEvent:Disconnect()
+    settings.destroyEvent = nil
+  end
 
-    spawnObject()
-  elseif not areTherePlayersNearby() and Object.IsValid(spawnedObject) then
+  if not Object.IsValid(settings.spawnedObject) then return end
 
-    despawnObject()
+  settings.spawnedObject:Destroy()
+end
+
+function respawnTimer(settings)
+  settings.shouldSpawn = false
+
+  if settings.destroyEvent then
+    settings.destroyEvent:Disconnect()
+    settings.destroyEvent = nil
+  end
+
+  Task.Wait(settings.respawnTime)
+  if not Object.IsValid(script) then return end
+
+  settings.shouldSpawn = true
+end
+
+function spawnLoop(settings)
+  if not Object.IsValid(script) then
+    -- Shows over, folks. Level's been destroyed.
+    despawnObject(settings)
+
+    return Task.GetCurrent():Cancel()
+  end
+
+  if areTherePlayersNearby(settings.spawnPoint) and not Object.IsValid(settings.spawnedObject) then
+
+    settings.spawnedObject = spawnObject(settings)
+  elseif not areTherePlayersNearby(settings.spawnPoint) and Object.IsValid(settings.spawnedObject) then
+
+    despawnObject(settings)
   end
 
   Task.Wait(2 + math.random() * 3)
 
-  -- print("Guess I'll just wait here. Not existing.")
-
-  spawnLoop()
+  spawnLoop(settings)
 end
 
-if SPAWN_ONCE then
-  spawnObject()
-else
-  spawnLoop()
+function initSpawners(objectTable, locations, respawnTime)
+  local spawnPoints = locations:GetChildren()
+
+  for _, location in ipairs(spawnPoints) do
+    local settings = {
+      objectTable = objectTable,
+      spawnPoint = location:GetWorldPosition(),
+      spawnRotation = location:GetWorldRotation(),
+      spawnedObject = nil,
+      respawnTime = respawnTime,
+      shouldSpawn = true,
+      destroyEvent = nil
+    }
+
+    if respawnTime then
+      Task.Spawn(function() spawnLoop(settings) end)
+    else
+      spawnObject(settings)
+    end
+  end
 end
+
+initSpawners(RAT_TABLE, RAT_LOCATIONS, 60)
+initSpawners(DESTRUCTIBLE_TABLE, DESTRUCTIBLE_LOCATIONS, 120)
+initSpawners(QUEST_TABLE, QUEST_LOCATIONS)

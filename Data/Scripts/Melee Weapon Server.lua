@@ -2,6 +2,8 @@ local Utils = require(script:GetCustomProperty("Utils"))
 
 local GRIPLESS = script:GetCustomProperty("Gripless")
 local EXPLODE_VFX = script:GetCustomProperty("ExplodeVFX")
+local THROW_SFX = script:GetCustomProperty("ThrowSFX")
+local SWOOSH_SFX = script:GetCustomProperty("SwooshSFX")
 
 local weapon = script.parent
 
@@ -25,7 +27,7 @@ function throwWeapon(thrower)
 
   local throwDirection = thrower:GetLookWorldRotation()
   local fromPosition = weapon:GetWorldPosition()
-  local toPosition = thrower:GetWorldPosition() + throwDirection * Vector3.FORWARD * 5000
+  local toPosition = thrower:GetWorldPosition() + throwDirection * Vector3.FORWARD * 4000
   local throwTarget = World.Raycast(fromPosition, toPosition, {ignorePlayers = true})
 
   if throwTarget then
@@ -41,6 +43,7 @@ function throwWeapon(thrower)
 
   Task.Wait(throwDistance / 4000)
   if not Object.IsValid(weapon) then return end
+
   HITBOX:SetScale(Vector3.ONE * 10)
 
   if EXPLODE_VFX then
@@ -59,6 +62,10 @@ function onAbilityCast(thisAbility)
 
   hitEnemies = {}
 
+  print((thisAbility.executePhaseSettings.duration - 0.2) * -5000)
+
+  Utils.playSoundEffect(SWOOSH_SFX, weapon:GetWorldPosition(), 0.4, (thisAbility.castPhaseSettings.duration - 0.25) * -8000)
+
   if GRIPLESS then
     HITBOX.collision = Collision.INHERIT
     return
@@ -68,6 +75,10 @@ function onAbilityCast(thisAbility)
 
   if currentGrip <= 0 then
     Task.Wait(thisAbility.castPhaseSettings.duration * 0.75)
+    if not Object.IsValid(weapon) or not Object.IsValid(thisAbility) or not Object.IsValid(thisAbility.owner) then return end
+
+    Utils.playSoundEffect(THROW_SFX, weapon:GetWorldPosition(), 1, -400 * HITBOX:GetWorldScale().size)
+
     throwWeapon(thisAbility.owner)
   else
     HITBOX.collision = Collision.INHERIT
@@ -93,7 +104,6 @@ end
 
 function onEquipped(thisEquipment, player)
   if STANCE then
-    player.animationStance = STANCE
     Events.Broadcast("UpdateIdleStance", player, STANCE)
   end
 
@@ -126,7 +136,7 @@ function onEquipped(thisEquipment, player)
 end
 
 function onUnequipped(thisEquipment, player)
-  player.animationStance = "unarmed_ready"
+  Events.Broadcast("UpdateIdleStance", player, "unarmed_ready")
 
   if throwEvent then
     throwEvent:Disconnect()

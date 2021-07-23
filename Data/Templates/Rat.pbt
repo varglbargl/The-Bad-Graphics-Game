@@ -2016,4 +2016,5 @@ Assets {
     }
   }
   SerializationVersion: 92
+  VirtualFolderPath: "Rats"
 }

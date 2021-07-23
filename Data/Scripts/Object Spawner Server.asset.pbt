@@ -11,28 +11,43 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:ObjectTable"
-        AssetReference {
-          Id: 841534158063459245
-        }
-      }
-      Overrides {
         Name: "cs:SpawnVFX"
         AssetReference {
           Id: 4048767687044730201
         }
       }
       Overrides {
-        Name: "cs:RespawnTime"
-        Float: 30
+        Name: "cs:RatTable"
+        AssetReference {
+          Id: 1231376412476768650
+        }
       }
       Overrides {
-        Name: "cs:RandomSpawnRotation"
-        Bool: false
+        Name: "cs:QuestTable"
+        AssetReference {
+          Id: 6676189601399625565
+        }
       }
       Overrides {
-        Name: "cs:SpawnOnce"
-        Bool: false
+        Name: "cs:DestructibleTable"
+        AssetReference {
+          Id: 8821218626252094872
+        }
+      }
+      Overrides {
+        Name: "cs:RatLocations"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:QuestLocations"
+        ObjectReference {
+        }
+      }
+      Overrides {
+        Name: "cs:DestructibleLocations"
+        ObjectReference {
+        }
       }
     }
   }

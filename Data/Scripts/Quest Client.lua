@@ -8,6 +8,8 @@ local sfx = nil
 
 local clientPlayer = Game.GetLocalPlayer()
 
+clientPlayer.clientUserData["Quests"] = {}
+
 function onPrivateNetworkedDataChanged(player, key)
   if player ~= clientPlayer or not Object.IsValid(player) then return end
 
@@ -41,7 +43,9 @@ function onPrivateNetworkedDataChanged(player, key)
       end
     end
 
-    if questsCompeted and COMPLETED_SFX then
+    if questsCompeted then
+      Events.Broadcast("NewGear")
+
       if Object.IsValid(sfx) then sfx:Destroy() end
 
       sfx = Utils.playSoundEffect(COMPLETED_SFX, nil, 0.75)

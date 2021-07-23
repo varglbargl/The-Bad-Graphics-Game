@@ -115,9 +115,9 @@ Assets {
             Yaw: -90
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 1
+            X: 2
+            Y: 2
+            Z: 2
           }
         }
         ParentId: 1011503542627030541
@@ -149,9 +149,9 @@ Assets {
         Name: "Exclamation"
         Transform {
           Location {
-            X: 40
+            X: 51
             Y: -0.000244140625
-            Z: 235
+            Z: 248
           }
           Rotation {
             Yaw: 3.41509372e-06
@@ -598,17 +598,18 @@ Assets {
         Name: "Cube"
         Transform {
           Location {
-            X: 0.000106751919
+            X: -5.00001478
             Y: 0.250976563
           }
           Rotation {
-            Yaw: 180
-            Roll: 45
+            Pitch: 45
+            Yaw: -90
+            Roll: 90
           }
           Scale {
-            X: 0.1
+            X: 0.2
             Y: 0.2
-            Z: 0.2
+            Z: 0.1
           }
         }
         ParentId: 3421551383796147055
@@ -643,7 +644,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 12095835209017042614
+            Id: 15347432209331748117
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1683,6 +1684,15 @@ Assets {
       PrimaryAsset {
         AssetType: "VfxBlueprintAssetRef"
         AssetId: "fxbp_Signal_Flare"
+      }
+    }
+    Assets {
+      Id: 15347432209331748117
+      Name: "Pipe - 4-Sided Thick"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_pipe_4_sided_thick_001"
       }
     }
     Assets {

@@ -52,10 +52,7 @@ function onResourceChanged(player, name, newTotal)
 
         Task.Wait(0.1)
 
-        if REWARD_POINT_SFX then
-          Utils.playSoundEffect(REWARD_POINT_SFX, nil, 0.2, 200)
-        end
-
+        Utils.playSoundEffect(REWARD_POINT_SFX, nil, 0.2, 200)
         Utils.showFlyupText("+"..Utils.formatInt(difference).." RP", clientPlayer:GetWorldPosition(), Utils.color.rp)
       end
     end
@@ -92,16 +89,14 @@ function onPrivateNetworkedDataChanged(player, key)
 
       local stat1, stat2, stat3 = Utils.getRandomStats()
 
-      Chat.LocalMessage("     You gained a level! You are now a Level "..myLevel.." "..data..[[!]])
-      Chat.LocalMessage("       +"..math.random(1, 4).." "..stat1)
-      Chat.LocalMessage("       +"..math.random(1, 4).." "..stat2)
-      Chat.LocalMessage("        -"..math.random(1, 3).." "..stat3)
+      Chat.LocalMessage(" ")
+      Chat.LocalMessage("   You gained a level! You are now a Level "..myLevel.." "..data..[[!]])
+      Chat.LocalMessage("      +"..math.random(1, 4).." "..stat1)
+      Chat.LocalMessage("      +"..math.random(1, 4).." "..stat2)
+      Chat.LocalMessage("       -"..math.random(1, 3).." "..stat3)
+      Chat.LocalMessage(" ")
 
       Events.Broadcast("LeveledUp")
-
-      if math.random() < 0.5 then
-        Events.Broadcast("NewGear")
-      end
 
     else
       myRank = data
