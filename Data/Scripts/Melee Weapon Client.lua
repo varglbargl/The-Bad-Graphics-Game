@@ -6,9 +6,12 @@ local weapon = script:FindAncestorByType("Equipment")
 
 local ICON = weapon:GetCustomProperty("Icon")
 
+local clientPlayer = Game.GetLocalPlayer()
 local prefix, suffix = Utils.getItemEnchant()
 
 function onEquipped(thisWeapon, owner)
+  if owner ~= clientPlayer then return end
+
   Chat.LocalMessage("      New weapon! Get equipped with: "..prefix.." "..weapon.name.." of "..suffix.."!")
 
   Utils.playSoundEffect(EQUIP_SFX)
@@ -19,6 +22,8 @@ function onEquipped(thisWeapon, owner)
 end
 
 function onUnequipped(thisWeapon, owner)
+  if owner ~= clientPlayer then return end
+
   Events.Broadcast("UpdateWeapon")
 end
 

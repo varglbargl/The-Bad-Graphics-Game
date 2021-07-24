@@ -464,8 +464,10 @@ end
 
 -- GENERAL UTILITY
 
-function Utils.groundBelowPoint(vec3)
-  local hitResult = World.Raycast(vec3 + Vector3.UP * 50, vec3 - Vector3.UP * 500, {ignorePlayers = true})
+function Utils.groundBelowPoint(vec3, distance)
+  distance = distance or 500
+
+  local hitResult = World.Raycast(vec3 + Vector3.UP * 50, vec3 - Vector3.UP * distance, {ignorePlayers = true})
 
   if hitResult then
     return hitResult:GetImpactPosition()

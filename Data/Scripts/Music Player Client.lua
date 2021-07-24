@@ -2,6 +2,7 @@ local PLAYLIST_FOLDER = script:GetCustomProperty("PlaylistFolder"):WaitForObject
 local BACK = script:GetCustomProperty("Back"):WaitForObject()
 local PLAY_STOP = script:GetCustomProperty("PlayStop"):WaitForObject()
 local FORWARD = script:GetCustomProperty("Forward"):WaitForObject()
+local SETTINGS = script:GetCustomProperty("Settings"):WaitForObject()
 
 local CROSSFADE = script:GetCustomProperty("CrossfadeTime")
 local ICON_CLICKED_COLOR = script:GetCustomProperty("IconClickedColor")
@@ -94,5 +95,10 @@ player.bindingPressedEvent:Connect(handleKeyPress)
 BACK.clickedEvent:Connect(playPreviousTrack)
 PLAY_STOP.clickedEvent:Connect(playStopMusic)
 FORWARD.clickedEvent:Connect(playNextTrack)
+
+SETTINGS.clickedEvent:Connect(function()
+  blinkIcons(SETTINGS:FindDescendantsByType("UIImage"))
+  Events.Broadcast("ToggleSettings")
+end)
 
 playlist[1]:FadeIn(0.5)

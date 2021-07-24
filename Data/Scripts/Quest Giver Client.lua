@@ -18,6 +18,13 @@ function onInteracted(thisTrigger, other)
       Utils.playSoundEffect(ACCEPT_SFX, TRIGGER:GetWorldPosition(), 0.75, math.random(-2, 2) * 100)
       Utils.showFlyupText("QUEST ACCEPTED")
       Utils.throttleToServer("AcceptQuest")
+
+      Task.Wait(60)
+
+      if Object.IsValid(script) and Object.IsValid(TRIGGER) then
+        TRIGGER.collision = Collision.FORCE_ON
+        EXCLAMATION_POINT.visibility = Visibility.INHERIT
+      end
     else
       Utils.playSoundEffect(LOG_FULL_SFX, TRIGGER:GetWorldPosition(), 0.75, math.random(-2, 2) * 100)
       Utils.showFlyupText("QUEST LOG FULL", nil, Utils.color.hurt)

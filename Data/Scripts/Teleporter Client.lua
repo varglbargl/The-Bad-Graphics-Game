@@ -14,8 +14,6 @@ function fadeToBlack(startTime)
   local function fadeLoop()
     local now = time() - startTime
 
-    print(math.floor(BLACK.parent.width * now))
-
     if now > 1 then
       BLACK.visibility = Visibility.FORCE_OFF
       Utils.playSoundEffect(CLOSE_SFX)

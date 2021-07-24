@@ -260,6 +260,15 @@ Assets {
   }
 }
 Assets {
+  Id: 14908746495484902539
+  Name: "Center Circle 001 Outline"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterCircle_001Outline"
+  }
+}
+Assets {
   Id: 14501095750580427382
   Name: "Frame Tri 002 Wedge"
   PlatformAssetType: 9
@@ -548,6 +557,15 @@ Assets {
   }
 }
 Assets {
+  Id: 10624740648027052384
+  Name: "Roboto Black"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "RobotoBlack_ref"
+  }
+}
+Assets {
   Id: 10604682295400649684
   Name: "Fantasy Ability Teal 017"
   PlatformAssetType: 9
@@ -764,12 +782,39 @@ Assets {
   }
 }
 Assets {
+  Id: 6567799083887839196
+  Name: "Sci-fi Ability Green 009"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_SciFi_Ability_Green_009"
+  }
+}
+Assets {
   Id: 6548253334508508867
   Name: "Fantasy Sword 020"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Weapon_Sword_020"
+  }
+}
+Assets {
+  Id: 6388731257446822808
+  Name: "BG Flat 006"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundNoOutline_015"
+  }
+}
+Assets {
+  Id: 6367683325620756371
+  Name: "Roboto Bold"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "RobotoBold_ref"
   }
 }
 Assets {
@@ -851,6 +896,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Gear_Cape_010"
+  }
+}
+Assets {
+  Id: 5430502107176314700
+  Name: "Icon Close"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "Icon_Close"
   }
 }
 Assets {

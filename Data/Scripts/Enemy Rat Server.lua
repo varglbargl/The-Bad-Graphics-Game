@@ -11,6 +11,7 @@ local LOOT_DROP = script:GetCustomProperty("LootDrop")
 
 local isDead = false
 local isFighting = false
+local experiencePlayers = {}
 local maxHitPoints = 5
 local hitPoints = maxHitPoints
 
@@ -93,6 +94,8 @@ end
 function stopFighting()
   if isDead or not Object.IsValid(enemy) then return end
 
+  experiencePlayers = {}
+
   if (enemy:GetWorldPosition() - spawnPoint).size > 10 then
     enemy:LookAt(spawnPoint)
   end
@@ -136,7 +139,21 @@ function die(killer, damage)
   isDead = true
   Utils.throttleToAllPlayers("eDie", killer, enemy.id, damage)
 
-  Events.Broadcast("RatKilled", isFighting)
+  for _, player in ipairs(Game.FindPlayersInSphere(enemy:GetWorldPosition(), 2000)) do
+    if Object.IsValid(player) then experiencePlayers[player] = true end
+  end
+
+  for _, player in ipairs(Game.FindPlayersInSphere(killer:GetWorldPosition(), 2000)) do
+    if Object.IsValid(player) then experiencePlayers[player] = true end
+  end
+
+  for xpPlayer in pairs(experiencePlayers) do
+    if Object.IsValid(xpPlayer) then
+      Events.Broadcast("RatKilled", xpPlayer)
+    end
+  end
+
+  experiencePlayers = {}
 
   if LOOT_DROP and math.random() < 0.75 then
     local loot = World.SpawnAsset(LOOT_DROP, {position = enemy:GetWorldPosition()})
@@ -166,6 +183,10 @@ function onWeaponHit(thisEnemy, weapon, damage)
 
   if weapon then
     attacker = weapon.owner or weapon.serverUserData["Thrower"]
+  end
+
+  if attacker then
+    experiencePlayers[attacker] = true
   end
 
   if attacker and not isFighting then

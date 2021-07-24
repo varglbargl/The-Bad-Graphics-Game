@@ -134,6 +134,10 @@ function initSpawners(objectTable, locations, respawnTime)
   end
 end
 
-initSpawners(RAT_TABLE, RAT_LOCATIONS, 60)
-initSpawners(DESTRUCTIBLE_TABLE, DESTRUCTIBLE_LOCATIONS, 120)
-initSpawners(QUEST_TABLE, QUEST_LOCATIONS)
+Task.Wait(1)
+
+if Object.IsValid(script) then
+  initSpawners(RAT_TABLE, RAT_LOCATIONS, 90)
+  initSpawners(DESTRUCTIBLE_TABLE, DESTRUCTIBLE_LOCATIONS, 90)
+  initSpawners(QUEST_TABLE, QUEST_LOCATIONS)
+end
