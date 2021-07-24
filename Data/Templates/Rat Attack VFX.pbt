@@ -69,7 +69,7 @@ Assets {
           }
           AutoPlay: true
           Volume: 0.8
-          Falloff: 2000
+          Falloff: 3000
           Radius: 1000
           FadeOutTime: 0.2
           IsSpatializationEnabled: true
@@ -112,7 +112,7 @@ Assets {
           }
           AutoPlay: true
           Volume: 1
-          Falloff: 2000
+          Falloff: 3000
           Radius: 1000
           IsSpatializationEnabled: true
           IsAttenuationEnabled: true

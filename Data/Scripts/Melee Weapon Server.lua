@@ -62,8 +62,6 @@ function onAbilityCast(thisAbility)
 
   hitEnemies = {}
 
-  print((thisAbility.executePhaseSettings.duration - 0.2) * -5000)
-
   Utils.playSoundEffect(SWOOSH_SFX, weapon:GetWorldPosition(), 0.4, (thisAbility.castPhaseSettings.duration - 0.25) * -8000)
 
   if GRIPLESS then

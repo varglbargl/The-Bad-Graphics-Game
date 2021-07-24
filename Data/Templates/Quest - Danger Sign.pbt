@@ -84,7 +84,7 @@ Assets {
           Overrides {
             Name: "cs:AcceptSFX"
             AssetReference {
-              Id: 1298475152617809123
+              Id: 2020734666116418584
             }
           }
         }
@@ -2141,12 +2141,12 @@ Assets {
       }
     }
     Assets {
-      Id: 1298475152617809123
-      Name: "Cartoon Wood Twang Spring Jump Set 01 SFX"
-      PlatformAssetType: 10
+      Id: 2020734666116418584
+      Name: "Large Wooden Door Shut Open Close Rattle 01 SFX"
+      PlatformAssetType: 7
       PrimaryAsset {
-        AssetType: "AudioBlueprintAssetRef"
-        AssetId: "sfxabp_funny_ruler_wood_twang_jump_bounce_ref"
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_large_wooden_door_shut_open_close_rattle_01_Cue_ref"
       }
     }
     Assets {

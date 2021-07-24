@@ -14,8 +14,22 @@ function areTherePlayersNearby(where)
   local players = Game.GetPlayers()
 
   for _, player in ipairs(players) do
-    if Object.IsValid(player) and (player:GetWorldPosition() - where).size < 4000 then
-      return "I hate players."
+    if Object.IsValid(player) then
+
+      local range = player:GetWorldPosition() - where
+      local inRange = range.size < 4000
+      local inVerticalRange = range.z < 1200 and range.z > -500
+
+      if inRange and inVerticalRange then
+        -- local closeRange = range < 1000
+        -- local outaSight = World.Raycast(where + Vector3.UP * 100, player:GetWorldPosition())
+
+        -- print("I am "..range.." units away from "..player.name.." and "..tostring(outaSight and outaSight.other.id).." is in my way of seeing her.")
+
+        -- if closeRange or not outaSight then
+          return "I hate players."
+        -- end
+      end
     end
   end
 
@@ -86,7 +100,7 @@ function spawnLoop(settings)
     despawnObject(settings)
   end
 
-  Task.Wait(2 + math.random() * 3)
+  Task.Wait(1 + math.random() * 2)
 
   spawnLoop(settings)
 end
@@ -104,6 +118,13 @@ function initSpawners(objectTable, locations, respawnTime)
       shouldSpawn = true,
       destroyEvent = nil
     }
+
+    local destroyLevelEvent = nil
+
+    destroyLevelEvent = script.destroyEvent:Connect(function()
+      despawnObject(settings)
+      destroyLevelEvent:Disconnect()
+    end)
 
     if respawnTime then
       Task.Spawn(function() spawnLoop(settings) end)

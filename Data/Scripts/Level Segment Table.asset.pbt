@@ -16,6 +16,18 @@ Assets {
           Id: 8921684629265765251
         }
       }
+      Overrides {
+        Name: "cs:LevelSegmentStairsDown"
+        AssetReference {
+          Id: 2668847900500311462
+        }
+      }
+      Overrides {
+        Name: "cs:LevelSegmentUpwardUTurnPlatformer"
+        AssetReference {
+          Id: 262247299555105057
+        }
+      }
     }
   }
   SerializationVersion: 92

@@ -138,7 +138,7 @@ Assets {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
         EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
+          Value: "mc:eindicatorvisibility:alwaysvisible"
         }
         Trigger {
           TeamSettings {
@@ -1538,7 +1538,7 @@ Assets {
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
-            X: 1450
+            X: 1500
             Y: 2500
           }
           Rotation {

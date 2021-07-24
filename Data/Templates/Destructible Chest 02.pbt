@@ -42,10 +42,9 @@ Assets {
         Name: "Collision"
         Transform {
           Location {
-            Z: 50
+            Z: 25
           }
           Rotation {
-            Roll: 90
           }
           Scale {
             X: 0.8

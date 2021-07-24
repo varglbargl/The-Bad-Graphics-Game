@@ -21,9 +21,9 @@ function onPickup(thisLoot, owner)
   elseif RESOURCE == "Grip" then
     local currentGrip = owner:GetResource("Grip")
 
-    if currentGrip == 0 then return end
-
-    owner:SetResource("Grip", math.min(currentGrip + amount, 25))
+    if currentGrip > 0 and currentGrip < 25 then
+      owner:SetResource("Grip", math.min(currentGrip + amount, 25))
+    end
   else
     owner:AddResource(RESOURCE, amount)
   end

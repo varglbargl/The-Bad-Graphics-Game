@@ -1,13 +1,13 @@
 Assets {
-  Id: 8921684629265765251
-  Name: "Level Segment - Straight Ass Line"
+  Id: 2668847900500311462
+  Name: "Level Segment - Stairs Down"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 12332789929555173137
+      RootId: 1849036424309690565
       Objects {
-        Id: 12332789929555173137
-        Name: "Level Segment - Straight Ass Line"
+        Id: 1849036424309690565
+        Name: "Level Segment - Stairs Down"
         Transform {
           Scale {
             X: 1
@@ -16,20 +16,20 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 3082400256045594970
-        ChildIds: 4666007151297949042
-        ChildIds: 8930542144195470245
+        ChildIds: 15283710003800107864
+        ChildIds: 13938561788175048504
+        ChildIds: 3094724296161762099
         UnregisteredParameters {
           Overrides {
             Name: "cs:ExitLocations"
             ObjectReference {
-              SubObjectId: 6398344947594512968
+              SubObjectId: 2878227500065573111
             }
           }
           Overrides {
             Name: "cs:BoundingBox"
             ObjectReference {
-              SubObjectId: 4666007151297949042
+              SubObjectId: 13938561788175048504
             }
           }
         }
@@ -51,7 +51,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3082400256045594970
+        Id: 15283710003800107864
         Name: "Object Spawner Server"
         Transform {
           Location {
@@ -64,30 +64,30 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12332789929555173137
+        ParentId: 1849036424309690565
         UnregisteredParameters {
           Overrides {
             Name: "cs:RatLocations"
             ObjectReference {
-              SubObjectId: 13775984796598756592
+              SubObjectId: 119442432774611732
             }
           }
           Overrides {
             Name: "cs:DestructableLocations"
             ObjectReference {
-              SubObjectId: 9796444577206278773
+              SubObjectId: 1738927443427336886
             }
           }
           Overrides {
             Name: "cs:QuestLocations"
             ObjectReference {
-              SubObjectId: 6446713915202883095
+              SubObjectId: 7831709863952360550
             }
           }
           Overrides {
             Name: "cs:DestructibleLocations"
             ObjectReference {
-              SubObjectId: 9796444577206278773
+              SubObjectId: 1738927443427336886
             }
           }
         }
@@ -111,22 +111,22 @@ Assets {
         }
       }
       Objects {
-        Id: 4666007151297949042
+        Id: 13938561788175048504
         Name: "Trigger"
         Transform {
           Location {
             X: 1500
-            Z: 300
+            Z: -250
           }
           Rotation {
           }
           Scale {
             X: 29
             Y: 9
-            Z: 9
+            Z: 19
           }
         }
-        ParentId: 12332789929555173137
+        ParentId: 1849036424309690565
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -151,7 +151,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8930542144195470245
+        Id: 3094724296161762099
         Name: "StaticContext"
         Transform {
           Location {
@@ -164,15 +164,23 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12332789929555173137
-        ChildIds: 13775984796598756592
-        ChildIds: 6446713915202883095
-        ChildIds: 9796444577206278773
-        ChildIds: 6398344947594512968
-        ChildIds: 18282899720210022495
-        ChildIds: 10830628616980773239
-        ChildIds: 3924610423861604968
-        ChildIds: 5855276550081459767
+        ParentId: 1849036424309690565
+        ChildIds: 119442432774611732
+        ChildIds: 7831709863952360550
+        ChildIds: 1738927443427336886
+        ChildIds: 2878227500065573111
+        ChildIds: 10927928231486490850
+        ChildIds: 13072744853638627162
+        ChildIds: 16215349802511418205
+        ChildIds: 5446662554947041116
+        ChildIds: 6983225300190906909
+        ChildIds: 14874246501369804955
+        ChildIds: 14256914261999374079
+        ChildIds: 16739982946337748516
+        ChildIds: 16346953134369318064
+        ChildIds: 7707550427368762523
+        ChildIds: 15331592848327827115
+        ChildIds: 7785273134438259888
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -191,7 +199,7 @@ Assets {
         }
       }
       Objects {
-        Id: 13775984796598756592
+        Id: 119442432774611732
         Name: "Rat Locations"
         Transform {
           Location {
@@ -204,9 +212,9 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8930542144195470245
-        ChildIds: 3260127544964447195
-        ChildIds: 18366882821998922578
+        ParentId: 3094724296161762099
+        ChildIds: 6940565042959339332
+        ChildIds: 18229138905470223853
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -224,11 +232,12 @@ Assets {
         }
       }
       Objects {
-        Id: 3260127544964447195
+        Id: 6940565042959339332
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
-            X: 2500
+            X: 950
+            Y: -50
           }
           Rotation {
           }
@@ -238,7 +247,7 @@ Assets {
             Z: 0.5
           }
         }
-        ParentId: 13775984796598756592
+        ParentId: 119442432774611732
         UnregisteredParameters {
           Overrides {
             Name: "bp:Shape Index"
@@ -282,12 +291,12 @@ Assets {
         }
       }
       Objects {
-        Id: 18366882821998922578
+        Id: 18229138905470223853
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
-            X: 1500
-            Y: -100
+            X: 2350
+            Z: -1050
           }
           Rotation {
           }
@@ -297,7 +306,7 @@ Assets {
             Z: 0.5
           }
         }
-        ParentId: 13775984796598756592
+        ParentId: 119442432774611732
         UnregisteredParameters {
           Overrides {
             Name: "bp:Shape Index"
@@ -341,7 +350,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6446713915202883095
+        Id: 7831709863952360550
         Name: "Quest Locations"
         Transform {
           Location {
@@ -354,8 +363,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8930542144195470245
-        ChildIds: 10046627124076473364
+        ParentId: 3094724296161762099
+        ChildIds: 12920871342502779088
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -373,13 +382,12 @@ Assets {
         }
       }
       Objects {
-        Id: 10046627124076473364
+        Id: 12920871342502779088
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
-            X: 1900
+            X: 700
             Y: -344.954773
-            Z: -7.62939453e-06
           }
           Rotation {
             Yaw: 90
@@ -390,7 +398,7 @@ Assets {
             Z: 0.5
           }
         }
-        ParentId: 6446713915202883095
+        ParentId: 7831709863952360550
         UnregisteredParameters {
           Overrides {
             Name: "bp:Shape Index"
@@ -435,7 +443,7 @@ Assets {
         }
       }
       Objects {
-        Id: 9796444577206278773
+        Id: 1738927443427336886
         Name: "Destructible Locations"
         Transform {
           Location {
@@ -448,10 +456,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8930542144195470245
-        ChildIds: 7874449407508661165
-        ChildIds: 11167968416022664982
-        ChildIds: 10320115733013673460
+        ParentId: 3094724296161762099
+        ChildIds: 10831104285474813107
+        ChildIds: 15329140290443412000
+        ChildIds: 3178539928119086292
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -469,11 +477,11 @@ Assets {
         }
       }
       Objects {
-        Id: 7874449407508661165
+        Id: 10831104285474813107
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
-            X: 1200
+            X: 500
             Y: 200
           }
           Rotation {
@@ -484,7 +492,7 @@ Assets {
             Z: 0.5
           }
         }
-        ParentId: 9796444577206278773
+        ParentId: 1738927443427336886
         UnregisteredParameters {
           Overrides {
             Name: "bp:Shape Index"
@@ -528,11 +536,11 @@ Assets {
         }
       }
       Objects {
-        Id: 11167968416022664982
+        Id: 15329140290443412000
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
-            X: 1400
+            X: 700
             Y: 200
           }
           Rotation {
@@ -543,7 +551,7 @@ Assets {
             Z: 0.5
           }
         }
-        ParentId: 9796444577206278773
+        ParentId: 1738927443427336886
         UnregisteredParameters {
           Overrides {
             Name: "bp:Shape Index"
@@ -587,12 +595,13 @@ Assets {
         }
       }
       Objects {
-        Id: 10320115733013673460
+        Id: 3178539928119086292
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
             X: 2100
             Y: -300
+            Z: -1050
           }
           Rotation {
           }
@@ -602,7 +611,7 @@ Assets {
             Z: 0.5
           }
         }
-        ParentId: 9796444577206278773
+        ParentId: 1738927443427336886
         UnregisteredParameters {
           Overrides {
             Name: "bp:Shape Index"
@@ -646,7 +655,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6398344947594512968
+        Id: 2878227500065573111
         Name: "Exit Locations"
         Transform {
           Location {
@@ -659,8 +668,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8930542144195470245
-        ChildIds: 1605653294833510800
+        ParentId: 3094724296161762099
+        ChildIds: 7969938275075582724
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -678,11 +687,12 @@ Assets {
         }
       }
       Objects {
-        Id: 1605653294833510800
+        Id: 7969938275075582724
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
             X: 3000
+            Z: -1050
           }
           Rotation {
           }
@@ -692,7 +702,7 @@ Assets {
             Z: 0.5
           }
         }
-        ParentId: 6398344947594512968
+        ParentId: 2878227500065573111
         UnregisteredParameters {
           Overrides {
             Name: "bp:Shape Index"
@@ -737,22 +747,22 @@ Assets {
         }
       }
       Objects {
-        Id: 18282899720210022495
+        Id: 10927928231486490850
         Name: "Cube"
         Transform {
           Location {
-            X: 1500
+            X: 500
             Z: -50
           }
           Rotation {
           }
           Scale {
-            X: 30
+            X: 10
             Y: 10
             Z: 1
           }
         }
-        ParentId: 8930542144195470245
+        ParentId: 3094724296161762099
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -812,7 +822,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10830628616980773239
+        Id: 13072744853638627162
         Name: "Pipe - 7-Sided Thin"
         Transform {
           Location {
@@ -826,10 +836,10 @@ Assets {
           Scale {
             X: 11
             Y: 11
-            Z: 30
+            Z: 10
           }
         }
-        ParentId: 8930542144195470245
+        ParentId: 3094724296161762099
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:smart"
@@ -856,7 +866,7 @@ Assets {
           }
           Overrides {
             Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1.2
+            Float: 0.6
           }
         }
         Collidable_v2 {
@@ -889,24 +899,24 @@ Assets {
         }
       }
       Objects {
-        Id: 3924610423861604968
+        Id: 16215349802511418205
         Name: "Decal Stains Bottom 01"
         Transform {
           Location {
-            X: 2000
-            Y: -429.504517
-            Z: 134.38089
+            X: 2759.28564
+            Y: -433.520203
+            Z: -926.730347
           }
           Rotation {
             Roll: 64.684906
           }
           Scale {
-            X: 0.9375
+            X: 0.473417938
             Y: 0.65625
             Z: 0.1875
           }
         }
-        ParentId: 8930542144195470245
+        ParentId: 3094724296161762099
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color"
@@ -942,7 +952,7 @@ Assets {
         }
       }
       Objects {
-        Id: 5855276550081459767
+        Id: 5446662554947041116
         Name: "Decal Stains Bottom 01"
         Transform {
           Location {
@@ -959,7 +969,7 @@ Assets {
             Z: -0.1875
           }
         }
-        ParentId: 8930542144195470245
+        ParentId: 3094724296161762099
         UnregisteredParameters {
           Overrides {
             Name: "bp:Color"
@@ -992,6 +1002,626 @@ Assets {
         }
         Relevance {
           Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 6983225300190906909
+        Name: "Cube"
+        Transform {
+          Location {
+            X: 2500
+            Z: -1100
+          }
+          Rotation {
+          }
+          Scale {
+            X: 10
+            Y: 10
+            Z: 1
+          }
+        }
+        ParentId: 3094724296161762099
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 336187462816927178
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.1
+              G: 0.1
+              B: 0.1
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.6
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 1.2
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12095835209017042614
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 14874246501369804955
+        Name: "Pipe - 7-Sided Thin"
+        Transform {
+          Location {
+            X: 2799.99951
+            Y: 4.57763672e-05
+            Z: -900
+          }
+          Rotation {
+            Pitch: -179
+            Yaw: 90
+            Roll: -90
+          }
+          Scale {
+            X: 11
+            Y: 11
+            Z: 2
+          }
+        }
+        ParentId: 3094724296161762099
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4447412514203981896
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.05
+              G: 0.05
+              B: 0.05
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.6
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.125
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 1571171952410718143
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 14256914261999374079
+        Name: "Pipe - 7-Sided Thin"
+        Transform {
+          Location {
+            X: 1900
+            Y: 500
+            Z: -250
+          }
+          Rotation {
+          }
+          Scale {
+            X: 18
+            Y: 2
+            Z: 17
+          }
+        }
+        ParentId: 3094724296161762099
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4447412514203981896
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.05
+              G: 0.05
+              B: 0.05
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.6
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.6
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12095835209017042614
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 16739982946337748516
+        Name: "Pipe - 7-Sided Thin"
+        Transform {
+          Location {
+            X: 1900
+            Y: -500
+            Z: -250
+          }
+          Rotation {
+          }
+          Scale {
+            X: 18
+            Y: 2
+            Z: 17
+          }
+        }
+        ParentId: 3094724296161762099
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4447412514203981896
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.05
+              G: 0.05
+              B: 0.05
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.6
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.6
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12095835209017042614
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 16346953134369318064
+        Name: "Pipe - 7-Sided Thin"
+        Transform {
+          Location {
+            X: 1300
+            Z: 550
+          }
+          Rotation {
+          }
+          Scale {
+            X: 6
+            Y: 10
+            Z: 2
+          }
+        }
+        ParentId: 3094724296161762099
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4447412514203981896
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.05
+              G: 0.05
+              B: 0.05
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.6
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.3
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12095835209017042614
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 7707550427368762523
+        Name: "Pipe - 7-Sided Thin"
+        Transform {
+          Location {
+            X: 2700
+            Z: -500
+          }
+          Rotation {
+          }
+          Scale {
+            X: 2
+            Y: 10
+            Z: 2
+          }
+        }
+        ParentId: 3094724296161762099
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4447412514203981896
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.05
+              G: 0.05
+              B: 0.05
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.125
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.6
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12095835209017042614
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 15331592848327827115
+        Name: "Pipe - 7-Sided Thin"
+        Transform {
+          Location {
+            X: 2078.31934
+            Z: 62.4758301
+          }
+          Rotation {
+            Pitch: -45
+          }
+          Scale {
+            X: 16.7500076
+            Y: 10
+            Z: 2
+          }
+        }
+        ParentId: 3094724296161762099
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 4447412514203981896
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 0.05
+              G: 0.05
+              B: 0.05
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:utile"
+            Float: 0.6
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:vtile"
+            Float: 0.3
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 12095835209017042614
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 7785273134438259888
+        Name: "Whitebox Stairs 01 Straight"
+        Transform {
+          Location {
+            X: 2000
+            Y: 400
+            Z: -1100
+          }
+          Rotation {
+            Yaw: -89.9999847
+          }
+          Scale {
+            X: 2
+            Y: 1.25
+            Z: 1.75
+          }
+        }
+        ParentId: 3094724296161762099
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_Detail2:id"
+            AssetReference {
+              Id: 10332422780199490145
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:id"
+            AssetReference {
+              Id: 10332422780199490145
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:smart"
+            Bool: false
+          }
+          Overrides {
+            Name: "ma:Shared_Detail2:color"
+            Color {
+              R: 0.2
+              G: 0.2
+              B: 0.2
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_Detail1:color"
+            Color {
+              R: 0.2
+              G: 0.2
+              B: 0.2
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 4666416234610807642
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
         }
       }
     }
@@ -1047,6 +1677,24 @@ Assets {
       PrimaryAsset {
         AssetType: "DecalBlueprintAssetRef"
         AssetId: "bp_decal_stain_bottom_001"
+      }
+    }
+    Assets {
+      Id: 4666416234610807642
+      Name: "Whitebox Stairs 01 Straight"
+      PlatformAssetType: 1
+      PrimaryAsset {
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_ts_gen_whitebox_stairs_001"
+      }
+    }
+    Assets {
+      Id: 10332422780199490145
+      Name: "Bricks Stone Floor Large 01"
+      PlatformAssetType: 2
+      PrimaryAsset {
+        AssetType: "MaterialAssetRef"
+        AssetId: "mi_brick_stone_floor_large_001"
       }
     }
     PrimaryAssetId {

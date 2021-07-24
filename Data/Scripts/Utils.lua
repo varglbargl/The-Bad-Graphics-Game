@@ -465,7 +465,7 @@ end
 -- GENERAL UTILITY
 
 function Utils.groundBelowPoint(vec3)
-  local hitResult = World.Raycast(vec3 + Vector3.UP * 50, vec3 - Vector3.UP * 10000, {ignorePlayers = true})
+  local hitResult = World.Raycast(vec3 + Vector3.UP * 50, vec3 - Vector3.UP * 500, {ignorePlayers = true})
 
   if hitResult then
     return hitResult:GetImpactPosition()
@@ -488,6 +488,8 @@ function Utils.playSoundEffect(audio, location, volume, pitch)
 
   if location then
     sfx:SetWorldPosition(location)
+    sfx.radius = 1000
+    sfx.falloff = 3000
   else
     sfx.isAttenuationEnabled = false
     sfx.isOcclusionEnabled = false
@@ -495,6 +497,8 @@ function Utils.playSoundEffect(audio, location, volume, pitch)
   end
 
   sfx:Play()
+
+  Task.Spawn(function() if Object.IsValid(sfx) then sfx:Destroy() end end, 10)
 
   return sfx
 end

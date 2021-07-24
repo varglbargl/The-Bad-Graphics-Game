@@ -92,14 +92,6 @@ Objects {
             Yaw: -135
           }
         }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
       }
     }
     TemplateAsset {
@@ -513,13 +505,13 @@ Objects {
   Name: "Pyramid - 4-Sided Truncated"
   Transform {
     Location {
-      X: -1322.19385
-      Y: -169.714203
-      Z: 377.051758
+      X: -1322.19421
+      Y: -148.992798
+      Z: 377.433899
     }
     Rotation {
       Pitch: 88.9435196
-      Yaw: -89.9987
+      Yaw: -89.9987183
       Roll: 0.000185444238
     }
     Scale {

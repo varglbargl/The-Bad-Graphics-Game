@@ -23,6 +23,8 @@ Assets {
       Overrides {
         Name: "sss"
         Color {
+          R: 0.0496402457
+          G: 0.05
           A: 1
         }
       }
@@ -40,11 +42,11 @@ Assets {
       }
       Overrides {
         Name: "displacement scale"
-        Float: 3
+        Float: 15
       }
       Overrides {
         Name: "displacement speed"
-        Float: 2.5
+        Float: 5
       }
       Overrides {
         Name: "bubble brightness"
@@ -52,11 +54,11 @@ Assets {
       }
       Overrides {
         Name: "bubble speed"
-        Float: 2.5
+        Float: 2
       }
       Overrides {
         Name: "scale"
-        Float: 10
+        Float: 25
       }
       Overrides {
         Name: "fresnel"
@@ -73,6 +75,12 @@ Assets {
       Overrides {
         Name: "thickness"
         Float: 0
+      }
+      Overrides {
+        Name: "bubble direction"
+        Vector {
+          Z: 1
+        }
       }
     }
     Assets {
