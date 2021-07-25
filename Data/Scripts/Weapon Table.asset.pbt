@@ -40,6 +40,18 @@ Assets {
           Id: 2205487474116222797
         }
       }
+      Overrides {
+        Name: "cs:Polearm"
+        AssetReference {
+          Id: 630227486846763019
+        }
+      }
+      Overrides {
+        Name: "cs:Cutlass"
+        AssetReference {
+          Id: 17350807040574840668
+        }
+      }
     }
   }
   SerializationVersion: 92

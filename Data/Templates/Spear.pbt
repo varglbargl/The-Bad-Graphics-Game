@@ -87,7 +87,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.4
+            Duration: 0.15
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -98,7 +98,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -109,7 +109,7 @@ Assets {
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.2
+            Duration: 0.05
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -120,7 +120,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.6
+            Duration: 0.25
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -128,7 +128,7 @@ Assets {
               Value: "mc:eabilitysetfacing:none"
             }
           }
-          Animation: "2hand_sword_slash_left"
+          Animation: "2hand_sword_thrust"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:primaryaction"
@@ -166,7 +166,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.4
+            Duration: 0.15
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -177,7 +177,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -188,7 +188,7 @@ Assets {
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.2
+            Duration: 0.05
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -199,7 +199,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.6
+            Duration: 0.25
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -207,7 +207,7 @@ Assets {
               Value: "mc:eabilitysetfacing:none"
             }
           }
-          Animation: "2hand_sword_slash_right"
+          Animation: "2hand_staff_magic_bolt"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:primaryaction"

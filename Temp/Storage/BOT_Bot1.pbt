@@ -11,7 +11,7 @@ Entries {
     StringVar: "rank"
   }
   SimpleValue {
-    StringVar: "Bubonic Plaguesploder"
+    StringVar: "Plucky Ratventurer"
   }
 }
 Entries {
@@ -27,6 +27,6 @@ Entries {
     StringVar: "xp"
   }
   SimpleValue {
-    IntVar: 757
+    IntVar: 16
   }
 }

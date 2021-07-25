@@ -25,10 +25,6 @@ Assets {
       PlatformAssetType: 5
     }
     Folders {
-      VirtualFolderPath: "Spawners"
-      PlatformAssetType: 5
-    }
-    Folders {
       VirtualFolderPath: "Consumables"
       PlatformAssetType: 5
     }

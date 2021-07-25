@@ -45,7 +45,6 @@ function onPlayerJoined(player)
   player.spawnedEvent:Connect(spawnAnimation)
 end
 
-
 -- on player joined/left functions need to be defined before calling event:Connect()
 Game.playerJoinedEvent:Connect(onPlayerJoined)
 

@@ -28,6 +28,12 @@ Assets {
           Id: 262247299555105057
         }
       }
+      Overrides {
+        Name: "cs:LevelSegmentRatArena"
+        AssetReference {
+          Id: 17868941467198591761
+        }
+      }
     }
   }
   SerializationVersion: 92

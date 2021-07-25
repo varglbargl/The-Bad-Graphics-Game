@@ -60,6 +60,7 @@ function placeSeg(segPos, segRot)
       exitsToPlace = exitsToPlace + 1
 
       table.insert(levelExits, math.random(1, #levelExits + 1), exit)
+      -- table.insert(levelExits, 1, exit)
     end
   end
 
@@ -85,8 +86,6 @@ function generateLevel()
 
   boundingBoxes = {SPAWN_ZONE_BOUNDING_BOX}
 
-  Utils.shuffleArray(teleporterNodes)
-
   Events.Broadcast("LevelGenerated")
 end
 
@@ -96,7 +95,7 @@ function destroyLevel()
   for _, seg in ipairs(placedSegs) do
     if Object.IsValid(seg) then
       seg:Destroy()
-      Task.Wait()
+      -- Task.Wait()
     end
   end
 
@@ -107,7 +106,7 @@ function destroyLevel()
 end
 
 function addTeleporter(trigger, position, rotation)
-  table.insert(teleporterNodes, {trigger = trigger, position = position, rotation = rotation})
+  table.insert(teleporterNodes, math.random(1, #teleporterNodes + 1), {trigger = trigger, position = position + Vector3.UP * 50, rotation = rotation})
 
   local index = #teleporterNodes
 

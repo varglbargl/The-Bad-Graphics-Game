@@ -23,12 +23,6 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:QuestTable"
-        AssetReference {
-          Id: 6676189601399625565
-        }
-      }
-      Overrides {
         Name: "cs:DestructibleTable"
         AssetReference {
           Id: 8821218626252094872
@@ -36,11 +30,6 @@ Assets {
       }
       Overrides {
         Name: "cs:RatLocations"
-        ObjectReference {
-        }
-      }
-      Overrides {
-        Name: "cs:QuestLocations"
         ObjectReference {
         }
       }

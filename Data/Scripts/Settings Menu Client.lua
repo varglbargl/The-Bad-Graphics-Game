@@ -19,28 +19,45 @@ local UNPLAYABLY_BAD = script:GetCustomProperty("UnplayablyBad"):WaitForObject()
 local clientPlayer = Game.GetLocalPlayer()
 local settingsOpen = false
 
-function changeGraphicsSettings(value)
+local currentGraphicsQuality = clientPlayer:GetResource("GraphicsQuality")
+local currentCombatAnimations = clientPlayer:GetResource("CombatAnimations")
+
+function changeGraphicsQuality(value)
   if value == 1 then
     CAMERA.fieldOfView = 70
+    CAMERA.currentDistance = math.max(CAMERA.currentDistance, 1200)
     VERY_BAD.visibility = Visibility.FORCE_OFF
     EXTREMELY_BAD.visibility = Visibility.FORCE_OFF
     UNPLAYABLY_BAD.visibility = Visibility.INHERIT
   elseif value == 2 then
     CAMERA.fieldOfView = 70
+    CAMERA.currentDistance = math.max(CAMERA.currentDistance, 1200)
     VERY_BAD.visibility = Visibility.FORCE_OFF
     EXTREMELY_BAD.visibility = Visibility.INHERIT
     UNPLAYABLY_BAD.visibility = Visibility.FORCE_OFF
   elseif value == 3 then
     CAMERA.fieldOfView = 70
+    CAMERA.currentDistance = math.max(CAMERA.currentDistance, 1200)
     VERY_BAD.visibility = Visibility.INHERIT
     EXTREMELY_BAD.visibility = Visibility.FORCE_OFF
     UNPLAYABLY_BAD.visibility = Visibility.FORCE_OFF
   elseif value == 4 then
+    CAMERA.currentDistance = math.min(CAMERA.currentDistance, 500)
     CAMERA.fieldOfView = 90
     VERY_BAD.visibility = Visibility.FORCE_OFF
     EXTREMELY_BAD.visibility = Visibility.FORCE_OFF
     UNPLAYABLY_BAD.visibility = Visibility.FORCE_OFF
   end
+
+  if value == currentGraphicsQuality then return end
+
+  currentGraphicsQuality = value
+
+  Utils.throttleToServer("UpdateGraphicsQuality", value)
+end
+
+function changeCombatAnimation(value)
+  Utils.throttleToServer("UpdateCombatAnimation", value)
 end
 
 function initRadioButtons(container, callback, defaultValue)
@@ -65,13 +82,23 @@ function initRadioButtons(container, callback, defaultValue)
 
       thisButton:FindChildByName("Selected").visibility = Visibility.INHERIT
 
+      Utils.playSoundEffect(SELECT_SFX)
       selected = thisButton
       callback(value)
+      Events.Broadcast("DisableButtons")
     end)
+
+    Events.Connect("DisableButtons", function() disableButton(button) end)
   end
 end
 
-initRadioButtons(GRAPHICS_QUALITY, changeGraphicsSettings, 4)
+function disableButton(button)
+  button.isInteractable = false
+
+  Task.Wait(1)
+
+  button.isInteractable = true
+end
 
 function openSettings()
   settingsOpen = true
@@ -105,7 +132,18 @@ function onBindingPressed(thisPlayer, keyCode)
   end
 end
 
+while currentGraphicsQuality == 0 or currentCombatAnimations == 0 do
+  currentGraphicsQuality = clientPlayer:GetResource("GraphicsQuality")
+  currentCombatAnimations = clientPlayer:GetResource("CombatAnimations")
+  Task.Wait(0.5)
+end
+
+changeGraphicsQuality(currentGraphicsQuality)
+
 CLOSE.clickedEvent:Connect(closeSettings)
 clientPlayer.bindingPressedEvent:Connect(onBindingPressed)
 
 Events.Connect("ToggleSettings", toggleSettingsOpen)
+
+initRadioButtons(GRAPHICS_QUALITY, changeGraphicsQuality, currentGraphicsQuality)
+initRadioButtons(COMBAT_ANIMATIONS, changeCombatAnimation, currentCombatAnimations)

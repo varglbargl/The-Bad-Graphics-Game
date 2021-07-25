@@ -1,4 +1,5 @@
 local Utils = require(script:GetCustomProperty("Utils"))
+local CombatAnimations = require(script:GetCustomProperty("CombatAnimations"))
 
 local enemy = script.parent.parent
 
@@ -13,8 +14,6 @@ local DIE_ANIM = script:GetCustomProperty("DieAnimation")
 
 if IDLE_ANIM ~= "" then MESH.animationStance = IDLE_ANIM end
 
-local DAMAGED_VFX = script:GetCustomProperty("DamagedVFX")
-local DEATH_VFX = script:GetCustomProperty("DeathVFX")
 local ATTACK_VFX = script:GetCustomProperty("AttackVFX")
 local IDLE_SFX = script:GetCustomProperty("IdleSFX")
 
@@ -132,8 +131,10 @@ function hitEnemy(player, damage)
     Utils.showFlyupText(damage, enemy:GetWorldPosition(), Utils.color.attack)
   end
 
-  if DAMAGED_VFX then
-    local vfx = World.SpawnAsset(DAMAGED_VFX, {position = script:GetWorldPosition()})
+  local combatAnims = CombatAnimations.getForPlayer(player)
+
+  if combatAnims then
+    local vfx = World.SpawnAsset(combatAnims.damaged, {position = script:GetWorldPosition()})
 
     Task.Wait(5)
 
@@ -165,10 +166,12 @@ function onEnemyDied(killingPlayer, id, damage)
       Utils.showFlyupText(damage, enemy:GetWorldPosition(), Utils.color.attack)
     end
 
-    if DEATH_VFX then
-      local vfx = World.SpawnAsset(DEATH_VFX, {position = script:GetWorldPosition()})
-      Task.Wait(5)
-      if Object.IsValid(vfx) then vfx:Destroy() end
+    local combatAnims = CombatAnimations.getForPlayer(killingPlayer)
+
+    if combatAnims then
+      local vfx = World.SpawnAsset(combatAnims.death, {position = script:GetWorldPosition()})
+
+      combatAnims.callback(MESH)
     end
   end
 end

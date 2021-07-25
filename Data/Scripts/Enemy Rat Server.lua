@@ -2,8 +2,6 @@ local Utils = require(script:GetCustomProperty("Utils"))
 
 local enemy = script.parent
 
-local SPAWN_VFX = script:GetCustomProperty("SpawnVFX")
-local DESPAWN_VFX = script:GetCustomProperty("DespawnVFX")
 local WANDER = script:GetCustomProperty("Wander")
 local HITBOX = script:GetCustomProperty("Hitbox"):WaitForObject()
 

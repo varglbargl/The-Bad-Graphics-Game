@@ -1,6 +1,6 @@
 Assets {
   Id: 14673038576022824141
-  Name: "Damage Zone"
+  Name: "Damage Zone Server"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {

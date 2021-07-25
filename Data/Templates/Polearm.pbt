@@ -1,13 +1,13 @@
 Assets {
-  Id: 16579771856403188121
-  Name: "Staff"
+  Id: 630227486846763019
+  Name: "Polearm"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 6458459856559832118
       Objects {
         Id: 6458459856559832118
-        Name: "Staff"
+        Name: "Polearm"
         Transform {
           Scale {
             X: 1
@@ -25,16 +25,16 @@ Assets {
           Overrides {
             Name: "cs:Icon"
             AssetReference {
-              Id: 5666387302446026145
+              Id: 13706246201199173200
             }
           }
           Overrides {
             Name: "cs:Damage"
-            Int: 3
+            Int: 2
           }
           Overrides {
             Name: "cs:AnimationStance"
-            String: "2hand_staff_ready"
+            String: "2hand_melee_ready"
           }
         }
         WantsNetworking: true
@@ -87,7 +87,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.4
+            Duration: 0.3
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -120,7 +120,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.6
+            Duration: 0.7
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -128,7 +128,7 @@ Assets {
               Value: "mc:eabilitysetfacing:none"
             }
           }
-          Animation: "2hand_staff_magic_bolt"
+          Animation: "2hand_sword_slash_left"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:primaryaction"
@@ -166,7 +166,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.4
+            Duration: 0.2
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -177,7 +177,7 @@ Assets {
             }
           }
           ExecutePhaseSettings {
-            Duration: 0.2
+            Duration: 0.4
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -188,7 +188,7 @@ Assets {
             }
           }
           RecoveryPhaseSettings {
-            Duration: 0.2
+            Duration: 0.1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -199,7 +199,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.6
+            Duration: 0.5
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -207,7 +207,7 @@ Assets {
               Value: "mc:eabilitysetfacing:none"
             }
           }
-          Animation: "dual_katana_right_hand_thrust"
+          Animation: "2hand_sword_slash_spin"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:primaryaction"
@@ -219,14 +219,14 @@ Assets {
         Name: "Hitbox"
         Transform {
           Location {
-            Z: 100
+            Z: 125
           }
           Rotation {
           }
           Scale {
             X: 1
             Y: 1
-            Z: 2.5
+            Z: 3
           }
         }
         ParentId: 6458459856559832118
@@ -311,15 +311,10 @@ Assets {
         }
         ParentId: 6458459856559832118
         ChildIds: 1354902791745501267
-        ChildIds: 809417838487878289
         ChildIds: 9639019214606763532
-        ChildIds: 14941375147734159969
-        ChildIds: 5953082444265983860
-        ChildIds: 4092527016849360570
-        ChildIds: 1435411716074561685
-        ChildIds: 5466950097553031777
-        ChildIds: 9833924023942634101
-        ChildIds: 2975289306916117727
+        ChildIds: 3049382244227598978
+        ChildIds: 16441135097521121870
+        ChildIds: 10353206446603909527
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -354,14 +349,6 @@ Assets {
           }
         }
         ParentId: 13077031324402482241
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:EquipSFX"
-            AssetReference {
-              Id: 4462783319313028214
-            }
-          }
-        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -381,99 +368,18 @@ Assets {
         }
       }
       Objects {
-        Id: 809417838487878289
-        Name: "Signal Flare"
-        Transform {
-          Location {
-            Z: 142.946747
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 13077031324402482241
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Sparks"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Flash"
-            Bool: true
-          }
-          Overrides {
-            Name: "bp:Smoke"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Central Hot Spot"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Coronal Glow"
-            Bool: false
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              G: 1
-              B: 0.266666889
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "bp:Gravity"
-            Float: 0
-          }
-          Overrides {
-            Name: "bp:Flare Shape"
-            Int: 2
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 17754497882593074739
-          }
-          TeamSettings {
-          }
-          Vfx {
-            AutoPlay: true
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
         Id: 9639019214606763532
         Name: "Pyramid - 4-Sided Truncated"
         Transform {
           Location {
-            Z: 125
+            Z: -75
           }
           Rotation {
-            Roll: 180
           }
           Scale {
             X: 0.067330718
             Y: 0.067330718
-            Z: 5.34201956
+            Z: 5.1
           }
         }
         ParentId: 13077031324402482241
@@ -527,8 +433,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0299999956
-              G: 0.1
+              R: 0.1
+              G: 0.0413333289
+              B: 0.02
               A: 1
             }
           }
@@ -563,19 +470,21 @@ Assets {
         }
       }
       Objects {
-        Id: 14941375147734159969
-        Name: "Pipe - Spiral"
+        Id: 3049382244227598978
+        Name: "Prism - 8-Sided Half"
         Transform {
           Location {
-            Y: 5
-            Z: 125
+            X: -15.0814514
+            Z: 212.662598
           }
           Rotation {
+            Pitch: 7.02655649
+            Roll: 180
           }
           Scale {
-            X: 0.4
-            Y: 0.4
-            Z: 0.4
+            X: 0.522171497
+            Y: 0.0266406815
+            Z: 0.675795913
           }
         }
         ParentId: 13077031324402482241
@@ -629,8 +538,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0299999956
-              G: 0.1
+              R: 0.2
+              G: 0.2
+              B: 0.2
               A: 1
             }
           }
@@ -649,7 +559,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 5343240269951874543
+            Id: 18080169738981885157
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -665,20 +575,19 @@ Assets {
         }
       }
       Objects {
-        Id: 5953082444265983860
-        Name: "Pipe - Spiral"
+        Id: 16441135097521121870
+        Name: "Prism - 8-Sided Half"
         Transform {
           Location {
-            Y: -5
-            Z: 127.716
+            Z: 171.317261
           }
           Rotation {
-            Yaw: 180
+            Yaw: 45
           }
           Scale {
-            X: 0.4
-            Y: 0.4
-            Z: 0.4
+            X: 0.07
+            Y: 0.07
+            Z: 0.0455036685
           }
         }
         ParentId: 13077031324402482241
@@ -732,8 +641,9 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0299999956
-              G: 0.1
+              R: 0.2
+              G: 0.2
+              B: 0.2
               A: 1
             }
           }
@@ -752,7 +662,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 5343240269951874543
+            Id: 12095835209017042614
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -768,20 +678,19 @@ Assets {
         }
       }
       Objects {
-        Id: 4092527016849360570
-        Name: "Plane Kite - One Sided"
+        Id: 10353206446603909527
+        Name: "Prism - 8-Sided Half"
         Transform {
           Location {
-            Y: 8.24708939
-            Z: 125
+            Z: 180.483887
           }
           Rotation {
-            Roll: -19.0302429
+            Yaw: 45
           }
           Scale {
-            X: 0.357211262
-            Y: 0.357211262
-            Z: 0.0357211269
+            X: 0.1
+            Y: 0.1
+            Z: 0.0455036685
           }
         }
         ParentId: 13077031324402482241
@@ -835,116 +744,12 @@ Assets {
           Overrides {
             Name: "ma:Shared_BaseMaterial:color"
             Color {
-              R: 0.0299999956
-              G: 0.1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8433652674186532614
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 1435411716074561685
-        Name: "Plane Kite - One Sided"
-        Transform {
-          Location {
-            X: -3.74830627
-            Y: -7.32852
-            Z: 122.636475
-          }
-          Rotation {
-            Yaw: 135.419937
-            Roll: -6.51980591
-          }
-          Scale {
-            X: 0.357211262
-            Y: 0.357211262
-            Z: 0.0357211269
-          }
-        }
-        ParentId: 13077031324402482241
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2555807082249945326
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 12446131267530965574
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
               R: 0.2
               G: 0.2
               B: 0.2
               A: 1
             }
           }
-          Overrides {
-            Name: "ma:Shared_Trim2:color"
-            Color {
-              R: 0.0447589979
-              G: 0.0840553939
-              B: 0.143
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0299999956
-              G: 0.1
-              A: 1
-            }
-          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -960,325 +765,7 @@ Assets {
         }
         CoreMesh {
           MeshAsset {
-            Id: 8433652674186532614
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 5466950097553031777
-        Name: "Plane Kite - One Sided"
-        Transform {
-          Location {
-            X: 9.08781433
-            Y: 0.0821847916
-            Z: 120.778282
-          }
-          Rotation {
-            Pitch: -1.77102661
-            Yaw: -93.0474243
-            Roll: -36.6562805
-          }
-          Scale {
-            X: 0.357211262
-            Y: 0.357211262
-            Z: 0.0357211269
-          }
-        }
-        ParentId: 13077031324402482241
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2555807082249945326
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 12446131267530965574
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.2
-              G: 0.2
-              B: 0.2
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim2:color"
-            Color {
-              R: 0.0447589979
-              G: 0.0840553939
-              B: 0.143
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0299999956
-              G: 0.1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8433652674186532614
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 9833924023942634101
-        Name: "Plane Kite - One Sided"
-        Transform {
-          Location {
-            X: -6.86694336
-            Y: -0.845770836
-            Z: 115.341713
-          }
-          Rotation {
-            Pitch: 2.13309526
-            Yaw: 89.4247
-            Roll: -36.441864
-          }
-          Scale {
-            X: 0.299116433
-            Y: 0.299116433
-            Z: 0.0299116448
-          }
-        }
-        ParentId: 13077031324402482241
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2555807082249945326
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 12446131267530965574
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.2
-              G: 0.2
-              B: 0.2
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim2:color"
-            Color {
-              R: 0.0447589979
-              G: 0.0840553939
-              B: 0.143
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0299999956
-              G: 0.1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8433652674186532614
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 2975289306916117727
-        Name: "Plane Kite - One Sided"
-        Transform {
-          Location {
-            X: 7.49185181
-            Y: 0.0821847916
-            Z: 83.5403671
-          }
-          Rotation {
-            Pitch: -1.77102661
-            Yaw: -93.0474243
-            Roll: -36.65625
-          }
-          Scale {
-            X: 0.242405966
-            Y: 0.242405966
-            Z: 0.0242405981
-          }
-        }
-        ParentId: 13077031324402482241
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 2555807082249945326
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:id"
-            AssetReference {
-              Id: 12446131267530965574
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:utile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:vtile"
-            Float: 24
-          }
-          Overrides {
-            Name: "ma:Shared_Trim:color"
-            Color {
-              R: 0.2
-              G: 0.2
-              B: 0.2
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_Trim2:color"
-            Color {
-              R: 0.0447589979
-              G: 0.0840553939
-              B: 0.143
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.0299999956
-              G: 0.1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 8433652674186532614
+            Id: 12095835209017042614
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -1295,30 +782,12 @@ Assets {
       }
     }
     Assets {
-      Id: 5666387302446026145
-      Name: "Fantasy Staff 029"
+      Id: 13706246201199173200
+      Name: "Japanese Weapon Naginata 01"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Weapon_Staff_029"
-      }
-    }
-    Assets {
-      Id: 4462783319313028214
-      Name: "Meta Weapon Ammo Pickup 06 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_meta_weapon_ammo_pickup_06_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 17754497882593074739
-      Name: "Signal Flare"
-      PlatformAssetType: 8
-      PrimaryAsset {
-        AssetType: "VfxBlueprintAssetRef"
-        AssetId: "fxbp_Signal_Flare"
+        AssetId: "IIllustratedIcons_Japan_Weapons_Naganata001"
       }
     }
     Assets {
@@ -1340,21 +809,21 @@ Assets {
       }
     }
     Assets {
-      Id: 5343240269951874543
-      Name: "Pipe - Spiral"
+      Id: 18080169738981885157
+      Name: "Heart - Broken Right"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_spiral_001"
+        AssetId: "sm_heart_broken_right_001"
       }
     }
     Assets {
-      Id: 8433652674186532614
-      Name: "Prism - 4-Sided Kite"
+      Id: 12095835209017042614
+      Name: "Cube"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_prism_kite_001"
+        AssetId: "sm_cube_002"
       }
     }
     PrimaryAssetId {

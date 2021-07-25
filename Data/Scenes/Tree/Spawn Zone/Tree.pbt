@@ -1,6 +1,105 @@
 Name: "Spawn Zone"
 RootId: 17065767821936964946
 Objects {
+  Id: 12598971363257624246
+  Name: "Level Segment - Dead End"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17065767821936964946
+  WantsNetworking: true
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 11190976839193001945
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Level Segment - Dead End"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -807.058105
+            Y: 750
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: 89.9999924
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 16380665429490410288
+    }
+  }
+}
+Objects {
+  Id: 18007256414957283709
+  Name: "ClientContext"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 17065767821936964946
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 9071545578764586568
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Graveyard"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+            X: -750
+            Y: -450
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+            Yaw: -89.9999771
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 9104709878388478628
+    }
+  }
+}
+Objects {
   Id: 11297618752171173936
   Name: "Destructible Chest 02"
   Transform {
@@ -36,14 +135,6 @@ Objects {
         Overrides {
           Name: "Rotation"
           Rotator {
-          }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
           }
         }
       }

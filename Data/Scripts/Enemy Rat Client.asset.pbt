@@ -11,6 +11,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:CombatAnimations"
+        AssetReference {
+          Id: 16732375606216277319
+        }
+      }
+      Overrides {
         Name: "cs:IdleAnimation"
         String: ""
       }

@@ -18,6 +18,7 @@ Assets {
         ParentId: 4781671109827199097
         ChildIds: 15087515197375471446
         ChildIds: 17864705521312984432
+        ChildIds: 6664399450807623453
         ChildIds: 1706359323981895498
         UnregisteredParameters {
           Overrides {
@@ -70,18 +71,6 @@ Assets {
             Name: "cs:RatLocations"
             ObjectReference {
               SubObjectId: 17418472386448114905
-            }
-          }
-          Overrides {
-            Name: "cs:DestructableLocations"
-            ObjectReference {
-              SubObjectId: 949068575916084001
-            }
-          }
-          Overrides {
-            Name: "cs:QuestLocations"
-            ObjectReference {
-              SubObjectId: 13426135743601311790
             }
           }
           Overrides {
@@ -147,6 +136,79 @@ Assets {
           }
           TriggerShape_v2 {
             Value: "mc:etriggershape:box"
+          }
+        }
+      }
+      Objects {
+        Id: 6664399450807623453
+        Name: "ClientContext"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 10775077709235861747
+        ChildIds: 8479000651545233143
+        WantsNetworking: true
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:forceoff"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        NetworkContext {
+        }
+      }
+      Objects {
+        Id: 8479000651545233143
+        Name: "Object Spawner Client"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 6664399450807623453
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:QuestLocations"
+            ObjectReference {
+              SubObjectId: 13426135743601311790
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 9970799805056237059
           }
         }
       }

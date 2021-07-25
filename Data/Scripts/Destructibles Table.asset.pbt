@@ -40,6 +40,12 @@ Assets {
           Id: 5794091055725121046
         }
       }
+      Overrides {
+        Name: "cs:DestructibleRatCage"
+        AssetReference {
+          Id: 14197001951445132948
+        }
+      }
     }
   }
   SerializationVersion: 92

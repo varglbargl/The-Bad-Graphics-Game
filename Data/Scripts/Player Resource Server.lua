@@ -14,10 +14,17 @@ function onPlayerHealed(player, newTotal)
   player:SetResource("HitPoints", player.hitPoints)
 end
 
+function updateCombatAnim(player, value)
+  player:SetResource("CombatAnimations", value)
+end
+
+function updateGraphicsQuality(player, value)
+  player:SetResource("GraphicsQuality", value)
+end
+
 function playerSpawned(player)
   player:SetResource("HitPoints", player.hitPoints)
 end
-
 function onPlayerJoined(player)
 
   local saveData = Storage.GetPlayerData(player)
@@ -27,9 +34,14 @@ function onPlayerJoined(player)
   if saveData.xp and saveData.rank then
     yourXP = player:SetResource("XP", saveData.xp)
     player.serverUserData["Rank"] = saveData.rank
+    player:SetResource("CombatAnimations", saveData.anims)
+    player:SetResource("GraphicsQuality", saveData.graphics)
   else
     player:SetResource("XP", 0)
     player.serverUserData["Rank"] = "Plucky Ratventurer"
+    player.serverUserData["Anim"] = "Default"
+    player:SetResource("CombatAnimations", 1)
+    player:SetResource("GraphicsQuality", 4)
   end
 
   player.serverUserData["Level"] = math.floor(yourXP / 25) + 1
@@ -75,10 +87,12 @@ end
 function onPlayerLeft(player)
   local saveData = {
     xp = player:GetResource("XP"),
-    rank = player.serverUserData["Rank"]
+    rank = player.serverUserData["Rank"],
+    anims = player:GetResource("CombatAnimations"),
+    graphics = player:GetResource("GraphicsQuality")
   }
 
-  if Environment.IsPreview() then saveData = {} end
+  -- if Environment.IsPreview() then saveData = {} end
 
   Storage.SetPlayerData(player, saveData)
 end
@@ -141,3 +155,6 @@ Events.Connect("RatKilled", onRatKilled)
 
 -- handler params: Player_player
 Events.Connect("CheckLevelUp", checkLevelUp)
+
+Events.ConnectForPlayer("UpdateCombatAnimation", updateCombatAnim)
+Events.ConnectForPlayer("UpdateGraphicsQuality", updateGraphicsQuality)

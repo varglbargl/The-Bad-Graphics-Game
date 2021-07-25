@@ -28,6 +28,12 @@ Assets {
           Id: 11756360882960052021
         }
       }
+      Overrides {
+        Name: "cs:CombatAnimations"
+        AssetReference {
+          Id: 16732375606216277319
+        }
+      }
     }
     Assets {
       Id: 5885512671247840730

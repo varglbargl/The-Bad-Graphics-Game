@@ -1,13 +1,13 @@
 Assets {
-  Id: 8921684629265765251
-  Name: "Level Segment - Straight Ass Line"
+  Id: 1832804711851380767
+  Name: "Rat Death VFX - Default"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 12332789929555173137
+      RootId: 13312380640363569658
       Objects {
-        Id: 12332789929555173137
-        Name: "Level Segment - Straight Ass Line"
+        Id: 13312380640363569658
+        Name: "Rat Death VFX"
         Transform {
           Scale {
             X: 1
@@ -16,145 +16,12 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 3082400256045594970
-        ChildIds: 4666007151297949042
-        ChildIds: 6628154024722101191
-        ChildIds: 8930542144195470245
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:ExitLocations"
-            ObjectReference {
-              SubObjectId: 6398344947594512968
-            }
-          }
-          Overrides {
-            Name: "cs:BoundingBox"
-            ObjectReference {
-              SubObjectId: 4666007151297949042
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Folder {
-          IsGroup: true
-        }
-      }
-      Objects {
-        Id: 3082400256045594970
-        Name: "Object Spawner Server"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12332789929555173137
-        UnregisteredParameters {
-          Overrides {
-            Name: "cs:RatLocations"
-            ObjectReference {
-              SubObjectId: 13775984796598756592
-            }
-          }
-          Overrides {
-            Name: "cs:DestructibleLocations"
-            ObjectReference {
-              SubObjectId: 9796444577206278773
-            }
-          }
-        }
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Script {
-          ScriptAsset {
-            Id: 635376554485353933
-          }
-        }
-      }
-      Objects {
-        Id: 4666007151297949042
-        Name: "Trigger"
-        Transform {
-          Location {
-            X: 1500
-            Z: 300
-          }
-          Rotation {
-          }
-          Scale {
-            X: 29
-            Y: 9
-            Z: 9
-          }
-        }
-        ParentId: 12332789929555173137
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:alwaysvisible"
-        }
-        Trigger {
-          TeamSettings {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          TriggerShape_v2 {
-            Value: "mc:etriggershape:box"
-          }
-        }
-      }
-      Objects {
-        Id: 6628154024722101191
-        Name: "ClientContext"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 12332789929555173137
-        ChildIds: 8520368538790185386
+        ChildIds: 11174074706174079379
+        ChildIds: 7281298430966585189
+        ChildIds: 2997070645655560099
+        ChildIds: 2036443368232342638
+        ChildIds: 16506846671997723022
+        Lifespan: 3
         WantsNetworking: true
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
@@ -163,7 +30,7 @@ Assets {
           Value: "mc:evisibilitysetting:inheritfromparent"
         }
         CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
+          Value: "mc:ecollisionsetting:forceoff"
         }
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
@@ -172,8 +39,49 @@ Assets {
         }
       }
       Objects {
-        Id: 8520368538790185386
-        Name: "Object Spawner Client"
+        Id: 11174074706174079379
+        Name: "Squeaky Toy 03 SFX"
+        Transform {
+          Location {
+            Z: 20
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13312380640363569658
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        AudioInstance {
+          AudioAsset {
+            Id: 4899923684842662943
+          }
+          AutoPlay: true
+          Pitch: 300
+          Volume: 1
+          Falloff: 3000
+          Radius: 1000
+          IsSpatializationEnabled: true
+          IsAttenuationEnabled: true
+        }
+      }
+      Objects {
+        Id: 7281298430966585189
+        Name: "Retro Explosions Set 01 SFX"
         Transform {
           Location {
           }
@@ -185,13 +93,316 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 6628154024722101191
+        ParentId: 13312380640363569658
         UnregisteredParameters {
           Overrides {
-            Name: "cs:QuestLocations"
-            ObjectReference {
-              SubObjectId: 6446713915202883095
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_retro_explosions:22"
             }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 11747456766905181057
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Volume: 1
+            Falloff: 3000
+            Radius: 1000
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
+        }
+      }
+      Objects {
+        Id: 2997070645655560099
+        Name: "Gunshot Retro Arcade & LoFi Set 01 SFX"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13312380640363569658
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_gunshot_retro_arcade_lofi_01:14"
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 4525558059198461685
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Pitch: -300
+            Volume: 1
+            Falloff: 3000
+            Radius: 1000
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
+        }
+      }
+      Objects {
+        Id: 2036443368232342638
+        Name: "Explosion Kit Rock Burst VFX"
+        Transform {
+          Location {
+            Z: 50
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13312380640363569658
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Density"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 0.132
+              G: 0.0351999961
+              A: 1
+            }
+          }
+          Overrides {
+            Name: "bp:Particle Scale"
+            Float: 2
+          }
+          Overrides {
+            Name: "bp:Life"
+            Float: 0.5
+          }
+          Overrides {
+            Name: "bp:Gravity"
+            Float: -30
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 12157075173082882202
+          }
+          TeamSettings {
+          }
+          Vfx {
+            AutoPlay: true
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 16506846671997723022
+        Name: "NewFolder"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13312380640363569658
+        ChildIds: 1133884599998685478
+        ChildIds: 13367776816678171777
+        ChildIds: 14077372557742311563
+        ChildIds: 4049583455270263145
+        Lifespan: 0.3
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Folder {
+          IsFilePartition: true
+        }
+      }
+      Objects {
+        Id: 1133884599998685478
+        Name: "Simple Look At Local View"
+        Transform {
+          Location {
+            Z: 75
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1.49999988
+            Y: 1.49999988
+            Z: 1.49999988
+          }
+        }
+        ParentId: 16506846671997723022
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 497320728139728614
+          }
+        }
+      }
+      Objects {
+        Id: 13367776816678171777
+        Name: "Star - Beveled"
+        Transform {
+          Location {
+            Z: 75
+          }
+          Rotation {
+            Pitch: -90
+          }
+          Scale {
+            X: 1.5
+            Y: 1.5
+            Z: 1.5
+          }
+        }
+        ParentId: 16506846671997723022
+        ChildIds: 13491857257846133652
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 69844939897041847
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              A: 1
+            }
+          }
+        }
+        Lifespan: 0.1
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 4706237999340980869
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 13491857257846133652
+        Name: "Simple Scale Parent"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 13367776816678171777
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Speed"
+            Float: -8
           }
         }
         Collidable_v2 {
@@ -208,17 +419,19 @@ Assets {
         }
         Script {
           ScriptAsset {
-            Id: 9970799805056237059
+            Id: 13246694329671874582
           }
         }
       }
       Objects {
-        Id: 8930542144195470245
-        Name: "StaticContext"
+        Id: 14077372557742311563
+        Name: "NewFolder"
         Transform {
           Location {
+            Z: 75
           }
           Rotation {
+            Roll: 89.9999924
           }
           Scale {
             X: 1
@@ -226,49 +439,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12332789929555173137
-        ChildIds: 13775984796598756592
-        ChildIds: 6446713915202883095
-        ChildIds: 9796444577206278773
-        ChildIds: 6398344947594512968
-        ChildIds: 18282899720210022495
-        ChildIds: 10830628616980773239
-        ChildIds: 3924610423861604968
-        ChildIds: 5855276550081459767
-        WantsNetworking: true
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        NetworkContext {
-          Type: RuntimeStatic
-        }
-      }
-      Objects {
-        Id: 13775984796598756592
-        Name: "Rat Locations"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8930542144195470245
-        ChildIds: 3260127544964447195
-        ChildIds: 18366882821998922578
+        ParentId: 16506846671997723022
+        ChildIds: 7992869266365394644
+        ChildIds: 11042923904313123875
+        Lifespan: 0.2
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -286,125 +460,8 @@ Assets {
         }
       }
       Objects {
-        Id: 3260127544964447195
-        Name: "Decal Stencil Font 01"
-        Transform {
-          Location {
-            X: 2500
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 13775984796598756592
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 17
-          }
-          Overrides {
-            Name: "bp:Fade Time"
-            Float: 0.001
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8004753098385281881
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 18366882821998922578
-        Name: "Decal Stencil Font 01"
-        Transform {
-          Location {
-            X: 1500
-            Y: -100
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 13775984796598756592
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 17
-          }
-          Overrides {
-            Name: "bp:Fade Time"
-            Float: 0.001
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8004753098385281881
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 6446713915202883095
-        Name: "Quest Locations"
+        Id: 7992869266365394644
+        Name: "Simple Rotate Parent"
         Transform {
           Location {
           }
@@ -416,8 +473,123 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8930542144195470245
-        ChildIds: 10046627124076473364
+        ParentId: 14077372557742311563
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Speed"
+            Vector {
+              X: 18
+            }
+          }
+          Overrides {
+            Name: "cs:IsLocal"
+            Bool: true
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 5358125184516124331
+          }
+        }
+      }
+      Objects {
+        Id: 11042923904313123875
+        Name: "Crescent 01 - Large"
+        Transform {
+          Location {
+            Y: 3.81469727e-06
+            Z: 20
+          }
+          Rotation {
+            Pitch: -90
+          }
+          Scale {
+            X: 0.15
+            Y: 0.15
+            Z: 0.005
+          }
+        }
+        ParentId: 14077372557742311563
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 69844939897041847
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 16816714259795304771
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 4049583455270263145
+        Name: "NewFolder"
+        Transform {
+          Location {
+            Z: 75
+          }
+          Rotation {
+            Roll: -13.4423523
+          }
+          Scale {
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
+          }
+        }
+        ParentId: 16506846671997723022
+        ChildIds: 14227323684121059331
+        ChildIds: 6711846254127899835
+        ChildIds: 9926254032018879254
+        ChildIds: 4343775487813261673
+        ChildIds: 13350548043682323694
+        ChildIds: 18068805005933182649
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -435,35 +607,332 @@ Assets {
         }
       }
       Objects {
-        Id: 10046627124076473364
-        Name: "Decal Stencil Font 01"
+        Id: 14227323684121059331
+        Name: "Simple Scale Parent"
         Transform {
           Location {
-            X: 1900
-            Y: -344.954773
-            Z: -7.62939453e-06
+          }
+          Rotation {
+          }
+          Scale {
+            X: 0.999999881
+            Y: 0.999999881
+            Z: 0.999999881
+          }
+        }
+        ParentId: 4049583455270263145
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:Speed"
+            Float: 5
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Script {
+          ScriptAsset {
+            Id: 13246694329671874582
+          }
+        }
+      }
+      Objects {
+        Id: 6711846254127899835
+        Name: "Plane Trapezoid - One Sided"
+        Transform {
+          Location {
+            Y: -52.7802544
+            Z: 10.9362326
+          }
+          Rotation {
+            Pitch: 78.294075
+            Yaw: 90
+            Roll: -90
+          }
+          Scale {
+            X: 0.134222016
+            Y: 0.653594851
+            Z: 0.0671098828
+          }
+        }
+        ParentId: 4049583455270263145
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 69844939897041847
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15152568979710955496
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 9926254032018879254
+        Name: "Plane Trapezoid - One Sided"
+        Transform {
+          Location {
+            Y: -27.1558037
+            Z: -46.5609283
+          }
+          Rotation {
+            Pitch: 149.747879
+            Yaw: 90
+            Roll: -90
+          }
+          Scale {
+            X: 0.134222016
+            Y: 0.653594851
+            Z: 0.0671098828
+          }
+        }
+        ParentId: 4049583455270263145
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 69844939897041847
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15152568979710955496
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 4343775487813261673
+        Name: "Plane Trapezoid - One Sided"
+        Transform {
+          Location {
+            Y: 33.7811165
+            Z: -42.002285
+          }
+          Rotation {
+            Pitch: -38.8086243
+            Yaw: -90
+            Roll: 90
+          }
+          Scale {
+            X: 0.134222016
+            Y: 0.653594851
+            Z: 0.0671098828
+          }
+        }
+        ParentId: 4049583455270263145
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 69844939897041847
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15152568979710955496
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 13350548043682323694
+        Name: "Plane Trapezoid - One Sided"
+        Transform {
+          Location {
+            Y: 51.8241196
+            Z: 14.8195353
+          }
+          Rotation {
+            Pitch: -105.958374
+            Yaw: -90
+            Roll: 90
+          }
+          Scale {
+            X: 0.134222016
+            Y: 0.653594851
+            Z: 0.0671098828
+          }
+        }
+        ParentId: 4049583455270263145
+        UnregisteredParameters {
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 69844939897041847
+            }
+          }
+          Overrides {
+            Name: "ma:Shared_BaseMaterial:color"
+            Color {
+              R: 1
+              G: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        CoreMesh {
+          MeshAsset {
+            Id: 15152568979710955496
+          }
+          Teams {
+            IsTeamCollisionEnabled: true
+            IsEnemyCollisionEnabled: true
+          }
+          StaticMesh {
+            Physics {
+              Mass: 100
+              LinearDamping: 0.01
+            }
+            BoundsScale: 1
+          }
+        }
+      }
+      Objects {
+        Id: 18068805005933182649
+        Name: "Plane Trapezoid - One Sided"
+        Transform {
+          Location {
+            Y: 1.31130219e-06
+            Z: 53.9013596
           }
           Rotation {
             Yaw: 90
+            Roll: -90
           }
           Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
+            X: 0.134222016
+            Y: 0.653594851
+            Z: 0.0671098828
           }
         }
-        ParentId: 6446713915202883095
+        ParentId: 4049583455270263145
         UnregisteredParameters {
           Overrides {
-            Name: "bp:Shape Index"
-            Int: 16
+            Name: "ma:Shared_BaseMaterial:id"
+            AssetReference {
+              Id: 69844939897041847
+            }
           }
           Overrides {
-            Name: "bp:Fade Time"
-            Float: 0.001
-          }
-          Overrides {
-            Name: "bp:Color"
+            Name: "ma:Shared_BaseMaterial:color"
             Color {
               R: 1
               G: 1
@@ -483,382 +952,9 @@ Assets {
         EditorIndicatorVisibility {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8004753098385281881
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 9796444577206278773
-        Name: "Destructible Locations"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8930542144195470245
-        ChildIds: 7874449407508661165
-        ChildIds: 11167968416022664982
-        ChildIds: 10320115733013673460
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Folder {
-          IsFilePartition: true
-        }
-      }
-      Objects {
-        Id: 7874449407508661165
-        Name: "Decal Stencil Font 01"
-        Transform {
-          Location {
-            X: 1200
-            Y: 200
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 9796444577206278773
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 3
-          }
-          Overrides {
-            Name: "bp:Fade Time"
-            Float: 0.001
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              G: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8004753098385281881
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 11167968416022664982
-        Name: "Decal Stencil Font 01"
-        Transform {
-          Location {
-            X: 1400
-            Y: 200
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 9796444577206278773
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 3
-          }
-          Overrides {
-            Name: "bp:Fade Time"
-            Float: 0.001
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              G: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8004753098385281881
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 10320115733013673460
-        Name: "Decal Stencil Font 01"
-        Transform {
-          Location {
-            X: 2100
-            Y: -300
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 9796444577206278773
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 3
-          }
-          Overrides {
-            Name: "bp:Fade Time"
-            Float: 0.001
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              G: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8004753098385281881
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 6398344947594512968
-        Name: "Exit Locations"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8930542144195470245
-        ChildIds: 1605653294833510800
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Folder {
-          IsFilePartition: true
-        }
-      }
-      Objects {
-        Id: 1605653294833510800
-        Name: "Decal Stencil Font 01"
-        Transform {
-          Location {
-            X: 3000
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 6398344947594512968
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 23
-          }
-          Overrides {
-            Name: "bp:Fade Time"
-            Float: 0.001
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              G: 0.786
-              B: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8004753098385281881
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 18282899720210022495
-        Name: "Cube"
-        Transform {
-          Location {
-            X: 1500
-            Z: -50
-          }
-          Rotation {
-          }
-          Scale {
-            X: 30
-            Y: 10
-            Z: 1
-          }
-        }
-        ParentId: 8930542144195470245
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 336187462816927178
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.1
-              G: 0.1
-              B: 0.1
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 0.6
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 1.2
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
         CoreMesh {
           MeshAsset {
-            Id: 12095835209017042614
+            Id: 15152568979710955496
           }
           Teams {
             IsTeamCollisionEnabled: true
@@ -873,242 +969,77 @@ Assets {
           }
         }
       }
-      Objects {
-        Id: 10830628616980773239
-        Name: "Pipe - 7-Sided Thin"
-        Transform {
-          Location {
-            Z: 200
-          }
-          Rotation {
-            Pitch: 0.999980628
-            Yaw: 89.999939
-            Roll: -89.9999924
-          }
-          Scale {
-            X: 11
-            Y: 11
-            Z: 30
-          }
-        }
-        ParentId: 8930542144195470245
-        UnregisteredParameters {
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:smart"
-            Bool: false
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:id"
-            AssetReference {
-              Id: 4447412514203981896
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:color"
-            Color {
-              R: 0.05
-              G: 0.05
-              B: 0.05
-              A: 1
-            }
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:utile"
-            Float: 0.6
-          }
-          Overrides {
-            Name: "ma:Shared_BaseMaterial:vtile"
-            Float: 1.2
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        CoreMesh {
-          MeshAsset {
-            Id: 1571171952410718143
-          }
-          Teams {
-            IsTeamCollisionEnabled: true
-            IsEnemyCollisionEnabled: true
-          }
-          StaticMesh {
-            Physics {
-              Mass: 100
-              LinearDamping: 0.01
-            }
-            BoundsScale: 1
-          }
-        }
-      }
-      Objects {
-        Id: 3924610423861604968
-        Name: "Decal Stains Bottom 01"
-        Transform {
-          Location {
-            X: 2000
-            Y: -429.504517
-            Z: 134.38089
-          }
-          Rotation {
-            Roll: 64.684906
-          }
-          Scale {
-            X: 0.9375
-            Y: 0.65625
-            Z: 0.1875
-          }
-        }
-        ParentId: 8930542144195470245
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              G: 3
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 4885929804749819663
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 5855276550081459767
-        Name: "Decal Stains Bottom 01"
-        Transform {
-          Location {
-            X: 568.034668
-            Y: 434.889282
-            Z: 105.133896
-          }
-          Rotation {
-            Roll: -45
-          }
-          Scale {
-            X: 0.9375
-            Y: -0.65625
-            Z: -0.1875
-          }
-        }
-        ParentId: 8930542144195470245
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              G: 3
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 4885929804749819663
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
     }
     Assets {
-      Id: 8004753098385281881
-      Name: "Decal Stencil Font 01"
-      PlatformAssetType: 14
+      Id: 4899923684842662943
+      Name: "Squeaky Toy 03 SFX"
+      PlatformAssetType: 7
       PrimaryAsset {
-        AssetType: "DecalBlueprintAssetRef"
-        AssetId: "bp_decal_stencil_letters_001_ref"
+        AssetType: "AudioAssetRef"
+        AssetId: "sfx_squeaky_toy_03a_Cue_ref"
       }
     }
     Assets {
-      Id: 12095835209017042614
-      Name: "Cube"
+      Id: 11747456766905181057
+      Name: "Retro Explosions Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_retro_explosions_ref"
+      }
+    }
+    Assets {
+      Id: 4525558059198461685
+      Name: "Gunshot Retro Arcade & LoFi Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_gunshot_Retro_arcade_lofi_ref"
+      }
+    }
+    Assets {
+      Id: 12157075173082882202
+      Name: "Explosion Kit Rock Burst VFX"
+      PlatformAssetType: 8
+      PrimaryAsset {
+        AssetType: "VfxBlueprintAssetRef"
+        AssetId: "fxbp_mil_dirt_impact_explosikit_debris"
+      }
+    }
+    Assets {
+      Id: 4706237999340980869
+      Name: "Star - Beveled"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_cube_002"
+        AssetId: "sm_star_beveled_001"
       }
     }
     Assets {
-      Id: 336187462816927178
-      Name: "Bricks Layered Stone Floor 01"
+      Id: 69844939897041847
+      Name: "Emissive Glow Opaque"
       PlatformAssetType: 2
       PrimaryAsset {
         AssetType: "MaterialAssetRef"
-        AssetId: "mi_brick_stone_floor_layered_001"
+        AssetId: "fxma_opaque_emissive"
       }
     }
     Assets {
-      Id: 1571171952410718143
-      Name: "Pipe - 7-Sided"
+      Id: 16816714259795304771
+      Name: "Crescent 01 - Large"
       PlatformAssetType: 1
       PrimaryAsset {
         AssetType: "StaticMeshAssetRef"
-        AssetId: "sm_pipe_7_sided_001"
+        AssetId: "sm_crescent_lg_001_ref"
       }
     }
     Assets {
-      Id: 4447412514203981896
-      Name: "Bricks Cobblestone Floor 01"
-      PlatformAssetType: 2
+      Id: 15152568979710955496
+      Name: "Plane Trapezoid - One Sided"
+      PlatformAssetType: 1
       PrimaryAsset {
-        AssetType: "MaterialAssetRef"
-        AssetId: "mi_brick_cobblestone_floor_001"
-      }
-    }
-    Assets {
-      Id: 4885929804749819663
-      Name: "Decal Stains Bottom 01"
-      PlatformAssetType: 14
-      PrimaryAsset {
-        AssetType: "DecalBlueprintAssetRef"
-        AssetId: "bp_decal_stain_bottom_001"
+        AssetType: "StaticMeshAssetRef"
+        AssetId: "sm_plane_trapezoid_001"
       }
     }
     PrimaryAssetId {
@@ -1117,5 +1048,5 @@ Assets {
     }
   }
   SerializationVersion: 92
-  VirtualFolderPath: "Level Segments"
+  VirtualFolderPath: "VFX"
 }

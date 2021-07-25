@@ -3,11 +3,9 @@ local Utils = require(script:GetCustomProperty("Utils"))
 local SPAWN_VFX = script:GetCustomProperty("SpawnVFX")
 
 local RAT_TABLE = require(script:GetCustomProperty("RatTable"))
-local QUEST_TABLE = require(script:GetCustomProperty("QuestTable"))
 local DESTRUCTIBLE_TABLE = require(script:GetCustomProperty("DestructibleTable"))
 
 local RAT_LOCATIONS = script:GetCustomProperty("RatLocations"):WaitForObject()
-local QUEST_LOCATIONS = script:GetCustomProperty("QuestLocations"):WaitForObject()
 local DESTRUCTIBLE_LOCATIONS = script:GetCustomProperty("DestructibleLocations"):WaitForObject()
 
 function areTherePlayersNearby(where)
@@ -17,8 +15,8 @@ function areTherePlayersNearby(where)
     if Object.IsValid(player) then
 
       local range = player:GetWorldPosition() - where
-      local inRange = range.size < 4000
-      local inVerticalRange = range.z < 1200 and range.z > -500
+      local inRange = range.size < 4250
+      local inVerticalRange = range.z < 2500 and range.z > -1500
 
       if inRange and inVerticalRange then
         -- local closeRange = range < 1000
@@ -111,7 +109,7 @@ function initSpawners(objectTable, locations, respawnTime)
   for _, location in ipairs(spawnPoints) do
     local settings = {
       objectTable = objectTable,
-      spawnPoint = location:GetWorldPosition(),
+      spawnPoint = Utils.groundBelowPoint(location:GetWorldPosition()) or location:GetWorldPosition(),
       spawnRotation = location:GetWorldRotation(),
       spawnedObject = nil,
       respawnTime = respawnTime,
@@ -139,5 +137,4 @@ Task.Wait(1)
 if Object.IsValid(script) then
   initSpawners(RAT_TABLE, RAT_LOCATIONS, 90)
   initSpawners(DESTRUCTIBLE_TABLE, DESTRUCTIBLE_LOCATIONS, 90)
-  initSpawners(QUEST_TABLE, QUEST_LOCATIONS)
 end

@@ -1,6 +1,6 @@
 Assets {
-  Id: 13057360465055397463
-  Name: "Enemy Rat Server"
+  Id: 9970799805056237059
+  Name: "Object Spawner Client"
   PlatformAssetType: 3
   TextAsset {
     CustomParameters {
@@ -11,18 +11,14 @@ Assets {
         }
       }
       Overrides {
-        Name: "cs:Hitbox"
-        ObjectReference {
+        Name: "cs:QuestTable"
+        AssetReference {
+          Id: 6676189601399625565
         }
       }
       Overrides {
-        Name: "cs:Wander"
-        Bool: true
-      }
-      Overrides {
-        Name: "cs:LootDrop"
-        AssetReference {
-          Id: 16108562932233883341
+        Name: "cs:QuestLocations"
+        ObjectReference {
         }
       }
     }

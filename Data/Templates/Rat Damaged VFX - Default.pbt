@@ -1,6 +1,6 @@
 Assets {
   Id: 9943909250650777562
-  Name: "Rat Damaged VFX"
+  Name: "Rat Damaged VFX - Default"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {

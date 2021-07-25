@@ -30,7 +30,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Damage"
-            Int: 3
+            Int: 4
           }
           Overrides {
             Name: "cs:AnimationStance"

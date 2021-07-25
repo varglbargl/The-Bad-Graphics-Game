@@ -25,7 +25,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        A: 0.5
+        A: 0.25
       }
     }
   }
@@ -85,7 +85,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        A: 0.5
+        A: 0.25
       }
     }
   }
@@ -145,7 +145,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        A: 0.5
+        A: 0.25
       }
     }
   }
@@ -205,7 +205,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        A: 0.5
+        A: 0.25
       }
     }
   }
@@ -265,7 +265,7 @@ Objects {
     Overrides {
       Name: "ma:Shared_BaseMaterial:color"
       Color {
-        A: 0.5
+        A: 0.25
       }
     }
   }
