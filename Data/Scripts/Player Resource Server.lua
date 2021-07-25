@@ -27,20 +27,31 @@ function playerSpawned(player)
 end
 function onPlayerJoined(player)
 
-  local saveData = Storage.GetPlayerData(player)
+  local saveData = Storage.GetPlayerData(player) or {}
 
   local yourXP = 0
 
-  if saveData.xp and saveData.rank then
+  if saveData.xp then
     yourXP = player:SetResource("XP", saveData.xp)
-    player.serverUserData["Rank"] = saveData.rank
-    player:SetResource("CombatAnimations", saveData.anims)
-    player:SetResource("GraphicsQuality", saveData.graphics)
   else
     player:SetResource("XP", 0)
-    player.serverUserData["Rank"] = "Plucky Ratventurer"
-    player.serverUserData["Anim"] = "Default"
+  end
+
+  if saveData.rank then
+    player.serverUserData["Rank"] = saveData.rank
+  else
+    player.serverUserData["Rank"] = Utils.getRank(math.floor(yourXP / 25) + 1)
+  end
+
+  if saveData.anims and saveData.anims ~= 0 then
+    player:SetResource("CombatAnimations", saveData.anims)
+  else
     player:SetResource("CombatAnimations", 1)
+  end
+
+  if saveData.graphics and saveData.graphics ~= 0 then
+    player:SetResource("GraphicsQuality", saveData.graphics)
+  else
     player:SetResource("GraphicsQuality", 4)
   end
 
@@ -91,6 +102,14 @@ function onPlayerLeft(player)
     anims = player:GetResource("CombatAnimations"),
     graphics = player:GetResource("GraphicsQuality")
   }
+
+  if saveData.anims == 0 then
+    saveData.anims = 1
+  end
+
+  if saveData.graphics == 0 then
+    saveData.graphics = 4
+  end
 
   -- if Environment.IsPreview() then saveData = {} end
 

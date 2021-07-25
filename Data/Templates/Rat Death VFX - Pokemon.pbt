@@ -913,9 +913,7 @@ Assets {
         Name: "Physics Sphere"
         Transform {
           Location {
-            X: -0.565856934
-            Y: -17.6916313
-            Z: 132.726501
+            Z: 50
           }
           Rotation {
           }
@@ -969,17 +967,17 @@ Assets {
           Overrides {
             Name: "cs:VelocityMax"
             Vector {
-              X: 100
-              Y: 100
-              Z: 300
+              X: 300
+              Y: 300
+              Z: 600
             }
           }
           Overrides {
             Name: "cs:VelocityMin"
             Vector {
-              X: -100
-              Y: -100
-              Z: 200
+              X: -300
+              Y: -300
+              Z: 400
             }
           }
         }

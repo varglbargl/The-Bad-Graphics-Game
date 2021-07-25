@@ -5,7 +5,7 @@ Description: "I recently inhereted the salvage rights to a shipwreck off the coa
 MaxPlayers: 10
 Tags: "Other"
 ScreenshotPaths: "C:\\Users\\Eric\\Desktop\\wog.jpg"
-ReleaseNotes: "BETA RLEASE\r\n\r\nGame is TECHNICALLY playable."
+ReleaseNotes: "BETA RLEASE\r\n\r\n - Added graphics settings to the settings menu!\r\n - Added combat animation settings to the settings menu!\r\n - Added two new combat animations!\r\n - Added 2 new weapons!\r\n - Added new room layout: The Rat Arena!\r\n - Optimized the way quests and VFX are spawned to reduce the number of networked objects by ~30%"
 OwnerId: "21c0b4284eff4bb091ce80a75c984fd4"
 SerializationVersion: 1
 AllowDirectJoinAsChild: true

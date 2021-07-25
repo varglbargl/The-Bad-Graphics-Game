@@ -199,8 +199,6 @@ function onWeaponHit(thisEnemy, weapon, damage)
   end
 end
 
-Events.Connect("WeaponHit", onWeaponHit)
-
 function wanderLoop()
   Task.Wait(math.random(20, 80) / 10)
   if isFighting or isDead or not Object.IsValid(enemy) then return end
@@ -233,3 +231,7 @@ end
 if WANDER then
   Task.Spawn(wanderLoop)
 end
+
+Task.Wait()
+
+Events.Connect("WeaponHit", onWeaponHit)

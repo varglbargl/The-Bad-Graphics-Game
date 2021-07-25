@@ -1,21 +1,5 @@
 Entries {
   Key {
-    StringVar: "graphics"
-  }
-  SimpleValue {
-    IntVar: 4
-  }
-}
-Entries {
-  Key {
-    StringVar: "rank"
-  }
-  SimpleValue {
-    StringVar: "Bubonic Plaguesploder"
-  }
-}
-Entries {
-  Key {
     StringVar: "anims"
   }
   SimpleValue {
@@ -24,9 +8,25 @@ Entries {
 }
 Entries {
   Key {
+    StringVar: "graphics"
+  }
+  SimpleValue {
+    IntVar: 4
+  }
+}
+Entries {
+  Key {
     StringVar: "xp"
   }
   SimpleValue {
-    IntVar: 757
+    IntVar: 1936
+  }
+}
+Entries {
+  Key {
+    StringVar: "rank"
+  }
+  SimpleValue {
+    StringVar: "Grim Exterminatrix Tier 2"
   }
 }

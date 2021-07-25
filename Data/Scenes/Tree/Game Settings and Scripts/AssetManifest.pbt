@@ -395,15 +395,6 @@ Assets {
   }
 }
 Assets {
-  Id: 13077568766725449866
-  Name: "Sci-fi 006"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "UI_Scifi_Fill_006"
-  }
-}
-Assets {
   Id: 12937392106759985119
   Name: "Fantasy Spell Ingredient 026"
   PlatformAssetType: 9

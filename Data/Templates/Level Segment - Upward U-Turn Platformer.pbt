@@ -262,7 +262,7 @@ Assets {
           PlayerScaleMultiplier: 1
           SpawnKey: "Graveyard"
           SpawnEffectsTemplate {
-            Id: 841534158063459245
+            Id: 333605395839068353
           }
         }
       }

@@ -8,10 +8,10 @@ Entries {
 }
 Entries {
   Key {
-    StringVar: "rank"
+    StringVar: "xp"
   }
   SimpleValue {
-    StringVar: "Plucky Ratventurer"
+    IntVar: 16325
   }
 }
 Entries {
@@ -24,9 +24,9 @@ Entries {
 }
 Entries {
   Key {
-    StringVar: "xp"
+    StringVar: "rank"
   }
   SimpleValue {
-    IntVar: 16
+    StringVar: "Apprentice Ankle Biter Tier 14"
   }
 }
