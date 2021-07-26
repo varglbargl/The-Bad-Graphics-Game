@@ -16,12 +16,20 @@ local PLAYER_RANK = script:GetCustomProperty("PlayerRank"):WaitForObject()
 
 local clientPlayer = Game.GetLocalPlayer()
 
-local myHitPoints = clientPlayer:GetResource("HitPoints") or "nothin"
+local myHitPoints = clientPlayer:GetResource("HitPoints")
 local myLevel = 1
 local myRank = clientPlayer:GetPrivateNetworkedData("Rank")
 
-local myRP = clientPlayer:GetResource("RP") or "nothin"
-local myXP = clientPlayer:GetResource("XP") or "nothin"
+local myRP = clientPlayer:GetResource("RP")
+local myXP = clientPlayer:GetResource("XP")
+
+if myXP == 0 then
+  myXP = "nothin"
+end
+
+if myHitPoints == 0 then
+  myHitPoints = "nothin"
+end
 
 PLAYER_NAME.text = clientPlayer.name
 

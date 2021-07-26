@@ -219,14 +219,15 @@ Assets {
         Name: "Hitbox"
         Transform {
           Location {
-            Z: 125
+            X: -50
+            Z: 150
           }
           Rotation {
           }
           Scale {
-            X: 1
-            Y: 1
-            Z: 3
+            X: 1.5
+            Y: 1.25
+            Z: 2.5
           }
         }
         ParentId: 6458459856559832118
@@ -249,7 +250,7 @@ Assets {
             IsEnemyCollisionEnabled: true
           }
           TriggerShape_v2 {
-            Value: "mc:etriggershape:capsule"
+            Value: "mc:etriggershape:box"
           }
         }
       }

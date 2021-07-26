@@ -203,21 +203,33 @@ function wanderLoop()
   Task.Wait(math.random(20, 80) / 10)
   if isFighting or isDead or not Object.IsValid(enemy) then return end
 
-  local toVector = Utils.groundBelowPoint(enemy:GetWorldPosition() + Rotation.New(0, 0, math.random(360)) * Vector3.FORWARD * 500)
-  local fromVector = enemy:GetWorldPosition()
+  local fromPosition = enemy:GetWorldPosition()
 
-  if (not toVector or (spawnPoint - fromVector).size > 1000) and (spawnPoint - fromVector).size > 1 then
+  local toDirection = Rotation.New(0, 0, math.random(360)) * Vector3.FORWARD
+  local toPosition = fromPosition + Vector3.UP * 10 + toDirection * 500
+
+  local toRaycast = World.Raycast(fromPosition + Vector3.UP * 10, toPosition)
+
+  if toRaycast then
+    local distance = (toRaycast:GetImpactPosition() - fromPosition).size - 50
+
+    toPosition = fromPosition + (toRaycast:GetImpactPosition() - fromPosition):GetNormalized() * distance
+  end
+
+  toPosition = Utils.groundBelowPoint(toPosition)
+
+  if (not toPosition or (spawnPoint - fromPosition).size > 1000) and (spawnPoint - fromPosition).size > 1 then
     -- print("im scared and im going home.")
-    toVector = Utils.groundBelowPoint(fromVector + (spawnPoint - fromVector):GetNormalized() * 300)
+    toPosition = Utils.groundBelowPoint(fromPosition + (spawnPoint - fromPosition):GetNormalized() * 300)
 
-    if not toVector then
-      toVector = fromVector + (spawnPoint - fromVector):GetNormalized() * 300
+    if not toPosition then
+      toPosition = fromPosition + (spawnPoint - fromPosition):GetNormalized() * 300
     end
   end
 
-  if toVector then
-    enemy:LookAt(toVector)
-    enemy:MoveTo(toVector, 5)
+  if toPosition then
+    enemy:LookAt(toPosition)
+    enemy:MoveTo(toPosition, 5)
   end
 
   Task.Wait(4.5)

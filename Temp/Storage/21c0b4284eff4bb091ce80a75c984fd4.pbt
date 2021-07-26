@@ -3,7 +3,7 @@ Entries {
     StringVar: "anims"
   }
   SimpleValue {
-    IntVar: 2
+    IntVar: 3
   }
 }
 Entries {
@@ -16,17 +16,17 @@ Entries {
 }
 Entries {
   Key {
-    StringVar: "xp"
+    StringVar: "rank"
   }
   SimpleValue {
-    IntVar: 1936
+    StringVar: "Pipsqueak Punisher Tier 9"
   }
 }
 Entries {
   Key {
-    StringVar: "rank"
+    StringVar: "xp"
   }
   SimpleValue {
-    StringVar: "Grim Exterminatrix Tier 2"
+    IntVar: 10163
   }
 }

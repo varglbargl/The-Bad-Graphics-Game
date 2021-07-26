@@ -16,7 +16,7 @@ function areTherePlayersNearby(where)
 
       local range = player:GetWorldPosition() - where
       local inRange = range.size < 4250
-      local inVerticalRange = range.z < 2500 and range.z > -1500
+      local inVerticalRange = range.z < 2250 and range.z > -1250
 
       if inRange and inVerticalRange then
         -- local closeRange = range < 1000

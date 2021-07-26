@@ -105,14 +105,14 @@ Assets {
         Transform {
           Location {
             X: 1500
-            Z: 300
+            Z: 400
           }
           Rotation {
           }
           Scale {
             X: 29
             Y: 49
-            Z: 9
+            Z: 19
           }
         }
         ParentId: 10775077709235861747
@@ -279,12 +279,10 @@ Assets {
           }
         }
         ParentId: 1706359323981895498
-        ChildIds: 11061911848336059862
         ChildIds: 13899138871329582863
         ChildIds: 1347830086227859852
         ChildIds: 1720468161282923452
         ChildIds: 7023619096174481317
-        ChildIds: 3910823933839734578
         ChildIds: 17684908184622362659
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -300,65 +298,6 @@ Assets {
         }
         Folder {
           IsFilePartition: true
-        }
-      }
-      Objects {
-        Id: 11061911848336059862
-        Name: "Decal Stencil Font 01"
-        Transform {
-          Location {
-            X: 1500
-            Y: 1000
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 17418472386448114905
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 17
-          }
-          Overrides {
-            Name: "bp:Fade Time"
-            Float: 0.001
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8004753098385281881
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
         }
       }
       Objects {
@@ -545,65 +484,6 @@ Assets {
           Location {
             X: 1725
             Y: -1850
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 17418472386448114905
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 17
-          }
-          Overrides {
-            Name: "bp:Fade Time"
-            Float: 0.001
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              R: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8004753098385281881
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 3910823933839734578
-        Name: "Decal Stencil Font 01"
-        Transform {
-          Location {
-            X: 2500
-            Y: -1950
           }
           Rotation {
           }
@@ -891,7 +771,6 @@ Assets {
         ChildIds: 8101166827048653990
         ChildIds: 10867093346429789769
         ChildIds: 4537770884430831787
-        ChildIds: 4942621032686992948
         ChildIds: 933982860976594264
         ChildIds: 3916666010765961765
         ChildIds: 9638528858641238864
@@ -1094,8 +973,8 @@ Assets {
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
-            X: 1010.74951
-            Y: -270.185028
+            X: 1192.33972
+            Y: -337
           }
           Rotation {
           }
@@ -1153,67 +1032,8 @@ Assets {
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
-            X: 870.40979
+            X: 1052
             Y: -309.048279
-          }
-          Rotation {
-          }
-          Scale {
-            X: 0.5
-            Y: 0.5
-            Z: 0.5
-          }
-        }
-        ParentId: 949068575916084001
-        UnregisteredParameters {
-          Overrides {
-            Name: "bp:Shape Index"
-            Int: 3
-          }
-          Overrides {
-            Name: "bp:Fade Time"
-            Float: 0.001
-          }
-          Overrides {
-            Name: "bp:Color"
-            Color {
-              G: 1
-              A: 1
-            }
-          }
-        }
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Blueprint {
-          BlueprintAsset {
-            Id: 8004753098385281881
-          }
-          TeamSettings {
-          }
-          DecalBP {
-          }
-        }
-        Relevance {
-          Value: "mc:eproxyrelevance:medium"
-        }
-      }
-      Objects {
-        Id: 4942621032686992948
-        Name: "Decal Stencil Font 01"
-        Transform {
-          Location {
-            X: 1830
-            Y: -1400
           }
           Rotation {
           }

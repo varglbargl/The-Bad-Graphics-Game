@@ -46,7 +46,7 @@ function swingLoop(dt)
     script.parent:SetWorldRotation(startRotation + curveValue * MIN_AMPLITUDE)
   end
 
-  swingLoop(Task.Wait(0.5))
+  swingLoop(Task.Wait(0.37))
 end
 
 swingLoop(Task.Wait(math.random()))

@@ -1,16 +1,19 @@
 local Utils = require(script:GetCustomProperty("Utils"))
 
+local CURSOR = script:GetCustomProperty("Cursor"):WaitForObject()
+
 local OPEN_SFX = script:GetCustomProperty("OpenSFX")
 local CLOSE_SFX = script:GetCustomProperty("CloseSFX")
 local SELECT_SFX = script:GetCustomProperty("SelectSFX")
 
 local SETTINGS_MENU = script:GetCustomProperty("SettingsMenu"):WaitForObject()
 local CLOSE = script:GetCustomProperty("Close"):WaitForObject()
+local LOADING = script:GetCustomProperty("Loading"):WaitForObject()
 
 local CAMERA = script:GetCustomProperty("Camera"):WaitForObject()
 
 local GRAPHICS_QUALITY = script:GetCustomProperty("GraphicsQuality"):WaitForObject()
-local COMBAT_ANIMATIONS = script:GetCustomProperty("CombatAnimations"):WaitForObject()
+local COMBAT_ANIMATION = script:GetCustomProperty("CombatAnimation"):WaitForObject()
 
 local VERY_BAD = script:GetCustomProperty("VeryBad"):WaitForObject()
 local EXTREMELY_BAD = script:GetCustomProperty("ExtremelyBad"):WaitForObject()
@@ -100,13 +103,29 @@ function disableButton(button)
   button.isInteractable = true
 end
 
+function cursorFollowLoop()
+  if CURSOR.visibility == Visibility.FORCE_OFF then return end
+
+  local mousePosition = UI.GetCursorPosition()
+
+  CURSOR.x = mousePosition.x
+  CURSOR.y = mousePosition.y
+
+  Task.Wait()
+
+  cursorFollowLoop()
+end
+
 function openSettings()
   settingsOpen = true
   Utils.playSoundEffect(OPEN_SFX)
   SETTINGS_MENU.visibility = Visibility.INHERIT
 
-  UI.SetCursorVisible(true)
+  -- UI.SetCursorVisible(true)
+  CURSOR.visibility = Visibility.INHERIT
   UI.SetCanCursorInteractWithUI(true)
+
+  Task.Spawn(cursorFollowLoop)
 end
 
 function closeSettings()
@@ -114,7 +133,8 @@ function closeSettings()
   Utils.playSoundEffect(CLOSE_SFX)
   SETTINGS_MENU.visibility = Visibility.FORCE_OFF
 
-  UI.SetCursorVisible(false)
+  -- UI.SetCursorVisible(false)
+  CURSOR.visibility = Visibility.FORCE_OFF
   UI.SetCanCursorInteractWithUI(false)
 end
 
@@ -132,18 +152,19 @@ function onBindingPressed(thisPlayer, keyCode)
   end
 end
 
+CLOSE.clickedEvent:Connect(closeSettings)
+clientPlayer.bindingPressedEvent:Connect(onBindingPressed)
+
 while currentGraphicsQuality == 0 or currentCombatAnimations == 0 do
   currentGraphicsQuality = clientPlayer:GetResource("GraphicsQuality")
   currentCombatAnimations = clientPlayer:GetResource("CombatAnimations")
   Task.Wait(0.5)
 end
 
+LOADING.visibility = Visibility.FORCE_OFF
 changeGraphicsQuality(currentGraphicsQuality)
-
-CLOSE.clickedEvent:Connect(closeSettings)
-clientPlayer.bindingPressedEvent:Connect(onBindingPressed)
 
 Events.Connect("ToggleSettings", toggleSettingsOpen)
 
 initRadioButtons(GRAPHICS_QUALITY, changeGraphicsQuality, currentGraphicsQuality)
-initRadioButtons(COMBAT_ANIMATIONS, changeCombatAnimation, currentCombatAnimations)
+initRadioButtons(COMBAT_ANIMATION, changeCombatAnimation, currentCombatAnimations)

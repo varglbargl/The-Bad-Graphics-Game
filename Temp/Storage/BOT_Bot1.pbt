@@ -1,17 +1,9 @@
 Entries {
   Key {
-    StringVar: "graphics"
-  }
-  SimpleValue {
-    IntVar: 4
-  }
-}
-Entries {
-  Key {
     StringVar: "xp"
   }
   SimpleValue {
-    IntVar: 16325
+    IntVar: 16789
   }
 }
 Entries {
@@ -24,9 +16,17 @@ Entries {
 }
 Entries {
   Key {
+    StringVar: "graphics"
+  }
+  SimpleValue {
+    IntVar: 4
+  }
+}
+Entries {
+  Key {
     StringVar: "rank"
   }
   SimpleValue {
-    StringVar: "Apprentice Ankle Biter Tier 14"
+    StringVar: "Secretive Nimhspeaker Tier 14"
   }
 }

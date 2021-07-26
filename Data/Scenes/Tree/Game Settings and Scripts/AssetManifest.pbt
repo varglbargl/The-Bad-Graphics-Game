@@ -341,6 +341,15 @@ Assets {
   }
 }
 Assets {
+  Id: 13569166279844712833
+  Name: "Center Arrow 003 Wedge"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "CenterArrow_003Wedge"
+  }
+}
+Assets {
   Id: 13529318026062962698
   Name: "4 Point Star"
   PlatformAssetType: 9
@@ -626,6 +635,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Gear_Bracers_007"
+  }
+}
+Assets {
+  Id: 9410709753180072970
+  Name: "BG Highlighted 011"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "BackgroundHighlighted_028"
   }
 }
 Assets {
@@ -941,6 +959,15 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "UI_Fantasy_Equip_Jewelry_026"
+  }
+}
+Assets {
+  Id: 4231664098163256901
+  Name: "Fantasy Glove 010"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Gear_Glove_010"
   }
 }
 Assets {

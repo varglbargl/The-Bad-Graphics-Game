@@ -193,7 +193,6 @@ Assets {
           }
         }
         ParentId: 14697011443181901045
-        ChildIds: 4613895346547614130
         ChildIds: 8644310632964034874
         ChildIds: 18110441993111922561
         ChildIds: 738890418221798109
@@ -227,43 +226,6 @@ Assets {
         }
         Folder {
           IsGroup: true
-        }
-      }
-      Objects {
-        Id: 4613895346547614130
-        Name: "Spawn Point"
-        Transform {
-          Location {
-            Z: 125
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11348220624767688777
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:alwaysvisible"
-        }
-        PlayerSpawnPoint {
-          TeamInt: 1
-          PlayerScaleMultiplier: 1
-          SpawnKey: "Graveyard"
-          SpawnEffectsTemplate {
-            Id: 333605395839068353
-          }
         }
       }
       Objects {
@@ -1965,6 +1927,7 @@ Assets {
           }
         }
         ParentId: 8151005879373768234
+        ChildIds: 4613895346547614130
         ChildIds: 2354344430068680489
         ChildIds: 7617023310744570627
         ChildIds: 11662799142516692356
@@ -1983,6 +1946,46 @@ Assets {
         }
         NetworkContext {
           Type: Server
+        }
+      }
+      Objects {
+        Id: 4613895346547614130
+        Name: "Spawn Point"
+        Transform {
+          Location {
+            X: 3195
+            Y: -875
+            Z: 125
+          }
+          Rotation {
+            Yaw: -44.9999962
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8596176051881402425
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:alwaysvisible"
+        }
+        PlayerSpawnPoint {
+          TeamInt: 1
+          PlayerScaleMultiplier: 1
+          SpawnKey: "Graveyard"
+          SpawnEffectsTemplate {
+            Id: 333605395839068353
+          }
         }
       }
       Objects {
@@ -2389,7 +2392,7 @@ Assets {
         Name: "Decal Stencil Font 01"
         Transform {
           Location {
-            X: 1100
+            X: 1129
             Y: -225
             Z: 1725
           }
@@ -2579,6 +2582,7 @@ Assets {
         }
         ParentId: 8990493219599382061
         ChildIds: 13524631818543753186
+        ChildIds: 16641841812063183079
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -2605,6 +2609,68 @@ Assets {
             Z: 1725
           }
           Rotation {
+          }
+          Scale {
+            X: 0.5
+            Y: 0.5
+            Z: 0.5
+          }
+        }
+        ParentId: 8671876593060340178
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Shape Index"
+            Int: 16
+          }
+          Overrides {
+            Name: "bp:Fade Time"
+            Float: 0.001
+          }
+          Overrides {
+            Name: "bp:Color"
+            Color {
+              R: 1
+              G: 1
+              A: 1
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 8004753098385281881
+          }
+          TeamSettings {
+          }
+          DecalBP {
+          }
+        }
+        Relevance {
+          Value: "mc:eproxyrelevance:medium"
+        }
+      }
+      Objects {
+        Id: 16641841812063183079
+        Name: "Decal Stencil Font 01"
+        Transform {
+          Location {
+            X: 1451
+            Y: -1248
+            Z: -1
+          }
+          Rotation {
+            Yaw: 90
           }
           Scale {
             X: 0.5
@@ -6044,9 +6110,9 @@ Assets {
             Z: 1175
           }
           Rotation {
-            Pitch: -95.1766663
+            Pitch: -90
             Yaw: 90
-            Roll: 90.001709
+            Roll: 90
           }
           Scale {
             X: 2.5
@@ -7334,14 +7400,13 @@ Assets {
         Transform {
           Location {
             X: 1300
-            Y: 150
             Z: 1675
           }
           Rotation {
           }
           Scale {
-            X: 6
-            Y: 31
+            X: 5.1
+            Y: 26.1
             Z: 1
           }
         }
@@ -7411,10 +7476,10 @@ Assets {
           Location {
             X: 1500
             Y: 1050
-            Z: 1949.99951
+            Z: 1912
           }
           Rotation {
-            Pitch: -83.3037109
+            Pitch: -90
             Yaw: 90
             Roll: 90
           }
@@ -7493,8 +7558,8 @@ Assets {
             Z: 2099.99951
           }
           Rotation {
-            Pitch: -96.2466431
-            Roll: -90.0058
+            Pitch: -90
+            Roll: -90
           }
           Scale {
             X: 2.7
@@ -7571,7 +7636,7 @@ Assets {
             Z: 2374.99951
           }
           Rotation {
-            Pitch: -82.6590271
+            Pitch: -90
             Roll: -90
           }
           Scale {
@@ -7649,7 +7714,7 @@ Assets {
             Z: 2706.59229
           }
           Rotation {
-            Pitch: -86.388916
+            Pitch: -90
             Roll: -90
           }
           Scale {
@@ -7892,7 +7957,7 @@ Assets {
             Z: 1874.99951
           }
           Rotation {
-            Pitch: -93.9806519
+            Pitch: -90
             Roll: -90
           }
           Scale {

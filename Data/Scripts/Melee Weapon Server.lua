@@ -38,7 +38,7 @@ function throwWeapon(thrower)
 
   HITBOX.collision = Collision.INHERIT
 
-  weapon:RotateContinuous(Vector3.RIGHT * 10 + Vector3.FORWARD * 13 + Vector3.UP * 7, true)
+  weapon:RotateContinuous(Vector3.RIGHT * 23 + Vector3.FORWARD * 17 + Vector3.UP * 11, true)
   weapon:MoveTo(toPosition, throwDistance / 4000)
 
   Task.Wait(throwDistance / 4000)

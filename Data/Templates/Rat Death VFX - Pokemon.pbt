@@ -16,8 +16,8 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
+        ChildIds: 9574526724213678534
         ChildIds: 765891857805068763
-        ChildIds: 10350766970363232270
         ChildIds: 13566776848762560966
         ChildIds: 7808555980993702983
         ChildIds: 9954459550921267879
@@ -39,6 +39,64 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         NetworkContext {
+        }
+      }
+      Objects {
+        Id: 9574526724213678534
+        Name: "Gunshot Projectile Launcher Set 01 SFX"
+        Transform {
+          Location {
+            Z: 20
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 8508477728544741480
+        UnregisteredParameters {
+          Overrides {
+            Name: "bp:Enable Dynamic Distant Sound"
+            Bool: false
+          }
+          Overrides {
+            Name: "bp:Type"
+            Enum {
+              Value: "mc:esfx_gunshot_launcher_01:19"
+            }
+          }
+        }
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Blueprint {
+          BlueprintAsset {
+            Id: 12691441275916690022
+          }
+          TeamSettings {
+          }
+          AudioBP {
+            AutoPlay: true
+            Pitch: -900
+            Volume: 1
+            Falloff: 3000
+            Radius: 1000
+            FadeInTime: 0.1
+            IsSpatializationEnabled: true
+            IsAttenuationEnabled: true
+          }
         }
       }
       Objects {
@@ -83,47 +141,6 @@ Assets {
         }
       }
       Objects {
-        Id: 10350766970363232270
-        Name: "Gunshot Boom Sweetener 01 SFX"
-        Transform {
-          Location {
-            Z: 20
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 8508477728544741480
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        AudioInstance {
-          AudioAsset {
-            Id: 3982879367764626513
-          }
-          AutoPlay: true
-          Pitch: 1200
-          Volume: 0.5
-          Falloff: 3000
-          Radius: -1
-          IsSpatializationEnabled: true
-          IsAttenuationEnabled: true
-        }
-      }
-      Objects {
         Id: 13566776848762560966
         Name: "Sci-fi Bubbly Powerup Buff Charge 01 SFX"
         Transform {
@@ -156,7 +173,7 @@ Assets {
             Id: 4916668486966878034
           }
           AutoPlay: true
-          Pitch: 400
+          Pitch: -1000
           Volume: 0.3
           Falloff: 3000
           Radius: 1000
@@ -198,7 +215,7 @@ Assets {
           }
           AutoPlay: true
           Pitch: 1200
-          Volume: 0.6
+          Volume: 0.75
           Falloff: 3000
           Radius: 1000
           IsSpatializationEnabled: true
@@ -1432,21 +1449,21 @@ Assets {
       }
     }
     Assets {
+      Id: 12691441275916690022
+      Name: "Gunshot Projectile Launcher Set 01 SFX"
+      PlatformAssetType: 10
+      PrimaryAsset {
+        AssetType: "AudioBlueprintAssetRef"
+        AssetId: "sfxabp_gunshot_launcher_ref"
+      }
+    }
+    Assets {
       Id: 877827860621096971
       Name: "Magic Water Spell Cast 01 SFX"
       PlatformAssetType: 7
       PrimaryAsset {
         AssetType: "AudioAssetRef"
         AssetId: "sfx_magic_water_spell_cast_01_Cue_ref"
-      }
-    }
-    Assets {
-      Id: 3982879367764626513
-      Name: "Gunshot Boom Sweetener 01 SFX"
-      PlatformAssetType: 7
-      PrimaryAsset {
-        AssetType: "AudioAssetRef"
-        AssetId: "sfx_gunshot_boom_sweetener_01_Cue_ref"
       }
     }
     Assets {

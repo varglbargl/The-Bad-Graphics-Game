@@ -222,14 +222,14 @@ Assets {
         Name: "Hitbox"
         Transform {
           Location {
-            Z: 75
+            Z: 100
           }
           Rotation {
           }
           Scale {
             X: 1
             Y: 1
-            Z: 2
+            Z: 2.5
           }
         }
         ParentId: 5634995190002848841

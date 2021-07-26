@@ -13,8 +13,6 @@ local placedSegs = {}
 local teleporterNodes = {}
 
 function placeSeg(segPos, segRot)
-  totalSegs = totalSegs + 1
-
   local segToSpawn = nil
 
   if totalSegs < maxSegs then
@@ -44,6 +42,8 @@ function placeSeg(segPos, segRot)
       return
     end
   end
+
+  totalSegs = totalSegs + 1
 
   table.insert(placedSegs, thisSeg)
   table.insert(boundingBoxes, thisBoundingBox)

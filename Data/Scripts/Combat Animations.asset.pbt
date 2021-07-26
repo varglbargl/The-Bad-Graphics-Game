@@ -17,6 +17,12 @@ Assets {
         }
       }
       Overrides {
+        Name: "cs:IconDefault"
+        AssetReference {
+          Id: 1512378671597293956
+        }
+      }
+      Overrides {
         Name: "cs:DamagedPinata"
         AssetReference {
           Id: 10811833680025563858
@@ -33,6 +39,30 @@ Assets {
         AssetReference {
           Id: 14579206738456761837
         }
+      }
+      Overrides {
+        Name: "cs:IconPokemon"
+        AssetReference {
+          Id: 9962806953653867509
+        }
+      }
+    }
+    Assets {
+      Id: 1512378671597293956
+      Name: "Fantasy Ability Red 005"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ability_Red_005"
+      }
+    }
+    Assets {
+      Id: 9962806953653867509
+      Name: "Fantasy Ability Teal 008"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "UI_Fantasy_Ability_Teal_008"
       }
     }
   }

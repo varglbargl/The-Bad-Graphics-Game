@@ -2,6 +2,7 @@ local Utils = require(script:GetCustomProperty("Utils"))
 
 local QUEST_LOG = script:GetCustomProperty("QuestLog"):WaitForObject()
 local COMPLETED_SFX = script:GetCustomProperty("CompletedSFX")
+local NO_QUESTS = script:GetCustomProperty("NoQuests"):WaitForObject()
 
 local questEntries = QUEST_LOG:GetChildren()
 local sfx = nil
@@ -49,6 +50,12 @@ function onPrivateNetworkedDataChanged(player, key)
       if Object.IsValid(sfx) then sfx:Destroy() end
 
       sfx = Utils.playSoundEffect(COMPLETED_SFX, nil, 0.75)
+    end
+
+    if #data > 0 then
+      NO_QUESTS.visibility = Visibility.FORCE_OFF
+    else
+      NO_QUESTS.visibility = Visibility.INHERIT
     end
   end
 

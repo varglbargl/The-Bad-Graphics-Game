@@ -34,6 +34,12 @@ Assets {
           Id: 17868941467198591761
         }
       }
+      Overrides {
+        Name: "cs:LevelSegmentSlimeHole"
+        AssetReference {
+          Id: 14002006313138896788
+        }
+      }
     }
   }
   SerializationVersion: 92

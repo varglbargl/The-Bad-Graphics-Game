@@ -51,8 +51,10 @@ function onRatKilled(player)
   Utils.updatePrivateNetworkedData(player, "Quests")
 
   if questsCompeted > 0 then
-    player:GrantRewardPoints(questsCompeted * 10, "RatKill")
-    player:AddResource("RP", questsCompeted * 10)
+    local pointReward = questsCompeted * 10 * math.ceil(player.serverUserData["Level"] / 50)
+
+    player:GrantRewardPoints(pointReward, "RatKill")
+    player:AddResource("RP", pointReward * 10)
     player:AddResource("XP", questsCompeted * 10)
 
     Events.Broadcast("CheckLevelUp", player)

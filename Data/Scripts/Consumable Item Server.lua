@@ -16,6 +16,8 @@ function onPickup(thisLoot, owner)
   elseif RESOURCE == "Gear" then
     Utils.throttleToPlayer(owner, "NewGear")
   elseif RESOURCE == "RP" or RESOURCE == "RewardPoints" then
+    amount = amount * math.ceil(owner.serverUserData["Level"] / 50)
+
     owner:GrantRewardPoints(amount, "Consumable")
     owner:AddResource("RP", amount)
   elseif RESOURCE == "Grip" then

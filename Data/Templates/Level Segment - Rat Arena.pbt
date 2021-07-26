@@ -233,7 +233,6 @@ Assets {
           }
         }
         ParentId: 16076733271880814082
-        ChildIds: 13713462925948082333
         ChildIds: 9917236682563233813
         ChildIds: 361114298553163438
         ChildIds: 17588465757272894450
@@ -266,44 +265,6 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         NetworkContext {
-        }
-      }
-      Objects {
-        Id: 13713462925948082333
-        Name: "Spawn Point"
-        Transform {
-          Location {
-            Z: 125
-          }
-          Rotation {
-            Yaw: -3.05175781e-05
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 1599108393397047043
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:alwaysvisible"
-        }
-        PlayerSpawnPoint {
-          TeamInt: 1
-          PlayerScaleMultiplier: 1
-          SpawnKey: "Graveyard"
-          SpawnEffectsTemplate {
-            Id: 333605395839068353
-          }
         }
       }
       Objects {
@@ -2009,6 +1970,7 @@ Assets {
           }
         }
         ParentId: 18414996857245200049
+        ChildIds: 13713462925948082333
         ChildIds: 6638731292202789406
         ChildIds: 15580916348338559308
         ChildIds: 550576892083753263
@@ -2078,6 +2040,46 @@ Assets {
         }
         NetworkContext {
           Type: RuntimeStatic
+        }
+      }
+      Objects {
+        Id: 13713462925948082333
+        Name: "Spawn Point"
+        Transform {
+          Location {
+            X: 5400
+            Y: 75
+            Z: 125
+          }
+          Rotation {
+            Yaw: -3.05175727e-05
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3500533050182956668
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:alwaysvisible"
+        }
+        PlayerSpawnPoint {
+          TeamInt: 1
+          PlayerScaleMultiplier: 1
+          SpawnKey: "Graveyard"
+          SpawnEffectsTemplate {
+            Id: 333605395839068353
+          }
         }
       }
       Objects {
