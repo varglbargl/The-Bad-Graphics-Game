@@ -30,7 +30,7 @@ Assets {
           }
           Overrides {
             Name: "cs:Damage"
-            Int: 3
+            Int: 10
           }
           Overrides {
             Name: "cs:AnimationStance"
@@ -87,7 +87,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.4
+            Duration: 1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -120,7 +120,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.6
+            Duration: 1.4
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -166,7 +166,7 @@ Assets {
         Ability {
           IsEnabled: true
           CastPhaseSettings {
-            Duration: 0.4
+            Duration: 1
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -199,7 +199,7 @@ Assets {
             }
           }
           CooldownPhaseSettings {
-            Duration: 0.6
+            Duration: 1.4
             CanMove: true
             CanJump: true
             CanRotate: true
@@ -207,7 +207,7 @@ Assets {
               Value: "mc:eabilitysetfacing:none"
             }
           }
-          Animation: "2hand_sword_thrust"
+          Animation: "2hand_staff_magic_bolt"
           CanBePrevented: true
           KeyBinding_v2 {
             Value: "mc:egameaction:primaryaction"

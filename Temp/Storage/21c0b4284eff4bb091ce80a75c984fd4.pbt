@@ -1,9 +1,17 @@
 Entries {
   Key {
-    StringVar: "anims"
+    StringVar: "xp"
   }
   SimpleValue {
-    IntVar: 3
+    IntVar: 10622
+  }
+}
+Entries {
+  Key {
+    StringVar: "rank"
+  }
+  SimpleValue {
+    StringVar: "Vermine Labrattler Tier 9"
   }
 }
 Entries {
@@ -16,17 +24,9 @@ Entries {
 }
 Entries {
   Key {
-    StringVar: "rank"
+    StringVar: "anims"
   }
   SimpleValue {
-    StringVar: "Pipsqueak Punisher Tier 9"
-  }
-}
-Entries {
-  Key {
-    StringVar: "xp"
-  }
-  SimpleValue {
-    IntVar: 10163
+    IntVar: 2
   }
 }

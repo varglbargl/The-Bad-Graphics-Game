@@ -69,7 +69,7 @@ function onAbilityCast(thisAbility)
     return
   end
 
-  local currentGrip = thisAbility.owner:RemoveResource("Grip", DAMAGE)
+  local currentGrip = thisAbility.owner:RemoveResource("Grip", math.ceil(DAMAGE / 2))
 
   if currentGrip <= 0 then
     Task.Wait(thisAbility.castPhaseSettings.duration * 0.75)
